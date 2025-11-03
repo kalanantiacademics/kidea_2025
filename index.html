@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindergarten Presentation - Computer Parts</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load a fun and rounded Google Font (Fredoka) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Make Fredoka the default font */
+        body {
+            font-family: 'Fredoka', sans-serif;
+            /* New kindergarten background image */
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/569/45/desktop-wallpaper-kindergarten-preschool.jpg');
+            background-size: cover; /* Ensure the image covers the entire area */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Image stays fixed on scroll (if any) */
+            overflow: hidden; /* Prevent main page scrolling */
+            position: relative; /* Add this for logo positioning */
+        }
+
+        /* --- [NEW] Styles for Drag and Drop Game --- */
+        .drop-zone {
+            /* Dashed border to show it's a target */
+            border: 3px dashed #cbd5e1; /* gray-300 */
+            border-radius: 1.5rem; /* rounded-3xl */
+            transition: all 0.3s;
+            /* Ensure it's on top of the image */
+            z-index: 30; 
+        }
+
+        .drop-zone.drag-over {
+            /* Highlight when dragging over */
+            background-color: rgba(74, 222, 128, 0.3); /* green-400 with opacity */
+            border-color: #22c55e; /* green-500 */
+        }
+
+        .drag-label {
+            cursor: grab;
+            transition: all 0.3s;
+            z-index: 40; /* Make sure labels are on top */
+        }
+
+        .drag-label:active {
+            cursor: grabbing;
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        
+        /* Style for a dropped label */
+        .drag-label.dropped {
+            background-color: #22c55e !important; /* green-500 */
+            color: white !important;
+            cursor: not-allowed;
+            opacity: 1;
+        }
+        /* [NEW] Style for background logos */
+        .bg-logo {
+            position: absolute;
+            z-index: 10;
+            opacity: 0.9;
+        }
+
+        /* Class to hide slides */
+        .slide.hidden {
+            display: none;
+        }
+
+        /* Class for the active slide, with fade-in animation */
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Bouncing animation for success message */
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .success-popup {
+            animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+    </style>
+</head>
+<body class="min-h-screen w-full flex items-center justify-center p-4">
+
+    <!-- [NEW] Background Logos -->
+    <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/c7c209c3-9a79-4d54-a917-87db5d073e70.png" 
+         alt="Ruang Guru Coding Logo" 
+         class="bg-logo h-12 top-5 left-5">
+    
+    <img src="https://lh4.googleusercontent.com/proxy/HeJjLMBSrkF1Db84y8LyJLcSFIs-9SqwpWv9b9UHSlRObHxqR-LoiEt29pttasbMBz7E7plqyOpps9HX9ziIA3Djv361bempSY8NVz5mBLrUXZKeleWCwy4u" 
+         alt="Kidea Kids Logo" 
+         class="bg-logo h-12 top-5 right-5">
+
+    <!-- Main wrapper/box for the presentation -->
+    <div class="w-full bg-white rounded-3xl shadow-2xl overflow-hidden relative z-20 h-[70vh] aspect-video">
+        
+        <div class="h-full flex flex-col">
+            
+            <!-- 1. HEADER (Title, Dropdown, and Logos) -->
+            <header class="relative flex justify-between items-center p-5 bg-gray-50 border-b-2 border-gray-100">
+                <h1 class="text-xl md:text-2xl font-bold text-blue-600">
+                    Getting to Know Computer Parts 🖥️
+                </h1>
+                <div class="flex items-center space-x-2">
+                    <label for="meeting-select" class="text-sm font-medium text-gray-700">Meeting:</label>
+                    <select id="meeting-select" class="rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm font-medium">
+                        <option value="1">Meeting 1 - Computer Parts</option>
+                        <option value="2" disabled>Meeting 2 (Soon)</option>
+                        <option value="3" disabled>Meeting 3 (Soon)</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- 2. SLIDE AREA (Main Content) -->
+            <main id="slide-container" class="flex-1 relative overflow-y-auto p-8 md:p-12">
+                
+                <!-- Slide 1: Title Slide -->
+                <div class="slide" data-slide="1">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://clipart-library.com/2023/children-computer-clipart-xl.png" alt="Friendly computer character waving" class="h-48 animate-bounce">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Let's Meet the Computer!</h1>
+                        <p class="text-2xl md:text-3xl text-blue-600 font-medium mt-6">Module 1: Our First Meeting</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Welcome Song! -->
+                <div class="slide hidden" data-slide="2">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Welcome, Super Coders!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Let's sing our welcome song!</p>
+                        <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
+                            <p>🎵 Hello, hello, how are you? 😊</p>
+                            <p>🎵 We are here, me and you! 🧑‍🤝‍🧑</p>
+                            <p>🎵 Time to learn and time to play, 🧠</p>
+                            <p>🎵 It's a happy, super day! ✨</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Meet Your Teacher! -->
+                <div class="slide hidden" data-slide="3">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Let's Meet Your Teacher! 👋</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Hello! It's so nice to meet you!</p>
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center w-full max-w-4xl">
+                            <div class="bg-pink-100 p-6 rounded-2xl shadow-md">
+                                <p class="text-xl font-medium text-pink-800">My Name is: 👩‍🏫</p>
+                                <input type="text" id="teacher-name-input" placeholder="Type name here" class="mt-2 text-3xl font-bold text-pink-600 bg-transparent text-center w-full focus:outline-none placeholder-pink-300">
+                            </div>
+                            <div class="bg-green-100 p-6 rounded-2xl shadow-md">
+                                <p class="text-xl font-medium text-green-800">My Favorite Food is: 🍕</p>
+                                <input type="text" id="teacher-food-input" placeholder="Type food here" class="mt-2 text-3xl font-bold text-green-600 bg-transparent text-center w-full focus:outline-none placeholder-green-300">
+                            </div>
+                            <div class="bg-purple-100 p-6 rounded-2xl shadow-md">
+                                <p class="text-xl font-medium text-purple-800">My Favorite Animal is: 🐶</p>
+                                <input type="text" id="teacher-animal-input" placeholder="Type animal here" class="mt-2 text-3xl font-bold text-purple-600 bg-transparent text-center w-full focus:outline-none placeholder-purple-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: What About You? -->
+                <div class="slide hidden" data-slide="4">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Now, It's Your Turn!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">I want to meet you! When I call your name, please stand up and wave!</p>
+                        <img src="https://media.baamboozle.com/uploads/images/967854/0459658e-39e6-4958-b90b-e0eb35b61df5.gif" alt="Happy kids waving" class="mt-8 rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <!-- Slide 5: Our Class Rules! -->
+                <div class="slide hidden" data-slide="5">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Our Super Rules!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Let's remember our rules so we can have fun!</p>
+                        <div class="mt-8 flex flex-col md:flex-row gap-8 text-center">
+                            <div class="bg-yellow-100 p-6 rounded-2xl shadow-md flex flex-col items-center">
+                                <img src="https://teachlogic.com/wp-content/uploads/2021/05/Desk-B.png" alt="Sit nicely icon" class="h-20 w-20 rounded-full">
+                                <p class="text-2xl font-bold text-yellow-700 mt-4">Sit nicely.</p>
+                            </div>
+                            <div class="bg-green-100 p-6 rounded-2xl shadow-md flex flex-col items-center">
+                                <img src="https://clipart-library.com/2023/raised-hand-student-clipart-xl.png" alt="Raise hand icon" class="h-20 w-20 rounded-full">
+                                <p class="text-2xl font-bold text-green-700 mt-4">Raise your hand to speak.</p>
+                            </div>
+                            <div class="bg-blue-100 p-6 rounded-2xl shadow-md flex flex-col items-center">
+                                <img src="https://www.nicepng.com/png/full/118-1189448_cartoon-nurse-teacher-reading-clipart.png" alt="Listen icon" class="h-20 w-20 rounded-full">
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Listen with your ears.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Let's Begin! (The "Computer Clap") -->
+                <div class="slide hidden" data-slide="6">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Are You Ready?</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Great! To start our computer day, let's do the Computer Clap!</p>
+                        <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
+                            <p>👏 (Clap!) Has a <span class="font-bold text-pink-500">Screen!</span></p>
+                            <p>👏 (Clap!) Has a <span class="font-bold text-green-500">Mouse!</span></p>
+                            <p>👏 (Clap!) Has some <span class="font-bold text-blue-500">Keys!</span></p>
+                            <p>🙌 (Shout!) <span class="font-bold text-purple-600">Com-pu-ter! Yes!</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Our New Friend -->
+                <div class="slide hidden" data-slide="7">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Who is this?</h2>
+                        <img src="https://img.pikbest.com/png-images/20251030/retro-computer-illustration-digital-workspace-concept_11981045.jpg!w700wp" alt="Full desktop computer setup" class="mt-6 rounded-2xl shadow-lg">
+                        <p class="text-2xl text-blue-600 mt-6">Today, we're going to meet our new friend, the 'Computer'!</p>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Today's Big Mission! -->
+                <div class="slide hidden" data-slide="8">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Our Mission!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Let's learn the 4 main parts of the computer!</p>
+                        <div class="mt-8 flex gap-6">
+                            <div class="w-32 h-32 bg-gray-300 rounded-2xl flex items-center justify-center text-6xl font-bold text-white shadow-inner">?</div>
+                            <div class="w-32 h-32 bg-gray-300 rounded-2xl flex items-center justify-center text-6xl font-bold text-white shadow-inner">?</div>
+                            <div class="w-32 h-32 bg-gray-300 rounded-2xl flex items-center justify-center text-6xl font-bold text-white shadow-inner">?</div>
+                            <div class="w-32 h-32 bg-gray-300 rounded-2xl flex items-center justify-center text-6xl font-bold text-white shadow-inner">?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 9: Part 1 - The MONITOR -->
+                <div class="slide hidden flex items-center justify-center" data-slide="9">
+                    <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
+                        <img src="https://images.vexels.com/media/users/3/127665/isolated/preview/004abf8b7946c4ed5605806fa445c476-flat-desktop-monitor.png" alt="Clear picture of a monitor" class="h-64 rounded-2xl shadow-lg object-contain">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-5xl md:text-7xl font-bold text-blue-600">1. The MONITOR</h2>
+                            <p class="text-3xl md:text-4xl text-gray-700 mt-4">It's the computer's TV! We use it to <span class="font-bold text-pink-500">SEE</span>! 👀</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 10: Part 2 - The CPU -->
+                <div class="slide hidden" data-slide="10">
+                    <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
+                        <img src="https://png.pngtree.com/png-clipart/20220909/original/pngtree-central-processing-unit-cpu-vector-illustration-png-image_8518469.png" alt="Clear picture of a CPU tower" class="h-64 rounded-2xl shadow-lg">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-5xl md:text-7xl font-bold text-purple-600">2. The CPU</h2>
+                            <p class="text-3xl md:text-4xl text-gray-700 mt-4">It's the computer's <span class="font-bold text-orange-500">BRAIN</span>! It helps it <span class="font-bold text-orange-500">THINK</span>! 🧠</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 11: Part 3 - The KEYBOARD -->
+                <div class="slide hidden" data-slide="11">
+                    <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
+                        <img src="https://png.pngtree.com/png-clipart/20240617/original/pngtree-yellow-keyboard-illustration-isolated-at-transparent-background-png-image_15349809.png" alt="Clear picture of a keyboard" class="h-48 rounded-2xl shadow-lg">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-5xl md:text-7xl font-bold text-green-600">3. The KEYBOARD</h2>
+                            <p class="text-3xl md:text-4xl text-gray-700 mt-4">It has many buttons, called <span class="font-bold text-blue-500">KEYS</span>. We use it to <span class="font-bold text-blue-500">TYPE</span>! 🔡</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 12: Part 4 - The MOUSE -->
+                <div class="slide hidden" data-slide="12">
+                    <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
+                        <img src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-beautiful-computer-mouse-of-various-colors-png-image_9016745.png" alt="Clear picture of a computer mouse" class="h-56 rounded-2xl shadow-lg">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-5xl md:text-7xl font-bold text-pink-600">4. The MOUSE</h2>
+                            <p class="text-3xl md:text-4xl text-gray-700 mt-4">Squeak, squeak! It's for <span class="font-bold text-purple-600">POINTING</span> and <span class="font-bold text-purple-600">CLICKING</span>! 👆</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 13: Interactive Game: "Point to the Part!" -->
+                <div class="slide hidden" data-slide="13">
+                    <div class="h-full flex flex-col items-center justify-center">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">🎮 Let's Play! 🎮</h2>
+                        <p class="text-xl text-gray-600 mt-2">Drag the labels to the right spot!</p>
+                        
+                        <!-- Game Area -->
+                        <div class="w-full flex items-center justify-center gap-8 mt-8">
+                            
+                            <!-- Draggable Labels -->
+                            <div class="flex flex-col space-y-4">
+                                <div id="label-monitor" draggable="true" data-part="monitor" class="drag-label text-xl font-bold bg-blue-100 text-blue-700 p-4 rounded-2xl shadow-lg">🖥️ Monitor</div>
+                                <div id="label-keyboard" draggable="true" data-part="keyboard" class="drag-label text-xl font-bold bg-green-100 text-green-700 p-4 rounded-2xl shadow-lg">⌨️ Keyboard</div>
+                                <div id="label-mouse" draggable="true" data-part="mouse" class="drag-label text-xl font-bold bg-pink-100 text-pink-700 p-4 rounded-2xl shadow-lg">🖱️ Mouse</div>
+                                <div id="label-cpu" draggable="true" data-part="cpu" class="drag-label text-xl font-bold bg-purple-100 text-purple-700 p-4 rounded-2xl shadow-lg">🧠 CPU</div>
+                            </div>
+
+                            <!-- Computer Image with Drop Zones -->
+                            <div class="relative w-2/3 h-full max-h-[350px]">
+                                <!-- Placeholder image of a computer setup -->
+                                <img src="https://placehold.co/600x400/e0e7ff/374151?text=Computer+Setup" 
+                                     alt="Computer Setup" 
+                                     class="w-full h-full object-contain rounded-2xl">
+                                
+                                <!-- Drop Zones (positioned over the image) -->
+                                <!-- Note: These positions are approximate for the placeholder. -->
+                                <div id="drop-monitor" data-part="monitor" class="drop-zone absolute w-1/2 h-1/2 top-0 left-1/4"></div>
+                                <div id="drop-keyboard" data-part="keyboard" class="drop-zone absolute w-1/2 h-1/4 bottom-0 left-1/4"></div>
+                                <div id="drop-mouse" data-part="mouse" class="drop-zone absolute w-1/6 h-1/4 bottom-0 right-[15%]"></div>
+                                <div id="drop-cpu" data-part="cpu" class="drop-zone absolute w-1/6 h-1/2 top-1/4 left-0"></div>
+                            </div>
+                        </div>
+                        <button id="reset-game-btn" class="mt-8 px-6 py-2 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition">Reset Game</button>
+                    </div>
+                </div>
+
+                <!-- Slide 14: Mouse Practice: How to Hold -->
+                <div class="slide hidden" data-slide="14">
+                    <div class="h-full flex flex-col items-center justify-center">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Let's Hold the Mouse!</h2>
+                        <div class="flex items-center justify-center gap-8 mt-6">
+                            <img src="https://cdn.dribbble.com/userupload/23816989/file/original-5ec37b7bc1d310926bc4b4a3f65cf856.gif" alt="How to hold a mouse" class="w-1/2 rounded-2xl shadow-lg border-4 border-purple-300">
+                            <div class="text-left text-2xl text-gray-700 space-y-3">
+                                <p class="text-3xl font-bold text-blue-600">👆 Pointer Finger</p>
+                                <p class="pl-4">...on the Left Button</p>
+                                <p class="text-3xl font-bold text-green-600">✌️ Middle Finger</p>
+                                <p class="pl-4">...on the Right Button</p>
+                                <p class="text-3xl font-bold text-pink-600">🖐️ Your Palm</p>
+                                <p class="pl-4">...hugs the mouse!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 15: Review: We Did It! -->
+                <div class="slide hidden" data-slide="15">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">What Did We Learn?</h2>
+                        <div class="mt-6 grid grid-cols-2 gap-6">
+                            <div class="bg-blue-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">🖥️</p><p class="text-xl font-bold text-blue-700">Monitor (Screen)</p>
+                            </div>
+                            <div class="bg-purple-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">🧠</p><p class="text-xl font-bold text-purple-700">CPU (Brain)</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">⌨️</p><p class="text-xl font-bold text-green-700">Keyboard (Keys)</p>
+                            </div>
+                            <div class="bg-pink-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">🖱️</p><p class="text-xl font-bold text-pink-700">Mouse (Pointer)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 16: You're a Computer Superstar! -->
+                <div class="slide hidden" data-slide="16">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://img2.clipart-library.com/27/excellent-clipart-gif/excellent-clipart-gif-14.gif" alt="Big shiny gold star" class="h-48 animate-bounce rounded-full">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Great Job, Everyone!</h1>
+                        <p class="text-2xl md:text-3xl text-green-600 font-medium mt-6">You are all Computer Superstars!</p>
+                    </div>
+                </div>
+
+                <!-- Slide 17: See You Next Time! -->
+                <div class="slide hidden" data-slide="17">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://i.pinimg.com/originals/ea/4b/b4/ea4bb43750344cb103caab2fec31caae.gif" alt="Friendly computer character waving goodbye" class="h-48">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Goodbye!</h1>
+                        <p class="text-2xl text-blue-600 mt-4">Next week, we will learn to play a game with the mouse!</p>
+                        <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
+                            <p>One last Computer Clap!</p>
+                        </p>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- 3. FOOTER (Navigation) -->
+            <footer class="flex justify-between items-center p-4 bg-gray-100 border-t-2 border-gray-200">
+                <button id="prev-btn" class="text-lg font-bold py-2 px-6 bg-gray-300 text-gray-600 rounded-full shadow-md transition-all duration-300 hover:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed">
+                    ⬅️ Previous
+                </button>
+                
+                <div class="font-medium text-gray-700 text-lg">
+                    <span id="current-slide-counter">1</span> / <span id="total-slides-counter">17</span>
+                </div>
+                
+                <button id="next-btn" class="text-lg font-bold py-2 px-6 bg-blue-600 text-white rounded-full shadow-md transition-all duration-300 hover:bg-blue-700 disabled:opacity-50">
+                    Next ➡️
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Success Message (Popup) - Initially hidden -->
+    <div id="success-message" class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-2xl shadow-xl z-50">
+        <p id="success-text" class="text-3xl font-bold text-green-600"></p>    </div>
+
+    <!-- JAVASCRIPT for slide functionality -->
+    <script>
+        // --- Variable Initialization ---
+        let currentSlide = 1;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // Navigation Buttons
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        
+        // Counter Text
+        const currentSlideCounter = document.getElementById('current-slide-counter');
+        const totalSlidesCounter = document.getElementById('total-slides-counter');
+        
+        // Success Message Popup
+        const successMessage = document.getElementById('success-message');
+        const successText = document.getElementById('success-text');
+
+        // --- [NEW] Game Variables ---
+        const draggableLabels = document.querySelectorAll('.drag-label');
+        const dropZones = document.querySelectorAll('.drop-zone');
+        const resetGameBtn = document.getElementById('reset-game-btn');
+        let correctDrops = 0;
+
+        // --- [NEW] Teacher Info Variables ---
+        const teacherNameInput = document.getElementById('teacher-name-input');
+        const teacherFoodInput = document.getElementById('teacher-food-input');
+        const teacherAnimalInput = document.getElementById('teacher-animal-input');
+
+
+        // --- Functions ---
+
+        /**
+         * Main function to display a slide by its number.
+         * @param {number} slideNumber - The number of the slide to display (starts from 1).
+         */
+        function showSlide(slideNumber) {
+            // 1. Update the current slide number
+            currentSlide = slideNumber;
+
+            // 2. Hide all slides, then show the active one
+            slides.forEach((slide, index) => {
+                const slideDataNum = parseInt(slide.getAttribute('data-slide'));
+                if (slideDataNum === slideNumber) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.add('hidden');
+                    slide.classList.remove('active');
+                }
+            });
+
+            // 3. Update the counter text
+            currentSlideCounter.textContent = currentSlide;
+            totalSlidesCounter.textContent = totalSlides;
+
+            // 4. Set button status (disable on first/last slide)
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+        }
+
+        /**
+         * Move to the next slide.
+         */
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        /**
+         * Move to the previous slide.
+         */
+        function previousSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        /**
+         * Displays the success message popup with a random message.
+         */
+        function showSuccessMessage(message) {
+            const messages = [
+                "🎉 Awesome! 🎉",
+                "👏 So smart! 👏",
+                "⭐ You are amazing! ⭐",
+                "🌟 Great job! 🌟",
+                "🎊 Cool! 🎊"
+            ];
+            
+            // Pick a random message or use the one provided
+            const randomMessage = message || messages[Math.floor(Math.random() * messages.length)];
+            successText.textContent = randomMessage;
+            
+            // Show the popup
+            successMessage.classList.remove('hidden');
+            successMessage.classList.add('success-popup');
+
+            // Hide the popup after 1.5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+                successMessage.classList.remove('success-popup');
+            }, 1500);
+        }
+
+        // --- [NEW] Teacher Info Logic ---
+
+        /**
+         * Loads teacher info from localStorage and populates the input fields.
+         */
+        function loadTeacherInfo() {
+            teacherNameInput.value = localStorage.getItem('teacherName') || '';
+            teacherFoodInput.value = localStorage.getItem('teacherFood') || '';
+            teacherAnimalInput.value = localStorage.getItem('teacherAnimal') || '';
+        }
+
+        /**
+         * Saves a piece of teacher info to localStorage.
+         * @param {string} key - The key to save (e.g., 'teacherName').
+         * @param {string} value - The value to save.
+         */
+        function saveTeacherInfo(key, value) {
+            localStorage.setItem(key, value);
+        }
+
+
+
+        // --- [NEW] Drag and Drop Game Logic ---
+
+        // Add event listeners to draggable labels
+        draggableLabels.forEach(label => {
+            label.addEventListener('dragstart', (e) => {
+                if (label.classList.contains('dropped')) {
+                    e.preventDefault(); // Don't drag if already dropped
+                    return;
+                }
+                e.dataTransfer.setData('text/plain', label.id);
+                setTimeout(() => {
+                    label.classList.add('hidden'); // Hide original while dragging
+                }, 0);
+            });
+
+            label.addEventListener('dragend', () => {
+                label.classList.remove('hidden'); // Show it again if drop failed
+            });
+        });
+
+        // Add event listeners to drop zones
+        dropZones.forEach(zone => {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault(); // Allow dropping
+                zone.classList.add('drag-over');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('drag-over');
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                
+                const labelId = e.dataTransfer.getData('text/plain');
+                const droppedLabel = document.getElementById(labelId);
+
+                // Check if the part matches
+                if (droppedLabel && droppedLabel.dataset.part === zone.dataset.part) {
+                    // Correct Drop!
+                    zone.innerHTML = ''; // Clear any previous label
+                    zone.appendChild(droppedLabel); // Move the label into the zone
+                    droppedLabel.classList.add('dropped'); // Mark as dropped
+                    droppedLabel.classList.remove('hidden');
+                    droppedLabel.setAttribute('draggable', 'false'); // Disable dragging
+                    
+                    correctDrops++;
+                    checkGameWin();
+                }
+            });
+        });
+
+        /**
+         * Checks if all items have been dropped correctly.
+         */
+        function checkGameWin() {
+            if (correctDrops >= draggableLabels.length) {
+                showSuccessMessage("🎉 Wow! All correct! 🎉");
+            }
+        }
+
+        /**
+         * Resets the drag and drop game.
+         */
+        function resetGame() {
+            correctDrops = 0;
+            const labelContainer = document.querySelector('.flex.flex-col.space-y-4');
+            
+            // Clear drop zones and move labels back
+            dropZones.forEach(zone => {
+                zone.innerHTML = ''; // Clear zone
+            });
+
+            draggableLabels.forEach(label => {
+                label.classList.remove('dropped', 'hidden');
+                label.setAttribute('draggable', 'true');
+                labelContainer.appendChild(label); // Move label back to start
+            });
+        }
+        // --- [NEW] Drag and Drop Game Logic ---
+
+        // Add event listeners to draggable labels
+        draggableLabels.forEach(label => {
+            label.addEventListener('dragstart', (e) => {
+                if (label.classList.contains('dropped')) {
+                    e.preventDefault(); // Don't drag if already dropped
+                    return;
+                }
+                e.dataTransfer.setData('text/plain', label.id);
+                setTimeout(() => {
+                    label.classList.add('hidden'); // Hide original while dragging
+                }, 0);
+            });
+
+            label.addEventListener('dragend', () => {
+                label.classList.remove('hidden'); // Show it again if drop failed
+            });
+        });
+
+        // Add event listeners to drop zones
+        dropZones.forEach(zone => {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault(); // Allow dropping
+                zone.classList.add('drag-over');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('drag-over');
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                
+                const labelId = e.dataTransfer.getData('text/plain');
+                const droppedLabel = document.getElementById(labelId);
+
+                // Check if the part matches
+                if (droppedLabel && droppedLabel.dataset.part === zone.dataset.part) {
+                    // Correct Drop!
+                    zone.innerHTML = ''; // Clear any previous label
+                    zone.appendChild(droppedLabel); // Move the label into the zone
+                    droppedLabel.classList.add('dropped'); // Mark as dropped
+                    droppedLabel.classList.remove('hidden');
+                    droppedLabel.setAttribute('draggable', 'false'); // Disable dragging
+                    
+                    correctDrops++;
+                    checkGameWin();
+                }
+            });
+        });
+
+        /**
+         * Checks if all items have been dropped correctly.
+         */
+        function checkGameWin() {
+            if (correctDrops >= draggableLabels.length) {
+                showSuccessMessage("🎉 Wow! All correct! 🎉");
+            }
+        }
+
+        /**
+         * Resets the drag and drop game.
+         */
+        function resetGame() {
+            correctDrops = 0;
+            const labelContainer = document.querySelector('.flex.flex-col.space-y-4');
+            
+            // Clear drop zones and move labels back
+            dropZones.forEach(zone => {
+                zone.innerHTML = ''; // Clear zone
+            });
+
+            draggableLabels.forEach(label => {
+                label.classList.remove('dropped', 'hidden');
+                label.setAttribute('draggable', 'true');
+                labelContainer.appendChild(label); // Move label back to start
+            });
+        }
+
+        // --- Event Listeners (Connecting functions to buttons) ---
+
+        // 1. Navigation Buttons
+        prevBtn.addEventListener('click', previousSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // 2. [NEW] Reset Game Button
+        resetGameBtn.addEventListener('click', resetGame);
+
+        // 3. [NEW] Teacher Info Inputs
+        teacherNameInput.addEventListener('input', () => saveTeacherInfo('teacherName', teacherNameInput.value));
+        teacherFoodInput.addEventListener('input', () => saveTeacherInfo('teacherFood', teacherFoodInput.value));
+        teacherAnimalInput.addEventListener('input', () => saveTeacherInfo('teacherAnimal', teacherAnimalInput.value));
+
+        // 2. [NEW] Reset Game Button
+        resetGameBtn.addEventListener('click', resetGame);
+
+        // 3. Keyboard Navigation (Left/Right Arrows)
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // --- Initial Setup ---
+        // Show the first slide when the page loads
+        showSlide(1);
+        loadTeacherInfo(); // [NEW] Load any saved teacher info
+
+    </script>
+</body>
+</html>
