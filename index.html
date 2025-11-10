@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindergarten Presentation - Computer Parts</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Load a fun and rounded Google Font (Fredoka) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
@@ -110,7 +108,6 @@
 </head>
 <body class="min-h-screen w-full flex items-center justify-center p-4">
 
-    <!-- [NEW] Background Logos -->
     <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/c7c209c3-9a79-4d54-a917-87db5d073e70.png" 
          alt="Ruang Guru Coding Logo" 
          class="bg-logo h-12 top-5 left-5">
@@ -119,12 +116,10 @@
          alt="Kidea Kids Logo" 
          class="bg-logo h-12 top-5 right-5">
 
-    <!-- Main wrapper/box for the presentation -->
     <div class="w-full bg-white rounded-3xl shadow-2xl overflow-hidden relative z-20 h-[70vh] aspect-video">
         
         <div class="h-full flex flex-col">
             
-            <!-- 1. HEADER (Title, Dropdown, and Logos) -->
             <header class="relative flex justify-between items-center p-5 bg-gray-50 border-b-2 border-gray-100">
                 <h1 class="text-xl md:text-2xl font-bold text-blue-600">
                     Getting to Know Computer Parts 🖥️
@@ -132,18 +127,16 @@
                 <div class="flex items-center space-x-2">
                     <label for="meeting-select" class="text-sm font-medium text-gray-700">Meeting:</label>
                     <select id="meeting-select" class="rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm font-medium">
-                        <option value="1">Meeting 1 - Computer Parts</option>
-                        <option value="2" disabled>Meeting 2 (Soon)</option>
+                        <option value="1">1 - Computer Parts</option>
+                        <option value="2">2 - Mouse Game</option>
                         <option value="3" disabled>Meeting 3 (Soon)</option>
                     </select>
                 </div>
             </header>
 
-            <!-- 2. SLIDE AREA (Main Content) -->
             <main id="slide-container" class="flex-1 relative overflow-y-auto p-8 md:p-12">
                 
-                <!-- Slide 1: Title Slide -->
-                <div class="slide" data-slide="1">
+                <div class="slide" data-meeting="1" data-slide="1">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <img src="https://clipart-library.com/2023/children-computer-clipart-xl.png" alt="Friendly computer character waving" class="h-48 animate-bounce">
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Let's Meet the Computer!</h1>
@@ -151,8 +144,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 2: Welcome Song! -->
-                <div class="slide hidden" data-slide="2">
+                <div class="slide hidden" data-meeting="1" data-slide="2">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Welcome, Super Coders!</h2>
                         <p class="text-2xl text-blue-600 mt-4">Let's sing our welcome song!</p>
@@ -165,8 +157,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Meet Your Teacher! -->
-                <div class="slide hidden" data-slide="3">
+                <div class="slide hidden" data-meeting="1" data-slide="3">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Let's Meet Your Teacher! 👋</h2>
                         <p class="text-2xl text-blue-600 mt-4">Hello! It's so nice to meet you!</p>
@@ -187,8 +178,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: What About You? -->
-                <div class="slide hidden" data-slide="4">
+                <div class="slide hidden" data-meeting="1" data-slide="4">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Now, It's Your Turn!</h2>
                         <p class="text-2xl text-blue-600 mt-4">I want to meet you! When I call your name, please stand up and wave!</p>
@@ -196,8 +186,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 5: Our Class Rules! -->
-                <div class="slide hidden" data-slide="5">
+                <div class="slide hidden" data-meeting="1" data-slide="5">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Our Super Rules!</h2>
                         <p class="text-2xl text-blue-600 mt-4">Let's remember our rules so we can have fun!</p>
@@ -218,8 +207,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 6: Let's Begin! (The "Computer Clap") -->
-                <div class="slide hidden" data-slide="6">
+                <div class="slide hidden" data-meeting="1" data-slide="6">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Are You Ready?</h2>
                         <p class="text-2xl text-blue-600 mt-4">Great! To start our computer day, let's do the Computer Clap!</p>
@@ -232,8 +220,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 7: Our New Friend -->
-                <div class="slide hidden" data-slide="7">
+                <div class="slide hidden" data-meeting="1" data-slide="7">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Who is this?</h2>
                         <img src="https://img.pikbest.com/png-images/20251030/retro-computer-illustration-digital-workspace-concept_11981045.jpg!w700wp" alt="Full desktop computer setup" class="mt-6 rounded-2xl shadow-lg">
@@ -241,8 +228,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 8: Today's Big Mission! -->
-                <div class="slide hidden" data-slide="8">
+                <div class="slide hidden" data-meeting="1" data-slide="8">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Our Mission!</h2>
                         <p class="text-2xl text-blue-600 mt-4">Let's learn the 4 main parts of the computer!</p>
@@ -255,8 +241,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 9: Part 1 - The MONITOR -->
-                <div class="slide hidden flex items-center justify-center" data-slide="9">
+                <div class="slide hidden flex items-center justify-center" data-meeting="1" data-slide="9">
                     <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
                         <img src="https://images.vexels.com/media/users/3/127665/isolated/preview/004abf8b7946c4ed5605806fa445c476-flat-desktop-monitor.png" alt="Clear picture of a monitor" class="h-64 rounded-2xl shadow-lg object-contain">
                         <div class="text-center md:text-left">
@@ -266,8 +251,7 @@
                     </div>
                 </div>
                 
-                <!-- Slide 10: Part 2 - The CPU -->
-                <div class="slide hidden" data-slide="10">
+                <div class="slide hidden" data-meeting="1" data-slide="10">
                     <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
                         <img src="https://png.pngtree.com/png-clipart/20220909/original/pngtree-central-processing-unit-cpu-vector-illustration-png-image_8518469.png" alt="Clear picture of a CPU tower" class="h-64 rounded-2xl shadow-lg">
                         <div class="text-center md:text-left">
@@ -277,8 +261,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 11: Part 3 - The KEYBOARD -->
-                <div class="slide hidden" data-slide="11">
+                <div class="slide hidden" data-meeting="1" data-slide="11">
                     <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
                         <img src="https://png.pngtree.com/png-clipart/20240617/original/pngtree-yellow-keyboard-illustration-isolated-at-transparent-background-png-image_15349809.png" alt="Clear picture of a keyboard" class="h-48 rounded-2xl shadow-lg">
                         <div class="text-center md:text-left">
@@ -288,8 +271,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 12: Part 4 - The MOUSE -->
-                <div class="slide hidden" data-slide="12">
+                <div class="slide hidden" data-meeting="1" data-slide="12">
                     <div class="h-full flex flex-col md:flex-row items-center justify-center gap-8">
                         <img src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-beautiful-computer-mouse-of-various-colors-png-image_9016745.png" alt="Clear picture of a computer mouse" class="h-56 rounded-2xl shadow-lg">
                         <div class="text-center md:text-left">
@@ -299,44 +281,38 @@
                     </div>
                 </div>
 
-                <!-- Slide 13: Interactive Game: "Point to the Part!" -->
-                <div class="slide hidden" data-slide="13">
+                <div class="slide hidden" data-meeting="1" data-slide="13">
                     <div class="h-full flex flex-col items-center justify-center">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">🎮 Let's Play! 🎮</h2>
                         <p class="text-xl text-gray-600 mt-2">Drag the labels to the right spot!</p>
                         
-                        <!-- Game Area -->
-                        <div class="w-full flex items-center justify-center gap-8 mt-8">
+                        <div class="flex-grow w-full flex items-center justify-center gap-8 mt-4">
                             
-                            <!-- Draggable Labels -->
                             <div class="flex flex-col space-y-4">
-                                <div id="label-monitor" draggable="true" data-part="monitor" class="drag-label text-xl font-bold bg-blue-100 text-blue-700 p-4 rounded-2xl shadow-lg">🖥️ Monitor</div>
-                                <div id="label-keyboard" draggable="true" data-part="keyboard" class="drag-label text-xl font-bold bg-green-100 text-green-700 p-4 rounded-2xl shadow-lg">⌨️ Keyboard</div>
-                                <div id="label-mouse" draggable="true" data-part="mouse" class="drag-label text-xl font-bold bg-pink-100 text-pink-700 p-4 rounded-2xl shadow-lg">🖱️ Mouse</div>
-                                <div id="label-cpu" draggable="true" data-part="cpu" class="drag-label text-xl font-bold bg-purple-100 text-purple-700 p-4 rounded-2xl shadow-lg">🧠 CPU</div>
+                                <div class="flex flex-col space-y-4 items-center">
+                                    <div id="label-monitor" draggable="true" data-part="monitor" class="drag-label text-xl font-bold bg-blue-100 text-blue-700 p-4 rounded-2xl shadow-lg">🖥️ Monitor</div>
+                                    <div id="label-keyboard" draggable="true" data-part="keyboard" class="drag-label text-xl font-bold bg-green-100 text-green-700 p-4 rounded-2xl shadow-lg">⌨️ Keyboard</div>
+                                    <div id="label-mouse" draggable="true" data-part="mouse" class="drag-label text-xl font-bold bg-pink-100 text-pink-700 p-4 rounded-2xl shadow-lg">🖱️ Mouse</div>
+                                    <div id="label-cpu" draggable="true" data-part="cpu" class="drag-label text-xl font-bold bg-purple-100 text-purple-700 p-4 rounded-2xl shadow-lg">🧠 CPU</div>
+                                    <button id="reset-game-btn" class="mt-4 flex-shrink-0 px-6 py-2 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition">Reset Game</button>
+                                </div>
                             </div>
 
-                            <!-- Computer Image with Drop Zones -->
                             <div class="relative w-2/3 h-full max-h-[350px]">
-                                <!-- Placeholder image of a computer setup -->
                                 <img src="https://placehold.co/600x400/e0e7ff/374151?text=Computer+Setup" 
                                      alt="Computer Setup" 
                                      class="w-full h-full object-contain rounded-2xl">
                                 
-                                <!-- Drop Zones (positioned over the image) -->
-                                <!-- Note: These positions are approximate for the placeholder. -->
                                 <div id="drop-monitor" data-part="monitor" class="drop-zone absolute w-1/2 h-1/2 top-0 left-1/4"></div>
                                 <div id="drop-keyboard" data-part="keyboard" class="drop-zone absolute w-1/2 h-1/4 bottom-0 left-1/4"></div>
                                 <div id="drop-mouse" data-part="mouse" class="drop-zone absolute w-1/6 h-1/4 bottom-0 right-[15%]"></div>
                                 <div id="drop-cpu" data-part="cpu" class="drop-zone absolute w-1/6 h-1/2 top-1/4 left-0"></div>
                             </div>
                         </div>
-                        <button id="reset-game-btn" class="mt-8 px-6 py-2 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition">Reset Game</button>
-                    </div>
+                        </div>
                 </div>
 
-                <!-- Slide 14: Mouse Practice: How to Hold -->
-                <div class="slide hidden" data-slide="14">
+                <div class="slide hidden" data-meeting="1" data-slide="14">
                     <div class="h-full flex flex-col items-center justify-center">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Let's Hold the Mouse!</h2>
                         <div class="flex items-center justify-center gap-8 mt-6">
@@ -353,8 +329,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 15: Review: We Did It! -->
-                <div class="slide hidden" data-slide="15">
+                <div class="slide hidden" data-meeting="1" data-slide="15">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800">What Did We Learn?</h2>
                         <div class="mt-6 grid grid-cols-2 gap-6">
@@ -374,8 +349,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 16: You're a Computer Superstar! -->
-                <div class="slide hidden" data-slide="16">
+                <div class="slide hidden" data-meeting="1" data-slide="16">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <img src="https://img2.clipart-library.com/27/excellent-clipart-gif/excellent-clipart-gif-14.gif" alt="Big shiny gold star" class="h-48 animate-bounce rounded-full">
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Great Job, Everyone!</h1>
@@ -383,28 +357,135 @@
                     </div>
                 </div>
 
-                <!-- Slide 17: See You Next Time! -->
-                <div class="slide hidden" data-slide="17">
+                <div class="slide hidden" data-meeting="1" data-slide="17">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <img src="https://i.pinimg.com/originals/ea/4b/b4/ea4bb43750344cb103caab2fec31caae.gif" alt="Friendly computer character waving goodbye" class="h-48">
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Goodbye!</h1>
                         <p class="text-2xl text-blue-600 mt-4">Next week, we will learn to play a game with the mouse!</p>
                         <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
                             <p>One last Computer Clap!</p>
-                        </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="1">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Mighty_Mouse.png" alt="Cute mouse with a superhero cape" class="h-48 animate-bounce">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">The Adventures of MIGHTY MOUSE!</h1>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="2">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Hello, MOUSE!</h2>
+                        <div class="relative mt-6">
+                            <img src="https://hp.widen.net/content/u4r6chjesm/webp/u4r6chjesm.png?w=573&h=430&dpi=72&color=ffffff00" alt="Clear picture of a computer mouse" class="h-64 rounded-2xl">
+                            <p class="absolute top-1/2 -left-20 text-2xl font-bold text-blue-600 animate-pulse">Body</p>
+                            <p class="absolute bottom-0 -right-16 text-2xl font-bold text-green-600 animate-pulse">Tail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="3">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">The Magic Arrow!</h2>
+                        <img src="https://images2.imgbox.com/f7/bc/9XKZeQCk_o.gif" alt="Large cursor arrow" class="h-48 mt-8 animate-pulse">
+                        <p class="text-2xl text-blue-600 mt-8">When the mouse moves, the arrow moves too!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="4">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">MOVE #1: POKE!</h2>
+                        <img src="https://i.pinimg.com/originals/b9/0f/a1/b90fa1bf4ef129db031ea5cba0d49b2a.gif" alt="Finger pressing a button" class="h-64 mt-8 rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="5">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <div class="relative">
+                            <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyZGMwbGJ2MWo1b3VlcXEzbXNiMjllcHAybWlvdGQ5OGFtZG5ubTdiYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0HlL2I8DbNa6JCJa/giphy.gif" alt="Comic speech bubble" class="h-80">
+                            <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl font-black text-blue-600">CLICK!</p>
+                        </div>
+                        <p class="text-2xl text-gray-700 mt-4">Let's press the button and hear the magic sound!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="6">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">MOVE #2: LIFT & MOVE!</h2>
+                        <img src="https://www.rapoo-eu.com/wp-content/uploads/2024/04/V20PRO-GIF-Animation-design-v2-1.gif" alt="Animation of dragging a box" class="h-64 mt-8 rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="7">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Hand Practice! (Part 1)</h2>
+                        <div class="mt-8 flex gap-12">
+                            <div class="text-center"><img src="https://www.goldtouch.com/wp-content/uploads/2021/02/hand-placement.gif" class="h-48"><p class="text-3xl font-bold mt-4">1. POINT!</p></div>
+                            <div class="text-center"><img src="https://cdn-blog.adafruit.com/uploads/2023/03/circuitpython_ezgif.com-optimize.gif" class="h-48"><p class="text-3xl font-bold mt-4">2. PRESS & HOLD!</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="8">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Hand Practice! (Part 2)</h2>
+                        <div class="mt-8 flex gap-12">
+                            <div class="text-center"><img src="https://miro.medium.com/v2/resize:fit:1360/0*NOUt36sgKfXwTtJg" class="h-48"><p class="text-3xl font-bold mt-4">3. SLIDE!</p></div>
+                            <div class="text-center"><img src="https://c8.alamy.com/comp/BKWP4C/hand-holding-computer-mouse-clicking-BKWP4C.jpg" class="h-48"><p class="text-3xl font-bold mt-4">4. LET GO!</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="9">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-red-600">SECRET MISSION!</h2>
+                        <img src="https://images2.imgbox.com/59/a2/kTuss46K_o.gif" alt="Cute hungry dragon" class="h-64 mt-6 animate-bounce">
+                        <p class="text-3xl text-gray-700 mt-4">This dragon is VERY hungry! Let's feed him!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="10">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">How to Play: Dragon's Feast!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Use your "LIFT & MOVE" power!</p>
+                        <img src="https://images2.imgbox.com/84/db/XFi3La8F_o.gif" alt="3 steps: point to sheep, drag sheep, sheep in dragon's mouth" class="h-64 mt-6 rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="11">
+                    <div class="text-center flex flex-col h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-green-600">It's Game Time!</h2>
+                        <p class="text-xl text-gray-700 mb-4">Teacher will now open the <span class="font-bold text-purple-600">"Dragon Drop"</span> game!</p>
+                        <iframe src="https://www.roomrecess.com/games/DragonDrop/play.html" class="w-full h-[80%] mt-2 rounded-2xl shadow-lg border-4 border-purple-300" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="12">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://clipart-library.com/new_gallery/33-332341_transparent-background-superhero-clipart.png" alt="Mighty Mouse giving a thumbs up" class="h-48 animate-bounce">
+                        <h1 class="text-4xl md:text-6xl font-bold text-green-600 mt-4">YOU ARE A MIGHTY MOUSE!</h1>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="2" data-slide="13">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://i.pinimg.com/originals/ea/4b/b4/ea4bb43750344cb103caab2fec31caae.gif" alt="Friendly computer character waving goodbye" class="h-48">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Goodbye, Mighty Mouse!</h1>
+                        <p class="text-2xl text-blue-600 mt-4">See you next time!</p>
                     </div>
                 </div>
 
             </main>
 
-            <!-- 3. FOOTER (Navigation) -->
             <footer class="flex justify-between items-center p-4 bg-gray-100 border-t-2 border-gray-200">
                 <button id="prev-btn" class="text-lg font-bold py-2 px-6 bg-gray-300 text-gray-600 rounded-full shadow-md transition-all duration-300 hover:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed">
                     ⬅️ Previous
                 </button>
                 
                 <div class="font-medium text-gray-700 text-lg">
-                    <span id="current-slide-counter">1</span> / <span id="total-slides-counter">17</span>
+                    <span id="current-slide-counter">1</span> / <span id="total-slides-counter"></span>
                 </div>
                 
                 <button id="next-btn" class="text-lg font-bold py-2 px-6 bg-blue-600 text-white rounded-full shadow-md transition-all duration-300 hover:bg-blue-700 disabled:opacity-50">
@@ -414,16 +495,16 @@
         </div>
     </div>
 
-    <!-- Success Message (Popup) - Initially hidden -->
     <div id="success-message" class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-2xl shadow-xl z-50">
-        <p id="success-text" class="text-3xl font-bold text-green-600"></p>    </div>
+        <p id="success-text" class="text-3xl font-bold text-green-600"></p>
+    </div>
 
-    <!-- JAVASCRIPT for slide functionality -->
     <script>
         // --- Variable Initialization ---
-        let currentSlide = 1;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
+        let currentMeeting = 1;
+        let currentSlideNum = 1;
+        const meetingSelect = document.getElementById('meeting-select');
+        const allSlides = document.querySelectorAll('.slide');
 
         // Navigation Buttons
         const prevBtn = document.getElementById('prev-btn');
@@ -453,16 +534,21 @@
 
         /**
          * Main function to display a slide by its number.
-         * @param {number} slideNumber - The number of the slide to display (starts from 1).
+         * @param {number} slideNum - The number of the slide to display within the current meeting (starts from 1).
          */
-        function showSlide(slideNumber) {
+        function showSlide(slideNum) {
+            const slidesInCurrentMeeting = document.querySelectorAll(`.slide[data-meeting="${currentMeeting}"]`);
+            const totalSlidesInMeeting = slidesInCurrentMeeting.length;
+
             // 1. Update the current slide number
-            currentSlide = slideNumber;
+            currentSlideNum = slideNum;
 
             // 2. Hide all slides, then show the active one
-            slides.forEach((slide, index) => {
-                const slideDataNum = parseInt(slide.getAttribute('data-slide'));
-                if (slideDataNum === slideNumber) {
+            allSlides.forEach(slide => {
+                const slideMeeting = parseInt(slide.dataset.meeting);
+                const slideDataNum = parseInt(slide.dataset.slide);
+
+                if (slideMeeting === currentMeeting && slideDataNum === slideNum) {
                     slide.classList.remove('hidden');
                     slide.classList.add('active');
                 } else {
@@ -470,22 +556,24 @@
                     slide.classList.remove('active');
                 }
             });
-
+            
             // 3. Update the counter text
-            currentSlideCounter.textContent = currentSlide;
-            totalSlidesCounter.textContent = totalSlides;
+            currentSlideCounter.textContent = currentSlideNum;
+            totalSlidesCounter.textContent = totalSlidesInMeeting;
 
             // 4. Set button status (disable on first/last slide)
-            prevBtn.disabled = currentSlide === 1;
-            nextBtn.disabled = currentSlide === totalSlides;
+            prevBtn.disabled = currentSlideNum === 1;
+            nextBtn.disabled = currentSlideNum === totalSlidesInMeeting;
         }
 
         /**
          * Move to the next slide.
          */
         function nextSlide() {
-            if (currentSlide < totalSlides) {
-                showSlide(currentSlide + 1);
+            const slidesInCurrentMeeting = document.querySelectorAll(`.slide[data-meeting="${currentMeeting}"]`);
+            const totalSlidesInMeeting = slidesInCurrentMeeting.length;
+            if (currentSlideNum < totalSlidesInMeeting) {
+                showSlide(currentSlideNum + 1);
             }
         }
 
@@ -493,8 +581,8 @@
          * Move to the previous slide.
          */
         function previousSlide() {
-            if (currentSlide > 1) {
-                showSlide(currentSlide - 1);
+            if (currentSlideNum > 1) {
+                showSlide(currentSlideNum - 1);
             }
         }
 
@@ -614,7 +702,8 @@
          */
         function resetGame() {
             correctDrops = 0;
-            const labelContainer = document.querySelector('.flex.flex-col.space-y-4');
+            // FIX: Get the parent element of the first label, which is the correct container
+            const labelContainer = document.getElementById('label-monitor').parentElement;
             
             // Clear drop zones and move labels back
             dropZones.forEach(zone => {
@@ -627,92 +716,21 @@
                 labelContainer.appendChild(label); // Move label back to start
             });
         }
-        // --- [NEW] Drag and Drop Game Logic ---
-
-        // Add event listeners to draggable labels
-        draggableLabels.forEach(label => {
-            label.addEventListener('dragstart', (e) => {
-                if (label.classList.contains('dropped')) {
-                    e.preventDefault(); // Don't drag if already dropped
-                    return;
-                }
-                e.dataTransfer.setData('text/plain', label.id);
-                setTimeout(() => {
-                    label.classList.add('hidden'); // Hide original while dragging
-                }, 0);
-            });
-
-            label.addEventListener('dragend', () => {
-                label.classList.remove('hidden'); // Show it again if drop failed
-            });
-        });
-
-        // Add event listeners to drop zones
-        dropZones.forEach(zone => {
-            zone.addEventListener('dragover', (e) => {
-                e.preventDefault(); // Allow dropping
-                zone.classList.add('drag-over');
-            });
-
-            zone.addEventListener('dragleave', () => {
-                zone.classList.remove('drag-over');
-            });
-
-            zone.addEventListener('drop', (e) => {
-                e.preventDefault();
-                zone.classList.remove('drag-over');
-                
-                const labelId = e.dataTransfer.getData('text/plain');
-                const droppedLabel = document.getElementById(labelId);
-
-                // Check if the part matches
-                if (droppedLabel && droppedLabel.dataset.part === zone.dataset.part) {
-                    // Correct Drop!
-                    zone.innerHTML = ''; // Clear any previous label
-                    zone.appendChild(droppedLabel); // Move the label into the zone
-                    droppedLabel.classList.add('dropped'); // Mark as dropped
-                    droppedLabel.classList.remove('hidden');
-                    droppedLabel.setAttribute('draggable', 'false'); // Disable dragging
-                    
-                    correctDrops++;
-                    checkGameWin();
-                }
-            });
-        });
-
-        /**
-         * Checks if all items have been dropped correctly.
-         */
-        function checkGameWin() {
-            if (correctDrops >= draggableLabels.length) {
-                showSuccessMessage("🎉 Wow! All correct! 🎉");
-            }
-        }
-
-        /**
-         * Resets the drag and drop game.
-         */
-        function resetGame() {
-            correctDrops = 0;
-            const labelContainer = document.querySelector('.flex.flex-col.space-y-4');
-            
-            // Clear drop zones and move labels back
-            dropZones.forEach(zone => {
-                zone.innerHTML = ''; // Clear zone
-            });
-
-            draggableLabels.forEach(label => {
-                label.classList.remove('dropped', 'hidden');
-                label.setAttribute('draggable', 'true');
-                labelContainer.appendChild(label); // Move label back to start
-            });
-        }
+        
+        // --- DELETED DUPLICATE GAME LOGIC BLOCK ---
 
         // --- Event Listeners (Connecting functions to buttons) ---
 
         // 1. Navigation Buttons
         prevBtn.addEventListener('click', previousSlide);
         nextBtn.addEventListener('click', nextSlide);
+
+        // Listen for changes on the meeting dropdown
+        meetingSelect.addEventListener('change', (e) => {
+            currentMeeting = parseInt(e.target.value);
+            currentSlideNum = 1; // Reset to the first slide of the new meeting
+            showSlide(currentSlideNum);
+        });
 
         // 2. [NEW] Reset Game Button
         resetGameBtn.addEventListener('click', resetGame);
@@ -722,8 +740,7 @@
         teacherFoodInput.addEventListener('input', () => saveTeacherInfo('teacherFood', teacherFoodInput.value));
         teacherAnimalInput.addEventListener('input', () => saveTeacherInfo('teacherAnimal', teacherAnimalInput.value));
 
-        // 2. [NEW] Reset Game Button
-        resetGameBtn.addEventListener('click', resetGame);
+        // --- DELETED DUPLICATE RESET BUTTON LISTENER ---
 
         // 3. Keyboard Navigation (Left/Right Arrows)
         document.addEventListener('keydown', function(event) {
@@ -736,7 +753,7 @@
 
         // --- Initial Setup ---
         // Show the first slide when the page loads
-        showSlide(1);
+        showSlide(currentSlideNum);
         loadTeacherInfo(); // [NEW] Load any saved teacher info
 
     </script>
