@@ -74,6 +74,7 @@
         .slide.active {
             display: block;
             animation: fadeIn 0.5s ease-in-out;
+            height: 100%; /* <-- [FIX 1] This ensures the slide fills the main container */
         }
 
         /* Fade-in animation */
@@ -129,13 +130,14 @@
                     <select id="meeting-select" class="rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm font-medium">
                         <option value="1">1 - Computer Parts</option>
                         <option value="2">2 - Mouse Game</option>
-                        <option value="3" disabled>Meeting 3 (Soon)</option>
+                        <option value="3">3 - Keyboard Fun</option>
                     </select>
                 </div>
             </header>
 
             <main id="slide-container" class="flex-1 relative overflow-y-auto p-8 md:p-12">
                 
+                <!-- Meeting 1 Slides -->
                 <div class="slide" data-meeting="1" data-slide="1">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <img src="https://clipart-library.com/2023/children-computer-clipart-xl.png" alt="Friendly computer character waving" class="h-48 animate-bounce">
@@ -368,6 +370,7 @@
                     </div>
                 </div>
 
+                <!-- Meeting 2 Slides -->
                 <div class="slide hidden" data-meeting="2" data-slide="1">
                     <div class="text-center flex flex-col items-center justify-center h-full">
                         <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Mighty_Mouse.png" alt="Cute mouse with a superhero cape" class="h-48 animate-bounce">
@@ -455,10 +458,12 @@
                 </div>
 
                 <div class="slide hidden" data-meeting="2" data-slide="11">
+                    <!-- The parent div now has h-full, which works because .slide.active has h-full -->
                     <div class="text-center flex flex-col h-full">
                         <h2 class="text-4xl md:text-5xl font-bold text-green-600">It's Game Time!</h2>
                         <p class="text-xl text-gray-700 mb-4">Teacher will now open the <span class="font-bold text-purple-600">"Dragon Drop"</span> game!</p>
-                        <iframe src="https://www.roomrecess.com/games/DragonDrop/play.html" class="w-full h-[80%] mt-2 rounded-2xl shadow-lg border-4 border-purple-300" allowfullscreen></iframe>
+                        <!-- [FIX 2] Changed h-[80%] to flex-1 to fill remaining space -->
+                        <iframe src="https://www.roomrecess.com/games/DragonDrop/play.html" class="w-full flex-1 mt-2 rounded-2xl shadow-lg border-4 border-purple-300" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -474,6 +479,140 @@
                         <img src="https://i.pinimg.com/originals/ea/4b/b4/ea4bb43750344cb103caab2fec31caae.gif" alt="Friendly computer character waving goodbye" class="h-48">
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Goodbye, Mighty Mouse!</h1>
                         <p class="text-2xl text-blue-600 mt-4">See you next time!</p>
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+                <!-- == SLIDES FOR MEETING 3: KEYBOARD FUN STARTS HERE == -->
+                <!-- ================================================== -->
+
+                <div class="slide hidden" data-meeting="3" data-slide="1">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/girl-use-laptop-illustration-svg-download-png-7616694.png" alt="Happy cartoon keyboard" class="h-48 animate-bounce">
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-4">Keyboard Fun!</h1>
+                        <p class="text-2xl md:text-3xl text-green-600 font-medium mt-6">Module 3: Let's Type!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="2">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Next Step: The Keyboard!</h2>
+                        <img src="https://sallyinthehaven.net/wp-content/uploads/2017/03/kidtyping.gif" alt="Kids learning on a computer" class="h-64 mt-6 rounded-2xl">
+                        <p class="text-2xl text-blue-600 mt-6 max-w-3xl">Before we can create games and code, we need to learn the keyboard. We already learned the mouse, now it's time for the keyboard!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="3">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Meet the Keyboard! ⌨️</h2>
+                        <img src="https://png.pngtree.com/png-clipart/20240617/original/pngtree-yellow-keyboard-illustration-isolated-at-transparent-background-png-image_15349809.png" alt="Clear picture of a keyboard" class="h-48 mt-6">
+                        <p class="text-2xl text-gray-700 mt-6">The keyboard has many buttons called <span class="font-bold text-blue-500">KEYS</span>.</p>
+                        <p class="text-2xl text-gray-700">We use it to <span class="font-bold text-pink-500">TYPE</span> letters and numbers!</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="4">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Magic Keys! ✨</h2>
+                        <p class="text-xl text-blue-600 mt-2">Let's learn 4 special keys!</p>
+                        <div class="mt-6 grid grid-cols-2 gap-6 w-full max-w-3xl">
+                            <div class="bg-green-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">␣</p><p class="text-xl font-bold text-green-700">SPACEBAR</p><p class="text-gray-600">Makes a space!</p>
+                            </div>
+                            <div class="bg-blue-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">↩️</p><p class="text-xl font-bold text-blue-700">ENTER</p><p class="text-gray-600">Goes to a new line!</p>
+                            </div>
+                            <div class="bg-red-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">⌫</p><p class="text-xl font-bold text-red-700">BACKSPACE</p><p class="text-gray-600">Erases backwards!</p>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-xl shadow-md text-center">
+                                <p class="text-4xl">🔠</p><p class="text-xl font-bold text-yellow-800">LETTER KEYS</p><p class="text-gray-600">Type your name!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="5">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-purple-600">Let's Practice Our Typing!</h2>
+                        <p class="text-xl text-gray-700 mb-4">Follow the guide to practice typing the letters.</p>
+                        <iframe src="https://www.roomrecess.com/games/TypingTutorForKids/play.html" class="w-full flex-1 mt-2 rounded-2xl shadow-lg border-4 border-purple-300" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="6">
+                    <!-- The parent div now has h-full, which works because .slide.active has h-full -->
+                    <div class="text-center flex flex-col h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-green-600">Now, Let's Play a Game!</h2>
+                        <p class="text-xl text-gray-700 mb-4">Teacher will now open the <span class="font-bold text-purple-600">"Letter Leaper"</span> game!</p>
+                        <!-- [FIX 2] Changed h-full to flex-1 to fill remaining space -->
+                        <iframe src="https://www.roomrecess.com/games/LetterLeaper/play.html" class="w-full flex-1 mt-2 rounded-2xl shadow-lg border-4 border-purple-300" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="7">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-red-600">Our Project: A Magic Sentence!</h2>
+                        <img src="https://i.gifer.com/embedded/download/7SCA.gif" alt="A writer with a feather pen" class="h-64 mt-6">
+                        <p class="text-3xl text-gray-700 mt-4">Today, we are great writers! Let's write one sentence about ourselves.</p>
+                    </div>
+                </div>
+
+                <!-- [NEW] Slide to show how to open Notepad -->
+                <div class="slide hidden" data-meeting="3" data-slide="8">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Let's Open Notepad!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">This is the app we will use for writing.</p>
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231219121921/How-To-Open-Notepad-using-Windows-Search-(1).jpg" height="400px" alt="How to open notepad on windows" class="h-64 mt-6 rounded-2xl shadow-lg border-4 border-blue-300">
+                        <p class="text-xl text-gray-700 mt-4">1. Click the Start button and type "notepad". <br>2. Click on the Notepad app to open it.</p>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="9">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Step 1: Type Your Name</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Find the letters of your name and type them!</p>
+                        <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner w-full max-w-lg h-24 flex items-center">
+                            <input type="text" placeholder="Ketik nama..." class="text-4xl font-mono text-left bg-transparent w-full focus:outline-none placeholder-gray-400">
+                        </div>
+                        <img src="https://www.designveloper.com/wp-content/uploads/2024/12/how-typing-practice-changes-the-professional-approach-to-work.gif" alt="Typing on a keyboard" class="h-40 mt-4">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="10">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Step 2: New Line & "suka"</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Press <span class="font-bold text-blue-700">ENTER</span>. Then type <span class="font-bold text-pink-500">s-u-k-a</span> and press <span class="font-bold text-green-600">SPACE</span>!</p>
+                        <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner w-full max-w-lg h-40">
+                            <textarea placeholder="Ketik di sini..." class="text-4xl font-mono text-left bg-transparent w-full h-full resize-none focus:outline-none placeholder-gray-400"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="11">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Step 3: Favorite Food!</h2>
+                        <p class="text-2xl text-blue-600 mt-4">Now, type your favorite food!</p>
+                        <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner w-full max-w-lg h-40">
+                            <textarea placeholder="Ketik di sini..." class="text-4xl font-mono text-left bg-transparent w-full h-full resize-none focus:outline-none placeholder-gray-400"></textarea>
+                        </div>
+                        <img src="https://i.pinimg.com/originals/39/6f/c2/396fc2753691cffd13a16c553d7e552c.gif" alt="Cartoon pizza" class="h-32 mt-4">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="12">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <h2 class="text-4xl md:text-5xl font-bold text-red-500">Oops, a Mistake?</h2>
+                        <p class="text-2xl text-gray-700 mt-4">No problem! Use the <span class="font-bold text-red-600">BACKSPACE</span> key to erase it!</p>
+                        <img src="https://metodeku.com/wp-content/uploads/2019/12/Fungsi-Backspace-di-Keyboard.jpg" alt="Backspace key being pressed" class="h-64 mt-6 rounded-2xl shadow-lg">
+                    </div>
+                </div>
+
+                <div class="slide hidden" data-meeting="3" data-slide="13">
+                    <div class="text-center flex flex-col items-center justify-center h-full">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycG96NW1xd3E3bnRjNmV6N296b202enhxNG9jd2h2ZzJvcncyZXNrdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZJN6ct1kyMvCznvTIi/giphy.gif" alt="A trophy and a medal" class="h-48 animate-bounce">
+                        <h1 class="text-4xl md:text-6xl font-bold text-yellow-500 mt-4">You are a Great Writer!</h1>
+                        <p class="text-2xl md:text-3xl text-green-600 font-medium mt-6">See you next time!</p>
                     </div>
                 </div>
 
@@ -717,7 +856,6 @@
             });
         }
         
-        // --- DELETED DUPLICATE GAME LOGIC BLOCK ---
 
         // --- Event Listeners (Connecting functions to buttons) ---
 
@@ -739,8 +877,6 @@
         teacherNameInput.addEventListener('input', () => saveTeacherInfo('teacherName', teacherNameInput.value));
         teacherFoodInput.addEventListener('input', () => saveTeacherInfo('teacherFood', teacherFoodInput.value));
         teacherAnimalInput.addEventListener('input', () => saveTeacherInfo('teacherAnimal', teacherAnimalInput.value));
-
-        // --- DELETED DUPLICATE RESET BUTTON LISTENER ---
 
         // 3. Keyboard Navigation (Left/Right Arrows)
         document.addEventListener('keydown', function(event) {
