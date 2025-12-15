@@ -128,7 +128,7 @@
                     <option value="4">Meet 4: Do You Speak Code?</option>
                     <option value="5">Meet 5: Order Matters</option>
                     <option value="6">Meet 6: Programmers in the World</option>
-                    <option value="7">Meet 7: First Program (Canvas)</option>
+                    <option value="7">Meet 7: Triggers in the World</option>
                 </select>
             </div>
         </header>
@@ -2024,214 +2024,432 @@
             <!-- == MEETING 7: Your First Program (Lesson 4) == -->
             <!-- ================================================== -->
 
-            <!-- 7.1 Title -->
+            <!-- 7.1 Apple Mystery -->
             <div class="slide hidden" data-meeting="7" data-slide="1">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h1 class="text-6xl font-bold text-orange-500 mb-4">Your First Program!</h1>
-                    <div class="img-placeholder w-full max-w-2xl h-64 rounded-2xl mb-6">[IMG: Kids Coding]</div>
-                    <p class="text-2xl text-gray-600">Lesson 4: Representation</p>
+                    <h1 class="text-6xl font-bold text-red-500 mb-6">The Apple Mystery 🍎</h1>
+                    <div id="scene-apple-tree"
+                        class="relative w-full max-w-2xl h-80 bg-blue-100 rounded-3xl overflow-hidden shadow-xl border-4 border-green-300">
+                        <div class="absolute bottom-0 w-full h-1/4 bg-green-500"></div>
+                        <!-- Stable Wikimedia Tree -->
+                        <img src="https://d1kvkzjpuym02z.cloudfront.net/5c42083a2de17e04c92020ea.gif?Expires=2071396739&Signature=XQrPmVwtc0XTFo4FNNaVvSouXJC5ZHsGQNPFRSZPheSgRtVojxPD-q6LS4eWp-xPfeGWV46jz4QLmKuBGoS6vbscHuvqstN68ceDL~BzNTipSebeZeeO0imf95WTX2dKOHOt2JSVkqsVW5CnzPsZ1PdtxiaaK4YHlasi2blT4zA_&Key-Pair-Id=APKAJXYWFXCDTRLR3EFA"
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 h-72">
+                        <div id="apple-hanging"
+                            class="absolute top-24 left-1/2 w-12 h-12 bg-red-600 rounded-full cursor-pointer hover:scale-110 transition-transform shadow-sm flex items-center justify-center text-xs text-white pb-2 z-10">
+                            stem</div>
+                    </div>
+                    <p class="text-3xl text-gray-700 mt-6 animate-pulse">Once upon a time... a happy apple fell. PLOP! ⏬
+                    </p>
+                    <p class="text-2xl text-blue-600 font-bold mt-2">Why did it fall?</p>
                 </div>
             </div>
 
-            <!-- 7.2 Warmup Symbols -->
+            <!-- 7.2 The Trigger (Apple) -->
             <div class="slide hidden" data-meeting="7" data-slide="2">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">What is a Symbol? 🛑</h2>
-                    <p class="text-xl text-gray-600 italic mb-6">"A mark or sign that represents an idea."</p>
-                    <div class="flex justify-center gap-8">
-                        <div class="img-placeholder w-32 h-32 rounded-full">[IMG: Stop Sign]</div>
-                        <div class="img-placeholder w-32 h-32 rounded-full">[IMG: Restroom Sign]</div>
-                        <div class="img-placeholder w-32 h-32 rounded-full">[IMG: Recycling Sign]</div>
+                    <h2 class="text-5xl font-bold text-gray-800 mb-4">The Reason (Trigger)</h2>
+                    <div class="flex items-center justify-center gap-8 mb-6">
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🪵⚡</span>
+                            <p class="text-xl font-bold mt-2">Stem Snaps</p>
+                        </div>
+                        <span class="text-4xl">➡️</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🍎👇</span>
+                            <p class="text-xl font-bold mt-2">Apple Falls</p>
+                        </div>
                     </div>
-                    <p class="text-2xl text-blue-600 font-bold mt-6">ScratchJr uses symbols (blocks) to write
-                        algorithms!</p>
+                    <div
+                        class="bg-yellow-100 p-8 rounded-3xl border-4 border-yellow-300 transform -rotate-1 shadow-lg max-w-3xl">
+                        <p class="text-4xl font-bold text-orange-600">"The Stem Snap was the TRIGGER!"</p>
+                        <p class="text-2xl text-gray-700 mt-4">Everything happens for a reason.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- 7.3 Scavenger Hunt -->
+            <!-- 7.3 Puddle Mystery -->
             <div class="slide hidden" data-meeting="7" data-slide="3">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-purple-600 mb-6">Scavenger Hunt!</h2>
-                    <p class="text-2xl mb-6">Look around the room. How many symbols can you find?</p>
-                    <div class="img-placeholder w-full max-w-3xl h-64 rounded-2xl">[IMG: Classroom with symbols
-                        highlighted]</div>
+                    <h2 class="text-5xl font-bold text-blue-600 mb-6">The Puddle Mystery 💧</h2>
+                    <div
+                        class="w-full max-w-2xl h-64 bg-gray-200 rounded-3xl flex items-center justify-center relative shadow-inner overflow-hidden">
+                        <div class="absolute bottom-4 w-32 h-12 bg-blue-500 rounded-full opacity-80 blur-sm"></div>
+                        <!-- Stable Wikimedia Water Drop/Puddle representation -->
+                        <img src="https://pics.clipartpng.com/Cloud_and_Rain_Drops_Weather_Icon_PNG_Clip_Art-1511.png"
+                            class="h-48 z-10 rounded-full opacity-80 mix-blend-multiply">
+                    </div>
+                    <p class="text-3xl text-gray-700 mt-6">Look! A big puddle! But the sky is blue now...</p>
+                    <p class="text-2xl text-blue-600 font-bold mt-2">How did the puddle get here?</p>
                 </div>
             </div>
 
-            <!-- 7.4 Open Tech Circle Shapes -->
+            <!-- 7.4 The Trigger (Rain) -->
             <div class="slide hidden" data-meeting="7" data-slide="4">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Do the shapes mean anything?</h2>
-                    <div class="grid grid-cols-3 gap-6 w-full">
-                        <div class="bg-yellow-50 p-4 rounded-2xl">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Yellow Trigger Block]</div>
-                            <p class="font-bold">Trigger Block (Hat shape)</p>
+                    <h2 class="text-5xl font-bold text-gray-800 mb-4">The Reason (Trigger)</h2>
+                    <div class="flex items-center justify-center gap-8 mb-6 animate-bounce">
+                        <div class="flex flex-col items-center">
+                            <span class="text-8xl">🌧️</span>
+                            <p class="text-xl font-bold mt-2">Heavy Cloud</p>
                         </div>
-                        <div class="bg-blue-50 p-4 rounded-2xl">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Blue Motion Block]</div>
-                            <p class="font-bold">Motion Block (Puzzle shape)</p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-2xl">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Red End Block]</div>
-                            <p class="font-bold">End Block (Smooth shape)</p>
-                        </div>
+                    </div>
+                    <div
+                        class="bg-blue-100 p-8 rounded-3xl border-4 border-blue-300 transform rotate-1 shadow-lg max-w-3xl">
+                        <p class="text-4xl font-bold text-blue-700">"The Rain was the TRIGGER!"</p>
+                        <p class="text-2xl text-gray-700 mt-4">The cloud got too heavy!</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 7.5 Open Tech Circle Colors -->
-            <div class="slide hidden" data-meeting="7" data-slide="5">
+            <!-- 7.5 Dark Room -->
+            <div class="slide hidden bg-black" data-meeting="7" data-slide="5">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">What do the colors tell us?</h2>
-                    <div class="space-y-4 text-left w-full max-w-2xl bg-white p-8 rounded-2xl shadow">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-full"></div>
-                            <span class="text-2xl font-bold">Yellow = Event / Trigger</span>
+                    <h2 class="text-5xl font-bold text-white mb-6">Oh no! It's Dark! 🌑</h2>
+                    <div class="text-8xl animate-pulse">👀</div>
+                    <p class="text-3xl text-gray-400 mt-6">I can't see anything!</p>
+                    <p class="text-2xl text-yellow-400 font-bold mt-2">How do we turn on the light?</p>
+                </div>
+            </div>
+
+            <!-- 7.6 The Trigger (Switch) -->
+            <div id="slide-light-switch" class="slide hidden bg-gray-800 transition-colors duration-500"
+                data-meeting="7" data-slide="6">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 id="light-title" class="text-5xl font-bold text-white mb-6">The Light Switch 💡</h2>
+
+                    <div onclick="toggleLightSwitch()" class="cursor-pointer group">
+                        <div id="switch-plate"
+                            class="w-32 h-48 bg-gray-200 rounded-xl border-b-8 border-gray-400 flex items-center justify-center shadow-2xl relative">
+                            <div id="switch-toggle"
+                                class="w-12 h-24 bg-white border border-gray-300 shadow-md transform translate-y-4 transition-transform duration-200 rounded-md">
+                            </div>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-400 rounded-full"></div>
-                            <span class="text-2xl font-bold">Blue = Motion</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-red-500 rounded-full"></div>
-                            <span class="text-2xl font-bold">Red = Stop / End</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-green-400 rounded-full"></div>
-                            <span class="text-2xl font-bold">Green = Sound</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-purple-400 rounded-full"></div>
-                            <span class="text-2xl font-bold">Purple = Looks</span>
-                        </div>
+                        <p class="text-white mt-4 text-xl group-hover:text-yellow-300">Click to Flip!</p>
+                    </div>
+
+                    <div id="light-explanation"
+                        class="hidden mt-8 bg-yellow-100 p-6 rounded-2xl border-4 border-yellow-400 shadow-xl max-w-3xl">
+                        <p class="text-4xl font-bold text-orange-600">"We FLIP the SWITCH!"</p>
+                        <p class="text-2xl text-gray-700 mt-2">The Switch is the <b>TRIGGER</b>. The Light is the
+                            <b>ACTION</b>.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- 7.6 Unplugged Game -->
-            <div class="slide hidden" data-meeting="7" data-slide="6">
-                <div class="flex flex-col items-center justify-center h-full text-center bg-indigo-50 rounded-3xl">
-                    <h2 class="text-4xl font-bold text-indigo-700 mb-6">Game: Programmer Says! 🗣️</h2>
-                    <p class="text-xl text-gray-600 mb-8">I will point to a block, and you act it out!</p>
-                    <div class="grid grid-cols-3 gap-6 w-full px-8">
-                        <div class="bg-white p-6 rounded-xl shadow-lg">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Green Flag]</div>
-                            <p class="font-bold text-2xl">CLAP!</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Blue Arrow]</div>
-                            <p class="font-bold text-2xl">JUMP!</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg">
-                            <div class="img-placeholder h-24 mb-2">[IMG: Red Block]</div>
-                            <p class="font-bold text-2xl">FREEZE!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 7.7 Teacher Demo Areas -->
+            <!-- 7.7 Challenge: Detective -->
             <div class="slide hidden" data-meeting="7" data-slide="7">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Teacher Demo: Programming Area</h2>
-                    <div class="img-placeholder w-full max-w-4xl h-80 rounded-2xl shadow-xl mb-4">[IMG:
-                        ScratchJr
-                        Programming Area highlighted]</div>
-                    <p class="text-2xl">Drag blocks here to create algorithms!</p>
+                    <h2 class="text-5xl font-bold text-purple-600 mb-2">Detective Challenge 🕵️‍♀️</h2>
+                    <p class="text-xl text-gray-600 mb-6">Find the TRIGGER (The Cause)! What starts the action?</p>
+
+                    <div class="grid grid-cols-2 gap-8 w-full max-w-5xl">
+                        <!-- Case 1: Balloon -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg border-2 border-purple-100 flex flex-col items-center">
+                            <h3 class="text-2xl font-bold text-gray-700 mb-4">Case #1: POP! 💥</h3>
+                            <div class="flex gap-4">
+                                <button onclick="checkDetective(this, true)"
+                                    class="w-32 h-32 bg-gray-100 rounded-xl hover:bg-green-100 hover:scale-105 transition-all flex flex-col items-center justify-center border-2 border-gray-200 p-2">
+                                    <span class="text-5xl">📌</span>
+                                    <span class="text-sm font-bold mt-2">Sharp Pin</span>
+                                </button>
+                                <button onclick="checkDetective(this, false)"
+                                    class="w-32 h-32 bg-gray-100 rounded-xl hover:bg-red-100 hover:scale-105 transition-all flex flex-col items-center justify-center border-2 border-gray-200 p-2">
+                                    <span class="text-5xl">🎈</span>
+                                    <span class="text-sm font-bold mt-2">Balloon</span>
+                                </button>
+                            </div>
+                            <p class="detective-feedback text-lg font-bold mt-2 h-8"></p>
+                        </div>
+
+                        <!-- Case 2: Hungry -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg border-2 border-purple-100 flex flex-col items-center">
+                            <h3 class="text-2xl font-bold text-gray-700 mb-4">Case #2: YUM! 😋</h3>
+                            <div class="flex gap-4">
+                                <button onclick="checkDetective(this, false)"
+                                    class="w-32 h-32 bg-gray-100 rounded-xl hover:bg-red-100 hover:scale-105 transition-all flex flex-col items-center justify-center border-2 border-gray-200 p-2">
+                                    <span class="text-5xl">👦</span>
+                                    <span class="text-sm font-bold mt-2">Hungry Boy</span>
+                                </button>
+                                <button onclick="checkDetective(this, true)"
+                                    class="w-32 h-32 bg-gray-100 rounded-xl hover:bg-green-100 hover:scale-105 transition-all flex flex-col items-center justify-center border-2 border-gray-200 p-2">
+                                    <span class="text-5xl">🍔</span>
+                                    <span class="text-sm font-bold mt-2">Tummy Grumble</span>
+                                </button>
+                            </div>
+                            <p class="detective-feedback text-lg font-bold mt-2 h-8"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- 7.8 Teacher Demo Characters -->
+            <!-- 7.8 Sleeping Cat (Bridge) -->
             <div class="slide hidden" data-meeting="7" data-slide="8">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Teacher Demo: Adding Characters</h2>
-                    <div class="grid grid-cols-2 gap-6 w-full max-w-4xl">
-                        <div class="bg-white p-4 rounded-xl shadow">
-                            <div class="img-placeholder h-48 rounded-lg">[IMG: Add Character Button]</div>
-                            <p class="font-bold mt-2">1. Click + to add</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl shadow">
-                            <div class="img-placeholder h-48 rounded-lg">[IMG: Select Character Screen]</div>
-                            <p class="font-bold mt-2">2. Select Character</p>
+                    <h2 class="text-5xl font-bold text-blue-600 mb-6">Computers Sleep too! 😴</h2>
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/ScratchCat-Small.png/640px-ScratchCat-Small.png"
+                            class="h-64 opacity-50 grayscale">
+                        <div class="absolute -top-4 -right-8 text-4xl font-bold text-blue-400 animate-pulse">Zzz...
                         </div>
                     </div>
-                    <p class="text-xl mt-6">To remove: Press and hold until it shakes!</p>
+                    <p class="text-3xl text-gray-700 mt-8">Our friend Cat is sleeping.</p>
+                    <p class="text-2xl text-purple-600 mt-2">He needs a TRIGGER to wake him up!</p>
                 </div>
             </div>
 
-            <!-- 7.9 Check for Understanding -->
+            <!-- 7.9 Meet Yellow Team -->
             <div class="slide hidden" data-meeting="7" data-slide="9">
-                <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Check for Understanding</h2>
-                    <div class="grid grid-cols-2 gap-8 w-full max-w-4xl">
-                        <div class="bg-green-100 p-6 rounded-2xl border-2 border-green-300">
-                            <p class="text-2xl font-bold mb-4">Which one makes a program?</p>
-                            <div class="img-placeholder h-32">[IMG: Correct Algorithm]</div>
+                <div class="flex flex-col items-center justify-center h-full text-center bg-yellow-50 rounded-3xl">
+                    <h2 class="text-5xl font-bold text-yellow-600 mb-6">Meet the Wake Up Team! ☀️</h2>
+                    <p class="text-xl text-gray-600 mb-8">In ScratchJr, the <b>YELLOW BLOCKS</b> are the Triggers.</p>
+
+                    <div class="flex justify-center gap-12">
+                        <div class="flex flex-col items-center animate-bounce" style="animation-delay: 0s">
+                            <img src="https://www.scratchjr.org/images/onflag.png" class="h-32 shadow-xl rounded-lg">
+                            <p class="text-2xl font-bold mt-4 text-green-600">Green Flag</p>
                         </div>
-                        <div class="bg-red-100 p-6 rounded-2xl border-2 border-red-300">
-                            <p class="text-2xl font-bold mb-4">Which one is just a pile?</p>
-                            <div class="img-placeholder h-32">[IMG: Messy Blocks]</div>
+                        <div class="flex flex-col items-center animate-bounce" style="animation-delay: 0.2s">
+                            <img src="https://www.scratchjr.org/images/ontap.png" class="h-32 shadow-xl rounded-lg">
+                            <p class="text-2xl font-bold mt-4 text-blue-600">Tap</p>
+                        </div>
+                        <div class="flex flex-col items-center animate-bounce" style="animation-delay: 0.4s">
+                            <img src="https://www.scratchjr.org/images/onbump.png" class="h-32 shadow-xl rounded-lg">
+                            <p class="text-2xl font-bold mt-4 text-orange-600">Bump</p>
                         </div>
                     </div>
-                    <p class="text-2xl font-bold text-blue-600 mt-8">Turn & Talk!</p>
                 </div>
             </div>
 
-            <!-- 7.10 Student Time -->
+            <!-- 7.10 Trigger A: Green Flag -->
             <div class="slide hidden" data-meeting="7" data-slide="10">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-5xl font-bold text-pink-600 mb-6">Student Time!</h2>
-                    <div class="bg-pink-50 p-8 rounded-3xl border-4 border-pink-200 max-w-3xl w-full">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Your Mission:</h3>
-                        <ul class="text-2xl text-left space-y-4 list-disc pl-10">
-                            <li>Open ScratchJr.</li>
-                            <li>Choose a character.</li>
-                            <li>Create an algorithm to make it <b>DANCE!</b> 💃🕺</li>
-                            <li>Start -> Move -> End.</li>
-                            <li>Switch turns with your partner.</li>
-                        </ul>
-                        <div class="mt-8 text-xl text-gray-500">Save: Initials + 1 (e.g., CJ1)</div>
+                    <h2 class="text-5xl font-bold text-green-600 mb-4">1. The Green Flag 🏁</h2>
+                    <p class="text-2xl text-gray-600 mb-8">It's like the Morning Sun! When clicked -> Everyone Runs!</p>
+
+                    <div
+                        class="relative w-full max-w-2xl h-64 bg-gray-100 rounded-3xl border-4 border-gray-200 overflow-hidden shadow-inner flex items-end justify-center pb-4">
+                        <img id="flag-cat"
+                            src="https://static.wikia.nocookie.net/awesome100-scratch/images/0/06/Scratchcatjr.gif/revision/latest/scale-to-width-down/250?cb=20220404233106"
+                            class="h-32 transition-transform duration-1000">
                     </div>
+
+                    <button onclick="triggerFlagRun()"
+                        class="mt-8 bg-green-500 hover:bg-green-600 text-white text-3xl font-bold py-4 px-12 rounded-full shadow-xl transform active:scale-95 transition-all flex items-center gap-4">
+                        <img src="" class="h-12 bg-yellow-400 rounded p-1">
+                        Click Me!
+                    </button>
                 </div>
             </div>
 
-            <!-- 7.11 Share -->
+            <!-- 7.11 Trigger B: Tap -->
             <div class="slide hidden" data-meeting="7" data-slide="11">
-                <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-blue-800 mb-6">Share</h2>
-                    <ul class="text-2xl text-left space-y-4 bg-white p-8 rounded-2xl shadow-lg">
-                        <li>❓ Which character did you choose?</li>
-                        <li>❓ Describe your algorithm.</li>
-                        <li>❓ Which blocks did you use?</li>
-                        <li>❓ What do you want to do next time?</li>
-                    </ul>
+                <div class="flex flex-col items-center bg-blue-50 justify-center h-full text-center rounded-3xl">
+                    <h2 class="text-5xl font-bold text-blue-600 mb-4">2. The Tap (Poke) 👆</h2>
+                    <p class="text-2xl text-gray-600 mb-8">It's like a Poke! "Hey! Wake Up!" -> Jump!</p>
+
+                    <div class="relative w-64 h-64">
+                        <img id="tap-cat" onclick="triggerTapJump()" src="https://www.scratchjr.org/images/ontap.png"
+                            class="h-full cursor-pointer hover:scale-105 transition-transform">
+                        <div id="tap-hint"
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none text-6xl opacity-0 transition-opacity">
+                            👆</div>
+                    </div>
+                    <p class="text-xl text-gray-500 mt-4 animate-bounce">Tap the Cat!</p>
                 </div>
             </div>
 
-            <!-- 7.12 Reflection -->
+            <!-- 7.12 Trigger C: Bump -->
             <div class="slide hidden" data-meeting="7" data-slide="12">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Reflection: Can we...</h2>
-                    <div class="bg-green-50 p-8 rounded-2xl text-left text-xl space-y-2">
-                        <p>✅ Define symbols?</p>
-                        <p>✅ Tap, drag, and release blocks?</p>
-                        <p>✅ Identify Start, End, and Motion blocks?</p>
-                        <p>✅ Order blocks correctly?</p>
-                        <p>✅ Add a new character?</p>
+                    <h2 class="text-5xl font-bold text-orange-600 mb-4">3. The Bump (High Five) ✋</h2>
+                    <p class="text-2xl text-gray-600 mb-8">When friends touch... -> Say Hello!</p>
+
+                    <div
+                        class="relative w-full max-w-3xl h-64 bg-gray-100 rounded-3xl flex items-end justify-between px-20 overflow-hidden">
+                        <img id="bump-char1"
+                            src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/512px/1f91c.png"
+                            class="h-32 transform scale-x-[-1]">
+                        <div id="hello-bubble"
+                            class="absolute top-10 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-2xl border-2 border-gray-300 shadow-lg opacity-0 transition-opacity text-2xl font-bold">
+                            Hello! 👋</div>
+                        <img id="bump-char2"
+                            src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f91b.png"
+                            class="h-32 filter hue-rotate-90">
+                    </div>
+
+                    <button onclick="triggerBump()"
+                        class="mt-8 bg-orange-500 hover:bg-orange-600 text-white text-3xl font-bold py-4 px-12 rounded-full shadow-xl">
+                        Make them Bump!
+                    </button>
+                </div>
+            </div>
+
+            <!-- 7.13 Review -->
+            <div class="slide hidden" data-meeting="7" data-slide="13">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-5xl font-bold text-red-500 mb-6">Don't Forget! ⚠️</h2>
+
+                    <div class="flex gap-12 items-center bg-white p-8 rounded-3xl shadow-xl border-4 border-red-100">
+                        <div class="flex flex-col items-center opacity-50">
+                            <img src="https://www.scratchjr.org/images/right.png" class="h-24">
+                            <p class="text-xl text-gray-500 mt-2">Just Blue Block...</p>
+                        </div>
+                        <span class="text-6xl text-red-500">❌</span>
+                        <div class="flex flex-col items-center">
+                            <div class="flex">
+                                <img src="https://www.scratchjr.org/images/onflag.png" class="h-24">
+                                <img src="https://www.scratchjr.org/images/right.png" class="h-24 -ml-2">
+                            </div>
+                            <p class="text-xl text-green-600 font-bold mt-2">Yellow + Blue = GO!</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 7.13 Clean Up Song -->
-            <div class="slide hidden" data-meeting="7" data-slide="13">
-                <div
-                    class="flex flex-col items-center justify-center h-full text-center bg-gray-900 rounded-3xl text-white p-8">
-                    <span class="text-6xl mb-4">🎶</span>
-                    <h2 class="text-4xl font-bold mb-6">Clean Up Song</h2>
-                    <p class="text-2xl italic">"We're turning off our tablets and putting them away..."</p>
-                    <p class="text-xl text-gray-400 mt-4">See you next time!</p>
+            <!-- 7.14 Capstone Game: Jumping Horse -->
+            <div class="slide hidden" data-meeting="7" data-slide="14">
+                <div class="flex flex-col items-center justify-center h-full text-center relative w-full">
+                    <!-- Game Overlay (Start Screen) -->
+                    <div id="horse-game-overlay"
+                        class="absolute inset-0 bg-black bg-opacity-80 rounded-3xl z-10 flex flex-col items-center justify-center text-white">
+                        <h1 class="text-6xl font-bold text-yellow-400 mb-4">🐴 Jumping Horse 🚧</h1>
+                        <p class="text-2xl mb-8">Mission: Use the <b>TAP TRIGGER</b> to Jump!</p>
+                        <div class="flex gap-4 bg-gray-800 p-4 rounded-xl mb-8 border-2 border-yellow-500">
+                            <img src="https://www.scratchjr.org/images/ontap.png" class="h-20">
+                            <span class="text-4xl self-center">+</span>
+                            <img src="https://www.scratchjr.org/images/hop.png" class="h-20">
+                        </div>
+                        <button onclick="startHorseGame()"
+                            class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full text-3xl shadow-lg transform hover:scale-105 transition-all">
+                            ▶️ PLAY
+                        </button>
+                    </div>
+
+                    <!-- Game Canvas Area -->
+                    <canvas id="horse-game-canvas" width="800" height="400"
+                        class="bg-blue-300 rounded-3xl shadow-inner border-b-8 border-green-700 w-full max-w-4xl cursor-pointer"></canvas>
+
+                    <div class="flex justify-between w-full max-w-4xl mt-4 px-4">
+                        <div class="text-2xl font-bold text-gray-700">Score: <span id="horse-score">0</span></div>
+                        <div class="text-xl text-gray-500">Tap / Spacebar to Jump</div>
+                    </div>
                 </div>
             </div>
+
+            <!-- 7.15 DIY Intro -->
+            <div class="slide hidden" data-meeting="7" data-slide="15">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-5xl font-bold text-indigo-600 mb-6">Let's Create Our Own! 🛠️</h2>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://cdn-web.ruangguru.com/file-uploader/7ffdfa24-9d23-427b-9dbb-eb850fbd86ec.gif"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.16 Open ScratchJr -->
+            <div class="slide hidden" data-meeting="7" data-slide="16">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">1. Setup Your Stage 🎭</h2>
+                    <p class="text-2xl text-gray-600 mb-4">Open ScratchJr. Add a <b>Horse</b> and a <b>Background</b>
+                        you like!</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://cdn-web.ruangguru.com/file-uploader/1b17cd9e-4158-492a-8475-71294ffed195.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.17 Adjust Size -->
+            <div class="slide hidden" data-meeting="7" data-slide="17">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-purple-600 mb-6">2. Resize Character 📏</h2>
+                    <p class="text-2xl text-gray-600 mb-4">Make the horse smaller! Do you remember specifically which
+                        block to use?</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://roboguru-forum-cdn.ruangguru.com/image/ac03c658-38d4-4491-afb2-c747a8ff22f5.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.18 Add Obstacle -->
+            <div class="slide hidden" data-meeting="7" data-slide="18">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-red-600 mb-6">3. Add the Obstacle 🍄</h2>
+                    <p class="text-2xl text-gray-600 mb-4">Add a mushroom or ball! Make it move <b>Forever</b>.</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://uob-1328237036.cos.ap-singapore.myqcloud.com//file-uploader/images/fa8da996-f51f-4972-b253-34234696b605.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.19 Game Over -->
+            <div class="slide hidden" data-meeting="7" data-slide="19">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">4. Game Over Logic 💀</h2>
+                    <p class="text-2xl text-gray-600 mb-4">If the Horse touches the Obstacle... <b>GAME OVER!</b></p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://uob-1328237036.cos.ap-singapore.myqcloud.com//file-uploader/images/cb1f02f4-7be0-4cc4-8054-b07788cc1a62.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.20 Switch Background -->
+            <div class="slide hidden" data-meeting="7" data-slide="20">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-pink-600 mb-6">5. Game Over Scene 🖼️</h2>
+                    <p class="text-2xl text-gray-600 mb-4">When lost, switch to the <b>Game Over</b> background!</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://uob-1328237036.cos.ap-singapore.myqcloud.com//file-uploader/images/cce9a208-bd65-426a-8276-f14fb105e494.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.21 Jump Logic -->
+            <div class="slide hidden" data-meeting="7" data-slide="21">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-4xl font-bold text-green-600 mb-6">6. Jump Animation 🐎</h2>
+                    <p class="text-2xl text-gray-600 mb-4">Let's make a cool jump! Use <b>Rotate</b> + <b>Up</b> +
+                        <b>Down</b>.</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://uob-1328237036.cos.ap-singapore.myqcloud.com//file-uploader/images/990ce0c8-b079-4dea-b44a-1afa79c01783.png"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.22 Play Time -->
+            <div class="slide hidden" data-meeting="7" data-slide="22">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h2 class="text-5xl font-bold text-blue-600 mb-6">Time to Play! 🎮</h2>
+                    <p class="text-2xl text-gray-600 mb-4">Test your game. Does the horse jump? Does it stop?</p>
+                    <div class="w-full max-w-4xl h-96 relative">
+                        <img src="https://cdn-web.ruangguru.com/file-uploader/7ffdfa24-9d23-427b-9dbb-eb850fbd86ec.gif"
+                            class="w-full h-full object-contain rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.23 Closing -->
+            <div class="slide hidden" data-meeting="7" data-slide="23">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <h1 class="text-6xl font-bold text-yellow-500 mb-8">Good Job Everyone! 🌟</h1>
+                    <p class="text-3xl text-gray-700 mb-8">You mastered Triggers & Events today!</p>
+                    <div class="w-full max-w-3xl h-80 relative">
+                        <img src="https://img.freepik.com/premium-vector/colorful-great-job-sticker-creative-motivational-vector-illustration-rewards-achievement_1167562-17467.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="w-full h-full object-contain rounded-3xl shadow-2xl">
+                    </div>
+                    <p class="text-2xl text-purple-600 font-bold mt-8">See you in the next class! 👋</p>
+                </div>
+            </div>
+
 
         </main>
 
@@ -2701,6 +2919,227 @@
                 crashScene.classList.add('hidden');
             }, 3000);
         }
+
+        // ==========================================
+        // === MEETING 7: STORY & GAME LOGIC (NEW) ===
+        // ==========================================
+
+        // --- 1. Light Switch (Slide 7.6) ---
+        let lightIsOn = false;
+        function toggleLightSwitch() {
+            const slide = document.getElementById('slide-light-switch');
+            const toggle = document.getElementById('switch-toggle');
+            const explanation = document.getElementById('light-explanation');
+            const title = document.getElementById('light-title');
+
+            lightIsOn = !lightIsOn;
+
+            if (lightIsOn) {
+                slide.classList.remove('bg-gray-800');
+                slide.classList.add('bg-yellow-50');
+                toggle.classList.remove('translate-y-4');
+                toggle.classList.add('-translate-y-4'); // Flip up
+                explanation.classList.remove('hidden');
+                title.classList.remove('text-white');
+                title.classList.add('text-gray-800');
+                showSuccessMessage("💡 Light ON! You found the Trigger!");
+            } else {
+                slide.classList.remove('bg-yellow-50');
+                slide.classList.add('bg-gray-800');
+                toggle.classList.remove('-translate-y-4');
+                toggle.classList.add('translate-y-4'); // Flip down
+                explanation.classList.add('hidden');
+                title.classList.remove('text-gray-800');
+                title.classList.add('text-white');
+            }
+        }
+
+        // --- 2. Detective Challenge (Slide 7.7) ---
+        function checkDetective(btn, isCorrect) {
+            const feedback = btn.parentElement.nextElementSibling;
+            if (isCorrect) {
+                feedback.textContent = "✅ Correct! That's the Trigger!";
+                feedback.className = "detective-feedback text-lg font-bold mt-2 h-8 text-green-600 animate-bounce";
+                showSuccessMessage("🔍 Great Detective Work!");
+                btn.classList.add('ring-4', 'ring-green-400', 'bg-green-100');
+            } else {
+                feedback.textContent = "❌ That's the Effect! find the Cause.";
+                feedback.className = "detective-feedback text-lg font-bold mt-2 h-8 text-red-500 animate-shake";
+                btn.classList.add('ring-4', 'ring-red-400', 'bg-red-100');
+                setTimeout(() => btn.classList.remove('ring-4', 'ring-red-400', 'bg-red-100'), 1000);
+            }
+        }
+
+        // --- 3. Interactive Triggers (Slides 7.10 - 7.12) ---
+        function triggerFlagRun() {
+            const cat = document.getElementById('flag-cat');
+            cat.style.transform = "translateX(400px)";
+            setTimeout(() => {
+                cat.style.transition = "none";
+                cat.style.transform = "translateX(0)";
+                cat.offsetWidth; // Force reflow
+                cat.style.transition = "transform 1s";
+            }, 1000);
+            showSuccessMessage("🏁 GO! The Flag started the run!");
+        }
+
+        function triggerTapJump() {
+            const cat = document.getElementById('tap-cat');
+            const hint = document.getElementById('tap-hint');
+
+            cat.classList.add('-translate-y-24', 'rotate-12'); // Jump up
+            setTimeout(() => {
+                cat.classList.remove('-translate-y-24', 'rotate-12'); // Down
+            }, 500);
+
+            hint.style.opacity = 1;
+            setTimeout(() => hint.style.opacity = 0, 1000);
+
+            showSuccessMessage("👆 Tap! The cat jumped!");
+        }
+
+        function triggerBump() {
+            const char1 = document.getElementById('bump-char1');
+            const char2 = document.getElementById('bump-char2');
+            const bubble = document.getElementById('hello-bubble');
+
+            // Walk towards each other
+            char1.style.transition = "transform 1s";
+            char2.style.transition = "transform 1s";
+
+            char1.style.transform = "scaleX(-1) translateX(-100px)";
+            char2.style.transform = "translateX(-100px)";
+
+            setTimeout(() => {
+                // Bump!
+                bubble.style.opacity = 1;
+                bubble.classList.add('animate-bounce');
+                showSuccessMessage("🤝 Bump! They said Hello!");
+
+                // Reset
+                setTimeout(() => {
+                    char1.style.transform = "scaleX(-1) translateX(0)";
+                    char2.style.transform = "translateX(0)";
+                    bubble.style.opacity = 0;
+                    bubble.classList.remove('animate-bounce');
+                }, 2000);
+            }, 1000);
+        }
+
+        // --- 4. Capstone: Jumping Horse Game (Slide 7.14) ---
+        let horseGameRunning = false;
+        let horseGameLoop;
+        const canvas = document.getElementById('horse-game-canvas');
+        const ctx = canvas.getContext('2d');
+        let horse = { x: 50, y: 300, w: 60, h: 60, dy: 0, grounded: true };
+        let obstacles = [];
+        let frame = 0;
+        let score = 0;
+        let gameSpeed = 5;
+
+        // Using emoji/shapes for now to avoid image loading issues in canvas for this demo
+        function drawHorse() {
+            ctx.font = "60px Arial";
+            ctx.fillText("🐴", horse.x, horse.y + 50);
+        }
+
+        function drawObstacles() {
+            ctx.font = "50px Arial";
+            obstacles.forEach(obs => {
+                ctx.fillText("🚧", obs.x, obs.y + 40);
+            });
+        }
+
+        function updateGame() {
+            if (!horseGameRunning) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Ground
+            ctx.fillStyle = "#2d6a4f"; // Dark green grass
+            ctx.fillRect(0, 350, canvas.width, 50);
+
+            // Horse Physics
+            if (!horse.grounded) {
+                horse.y += horse.dy;
+                horse.dy += 1; // Gravity
+                if (horse.y >= 300) {
+                    horse.y = 300;
+                    horse.grounded = true;
+                    horse.dy = 0;
+                }
+            }
+
+            drawHorse();
+
+            // Spawn Obstacles
+            if (frame % 100 === 0) {
+                obstacles.push({ x: canvas.width, y: 310, w: 40, h: 40 });
+            }
+
+            // Update Obstacles
+            obstacles.forEach(obs => {
+                obs.x -= gameSpeed;
+            });
+
+            drawObstacles();
+
+            // Collision & Cleanup
+            obstacles = obstacles.filter(obs => obs.x > -50);
+            obstacles.forEach(obs => {
+                // Simple AABB Collision
+                // Adjust hitbox slightly smaller than emoji
+                if (horse.x < obs.x + 30 &&
+                    horse.x + 40 > obs.x &&
+                    horse.y < obs.y + 30 &&
+                    horse.y + 40 > obs.y) {
+                    endGame();
+                }
+            });
+
+            score++;
+            document.getElementById('horse-score').innerText = Math.floor(score / 10);
+            frame++;
+
+            horseGameLoop = requestAnimationFrame(updateGame);
+        }
+
+        function startHorseGame() {
+            document.getElementById('horse-game-overlay').classList.add('hidden');
+            horseGameRunning = true;
+            score = 0;
+            frame = 0;
+            obstacles = [];
+            horse.y = 300;
+            updateGame();
+        }
+
+        function jumpHorse() {
+            if (horse.grounded && horseGameRunning) {
+                horse.dy = -17; // Jump power
+                horse.grounded = false;
+                showSuccessMessage("⬆️ Jump!");
+            }
+        }
+
+        function endGame() {
+            horseGameRunning = false;
+            cancelAnimationFrame(horseGameLoop);
+            document.getElementById('horse-game-overlay').classList.remove('hidden');
+            document.querySelector('#horse-game-overlay h1').innerText = "Game Over! Score: " + Math.floor(score / 10);
+            document.querySelector('#horse-game-overlay button').innerText = "🔄 Try Again";
+        }
+
+        // Input listeners for game
+        if (canvas) {
+            canvas.addEventListener('mousedown', jumpHorse);
+        }
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && horseGameRunning) {
+                e.preventDefault(); // Prevent scrolling
+                jumpHorse();
+            }
+        });
 
     </script>
 </body>
