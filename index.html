@@ -131,6 +131,8 @@
                     <option value="7">Meet 7: Triggers in the World</option>
                     <option value="8">Meet 8: Digital Superheroes & Treasure Hunt</option>
                     <option value="9">Meet 9: Being a Digital Creator</option>
+                    <option value="10">Meet 10: Patterns & Prediction</option>
+                    <option value="11">Meet 11: Decomposition</option>
                 </select>
             </div>
         </header>
@@ -3294,6 +3296,833 @@
                     </div>
                 </div>
             </div>
+            <!-- Meeting 10 Slides: Patterns & Prediction -->
+            <div class="slide hidden" data-meeting="10" data-slide="1">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h1 class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 mb-6">
+                        Patterns & Prediction 🧩
+                    </h1>
+                    <p class="text-3xl text-gray-600 font-medium">Let's find the hidden rules!</p>
+                    <div class="flex gap-4 mt-8 justify-center">
+                        <div class="w-16 h-16 rounded-full bg-red-400 animate-bounce" style="animation-delay: 0s"></div>
+                        <div class="w-16 h-16 rounded-full bg-blue-400 animate-bounce" style="animation-delay: 0.2s"></div>
+                        <div class="w-16 h-16 rounded-full bg-red-400 animate-bounce" style="animation-delay: 0.4s"></div>
+                        <div class="w-16 h-16 rounded-full bg-blue-400 animate-bounce" style="animation-delay: 0.6s"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="2">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">What is a Pattern? 🤔</h2>
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border-4 border-purple-200 max-w-4xl">
+                        <p class="text-3xl text-gray-700 leading-relaxed mb-6">
+                            <span class="font-bold text-purple-600">Pattern</span> is something that...
+                        </p>
+                        <ul class="text-2xl text-left space-y-4 px-8">
+                            <li class="flex items-center gap-4">
+                                <span class="text-4xl">🔄</span>
+                                <div>
+                                    <span class="font-bold">Repeats</span> (Over and over)
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="text-4xl">📏</span>
+                                <div>
+                                    <span class="font-bold">Follows a rule</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="text-4xl">🔮</span>
+                                <div>
+                                    We can <span class="font-bold">predict</span> what comes next!
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="3">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">1. Color Pattern 🎨</h2>
+                    <p class="text-2xl text-gray-600 mb-8">Look at the colors... Red, Blue, Red, Blue...</p>
+                    
+                    <div class="flex items-center justify-center gap-4 bg-gray-100 p-8 rounded-2xl w-full max-w-5xl overflow-x-auto">
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-red-500 rounded-xl shadow-md mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">A</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-blue-500 rounded-xl shadow-md mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">B</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-red-500 rounded-xl shadow-md mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">A</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-blue-500 rounded-xl shadow-md mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">B</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="w-20 h-20 border-4 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-4xl text-gray-400">?</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="4">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-600 mb-8">2. Shape Pattern 🔺🟣</h2>
+                    <p class="text-2xl text-gray-600 mb-8">Triangle, Triangle, Circle...</p>
+                    
+                    <div class="flex items-center justify-center gap-4 bg-gray-100 p-8 rounded-2xl w-full max-w-5xl overflow-x-auto">
+                        <div class="flex flex-col items-center">
+                            <div class="w-0 h-0 border-l-[40px] border-l-transparent border-b-[80px] border-b-green-500 border-r-[40px] border-r-transparent mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">A</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-0 h-0 border-l-[40px] border-l-transparent border-b-[80px] border-b-green-500 border-r-[40px] border-r-transparent mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">A</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-purple-500 rounded-full shadow-md mb-2"></div>
+                            <span class="text-xl font-bold text-gray-500">B</span>
+                        </div>
+                        <div class="text-4xl text-gray-400">➡️</div>
+                        <div class="w-20 h-20 border-4 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-4xl text-gray-400">?</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="5">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8">3. Sound Pattern 🥁</h2>
+                    <p class="text-2xl text-gray-600 mb-8">We can hear patterns too!</p>
+                    
+                    <div class="grid grid-cols-2 gap-8 w-full max-w-4xl">
+                        <div class="bg-orange-100 p-6 rounded-2xl flex flex-col items-center">
+                            <span class="text-6xl mb-4">👏</span>
+                            <h3 class="text-2xl font-bold text-orange-700">Clap</h3>
+                        </div>
+                        <div class="bg-blue-100 p-6 rounded-2xl flex flex-col items-center">
+                            <span class="text-6xl mb-4">🦶</span>
+                            <h3 class="text-2xl font-bold text-blue-700">Stomp</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="6">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-4">Let's Play: Pattern Body! 🕺</h2>
+                    <img src="https://media3.giphy.com/media/l41Yh18f5TbiWHE0o/giphy.gif" alt="Dancing Kids" class="h-64 rounded-xl shadow-lg mb-6">
+                    <p class="text-3xl text-gray-700 font-bold">Follow my moves!</p>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="7">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">Level 1: AB - AB - AB</h2>
+                    <div class="flex justify-center items-center gap-8 mb-8">
+                        <div class="text-center animate-pulse">
+                            <div class="text-8xl mb-2">👏</div>
+                            <span class="text-2xl font-bold text-gray-600">A (Clap)</span>
+                        </div>
+                        <div class="text-6xl text-gray-300">➜</div>
+                        <div class="text-center animate-pulse" style="animation-delay: 0.5s">
+                            <div class="text-8xl mb-2">🤐</div>
+                            <span class="text-2xl font-bold text-gray-600">B (Silence)</span>
+                        </div>
+                    </div>
+                    <button class="bg-green-500 text-white text-2xl px-8 py-3 rounded-full font-bold shadow-lg hover:bg-green-600 transform active:scale-95 transition-all">
+                        Start Together!
+                    </button>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="8">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">Level 2: A - A - B - B</h2>
+                    <div class="flex justify-center items-center gap-4 mb-8 overflow-x-auto p-4">
+                        <div class="text-center">
+                            <div class="text-6xl mb-2">👏</div>
+                            <span class="text-xl font-bold">Clap</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-2">👏</div>
+                            <span class="text-xl font-bold">Clap</span>
+                        </div>
+                        <div class="text-4xl text-gray-300">➜</div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-2">🦶</div>
+                            <span class="text-xl font-bold">Stomp</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-2">🦶</div>
+                            <span class="text-xl font-bold">Stomp</span>
+                        </div>
+                    </div>
+                    <p class="text-2xl text-purple-600 font-bold">Keep Repeating!</p>
+                </div>
+            </div>
+
+
+
+            <div class="slide hidden" data-meeting="10" data-slide="9">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-6">Pattern Challenge! 🧩</h2>
+                    <p class="text-2xl text-gray-600 mb-8">Help me complete these patterns.</p>
+                    <div class="grid grid-cols-2 gap-4 w-full max-w-3xl">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-red-500 flex items-center gap-4">
+                            <span class="text-4xl">🍎</span>
+                            <div class="text-left">
+                                <h3 class="font-bold text-xl">Fruits</h3>
+                                <p class="text-gray-500">What comes next?</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500 flex items-center gap-4">
+                            <span class="text-4xl">🦁</span>
+                            <div class="text-left">
+                                <h3 class="font-bold text-xl">Animals</h3>
+                                <p class="text-gray-500">Who is missing?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Game 1: Fruit Pattern (ABAB) -->
+            <div class="slide hidden" data-meeting="10" data-slide="10">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Complete the Pattern: <span class="text-red-500">A</span> - <span class="text-yellow-500">B</span></h2>
+                    
+                    <div class="flex items-center gap-2 mb-12 bg-gray-50 p-6 rounded-3xl shadow-inner border-2 border-gray-200">
+                        <span class="text-6xl hover-pop">🍎</span>
+                        <span class="text-6xl hover-pop">🍌</span>
+                        <span class="text-6xl hover-pop">🍎</span>
+                        <div class="w-20 h-20 bg-gray-200 rounded-xl border-4 border-dashed border-gray-400 flex items-center justify-center text-4xl font-bold text-gray-400" id="target-slot-10">?</div>
+                    </div>
+
+                    <div class="flex gap-8">
+                        <button onclick="checkPattern(10, 'banana')" class="bg-white hover:bg-yellow-50 p-6 rounded-2xl shadow-lg border-b-4 border-gray-200 transition-all active:scale-95 group">
+                            <span class="text-6xl block group-hover:scale-110 transition-transform">🍌</span>
+                        </button>
+                        <button onclick="checkPattern(10, 'apple')" class="bg-white hover:bg-red-50 p-6 rounded-2xl shadow-lg border-b-4 border-gray-200 transition-all active:scale-95 group">
+                            <span class="text-6xl block group-hover:scale-110 transition-transform">🍎</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Game 2: Color Pattern (AABB) -->
+            <div class="slide hidden" data-meeting="10" data-slide="11">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">What Color is Next?</h2>
+                    
+                    <div class="flex items-center gap-4 mb-12 bg-white p-6 rounded-3xl shadow-lg">
+                        <div class="w-16 h-16 rounded-full bg-blue-500 shadow-md"></div>
+                        <div class="w-16 h-16 rounded-full bg-blue-500 shadow-md"></div>
+                        <div class="w-16 h-16 rounded-full bg-green-500 shadow-md"></div>
+                        <div class="w-16 h-16 rounded-full border-4 border-dashed border-gray-300 flex items-center justify-center text-gray-300 font-bold text-2xl" id="target-slot-11">?</div>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <button onclick="checkPattern(11, 'blue')" class="w-24 h-24 rounded-full bg-blue-500 shadow-lg hover:scale-110 transition-transform border-4 border-white ring-2 ring-blue-200"></button>
+                        <button onclick="checkPattern(11, 'green')" class="w-24 h-24 rounded-full bg-green-500 shadow-lg hover:scale-110 transition-transform border-4 border-white ring-2 ring-green-200"></button>
+                        <button onclick="checkPattern(11, 'red')" class="w-24 h-24 rounded-full bg-red-500 shadow-lg hover:scale-110 transition-transform border-4 border-white ring-2 ring-red-200"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Game 3: Animal Pattern (ABC) -->
+            <div class="slide hidden" data-meeting="10" data-slide="12">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Zoo Pattern 🦁</h2>
+                    
+                    <div class="flex items-center gap-2 mb-12">
+                        <span class="text-6xl">🐶</span>
+                        <span class="text-6xl">🐱</span>
+                        <span class="text-6xl">🐭</span>
+                        <span class="text-4xl text-gray-300 mx-2">|</span>
+                        <span class="text-6xl">🐶</span>
+                        <span class="text-6xl">🐱</span>
+                        <div class="w-20 h-20 bg-white rounded-xl border-4 border-dashed border-gray-400 flex items-center justify-center text-4xl animate-pulse" id="target-slot-12">?</div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <button onclick="checkPattern(12, 'mouse')" class="p-4 bg-white rounded-xl shadow-md hover:bg-gray-50 text-5xl">🐭</button>
+                        <button onclick="checkPattern(12, 'cat')" class="p-4 bg-white rounded-xl shadow-md hover:bg-gray-50 text-5xl">🐱</button>
+                        <button onclick="checkPattern(12, 'dog')" class="p-4 bg-white rounded-xl shadow-md hover:bg-gray-50 text-5xl">🐶</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="13">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-8">Prediction 🔮</h2>
+                    <img src="https://miro.medium.com/1*7dpfH-Ab1iIPNu6ZqoY0IA.jpeg" alt="Thinking" class="h-56 rounded-xl shadow-lg mb-8">
+                    <div class="bg-yellow-50 p-8 rounded-3xl border-2 border-yellow-200 max-w-3xl">
+                        <p class="text-3xl text-gray-800">
+                            "If we understand the <span class="font-bold text-purple-600">PATTERN</span>, we can predict what happens <span class="font-bold text-blue-600">NEXT</span>!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" data-meeting="10" data-slide="14">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Nature Patterns ☀️🌙</h2>
+                    <div class="flex justify-center items-center gap-4 mb-8">
+                        <div class="text-center">
+                            <div class="bg-blue-300 w-32 h-32 rounded-full flex items-center justify-center text-6xl shadow-inner">☀️</div>
+                            <span class="font-bold text-gray-600">Day</span>
+                        </div>
+                        <div class="text-4xl">➡</div>
+                        <div class="text-center">
+                            <div class="bg-gray-800 w-32 h-32 rounded-full flex items-center justify-center text-6xl shadow-inner">🌙</div>
+                            <span class="font-bold text-gray-600">Night</span>
+                        </div>
+                        <div class="text-4xl">➡</div>
+                        <div class="text-center">
+                            <div class="bg-blue-300 w-32 h-32 rounded-full flex items-center justify-center text-6xl shadow-inner">☀️</div>
+                            <span class="font-bold text-gray-600">Day</span>
+                        </div>
+                        <div class="text-4xl">➡</div>
+                        <div class="w-32 h-32 rounded-full border-4 border-dashed border-gray-400 flex items-center justify-center text-6xl bg-gray-100" id="target-slot-14">?</div>
+                    </div>
+
+                    <p class="text-2xl text-gray-600 mb-6">After Day... what comes next?</p>
+                    
+                    <div class="flex gap-6 justify-center">
+                        <button onclick="checkPattern(14, 'sun')" class="bg-blue-100 hover:bg-blue-200 p-4 rounded-xl shadow-md transition-colors">
+                            <span class="text-5xl">☀️</span>
+                        </button>
+                        <button onclick="checkPattern(14, 'moon')" class="bg-gray-700 hover:bg-gray-600 p-4 rounded-xl shadow-md transition-colors">
+                            <span class="text-5xl">🌙</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.15: Connection to Coding -->
+            <div class="slide hidden" data-meeting="10" data-slide="15">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Why do we learn Patterns? 🤖</h2>
+                    <img src="https://cdn.sanity.io/images/bl383u0v/production/e36e7cddcbb7d6f5f624ea9ffa4714f959616430-1500x1000.gif" alt="Robot thinking" class="h-56 rounded-xl shadow-lg mb-8">
+                    <div class="bg-blue-100 p-8 rounded-3xl border-2 border-blue-200 max-w-4xl">
+                        <p class="text-3xl text-gray-800 leading-relaxed">
+                            Computers <span class="font-bold text-red-500">LOVE</span> patterns!
+                        </p>
+                        <p class="text-2xl text-gray-600 mt-4">
+                            Coding is giving the computer a pattern to follow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.16: Lazy Computers -->
+            <div class="slide hidden" data-meeting="10" data-slide="16">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-600 mb-8">Lazy Computers 😴</h2>
+                    <p class="text-2xl text-gray-600 mb-6">Computers don't like to do the same thing over and over...</p>
+                    
+                    <div class="flex items-center justify-center gap-8 mb-8">
+                        <div class="opacity-50">
+                            <div class="text-4xl mb-2">🚶</div>
+                            <span class="text-xl">Walk</span>
+                        </div>
+                        <div class="opacity-50">
+                            <div class="text-4xl mb-2">🚶</div>
+                            <span class="text-xl">Walk</span>
+                        </div>
+                        <div class="opacity-50">
+                            <div class="text-4xl mb-2">🚶</div>
+                            <span class="text-xl">Walk</span>
+                        </div>
+                         <div class="opacity-50">
+                            <div class="text-4xl mb-2">🚶</div>
+                            <span class="text-xl">Walk</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-100 p-6 rounded-2xl animate-pulse">
+                        <p class="text-3xl font-bold text-green-800">Use a LOOP!</p>
+                        <p class="text-xl text-green-600 mt-2">"Do this 4 times!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.17: Repeat Block -->
+            <div class="slide hidden" data-meeting="10" data-slide="17">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8">The Magic Block 🟧</h2>
+                    <p class="text-2xl text-gray-600 mb-8">In Scratch Jr, we use the <span class="font-bold text-orange-500">Orange</span> block.</p>
+                    
+                    <div class="flex items-center justify-center gap-12">
+                        <div class="text-center">
+                            <img src="https://www.scratchjr.org/images/repeat.png" alt="Repeat Block" class="h-32 mb-4 drop-shadow-xl hover:scale-110 transition-transform">
+                            <p class="text-3xl font-bold text-gray-700">Repeat</p>
+                        </div>
+                        <div class="text-6xl text-gray-400">➡️</div>
+                         <div class="bg-gray-100 p-8 rounded-2xl">
+                            <p class="text-2xl text-gray-600">It makes the pattern</p>
+                            <p class="text-3xl font-bold text-purple-600">Go Round and Round! 🔄</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.18: Spot the Pattern -->
+            <div class="slide hidden" data-meeting="10" data-slide="18">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">Spot the Pattern! 👀</h2>
+                    <p class="text-2xl text-gray-600 mb-8">Which one is better?</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+                         <div class="bg-red-50 p-6 rounded-2xl border-2 border-red-100 opacity-70">
+                            <h3 class="text-xl font-bold text-red-400 mb-4">No Pattern (Tired Computer)</h3>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-blue-500 text-white px-2 py-1 rounded">Jump</span>
+                                <span class="bg-blue-500 text-white px-2 py-1 rounded">Jump</span>
+                                <span class="bg-blue-500 text-white px-2 py-1 rounded">Jump</span>
+                                <span class="bg-blue-500 text-white px-2 py-1 rounded">Jump</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-2xl border-4 border-green-400 transform scale-105 shadow-xl">
+                            <h3 class="text-2xl font-bold text-green-700 mb-4">With Pattern! (Smart Computer)</h3>
+                            <div class="flex items-center justify-center gap-2 bg-white p-4 rounded-xl">
+                                <span class="text-4xl">🟧</span>
+                                <span class="text-xl font-bold">Repeat 4x:</span>
+                                <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-xl font-bold">Jump</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.19: Project Transition (Replaces Old Slide 15) -->
+            <div class="slide hidden" data-meeting="10" data-slide="19">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <div class="bg-white bg-opacity-90 p-12 rounded-3xl shadow-2xl border-4 border-purple-300">
+                        <h1 class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 mb-8">Mission Complete! 🚀</h1>
+                        <p class="text-4xl text-gray-800 mb-8 font-bold">You are a Pattern Master!</p>
+                        <div class="flex justify-center gap-4 text-6xl animate-bounce mt-4">
+                            <span>🎮</span><span>💻</span><span>✨</span>
+                        </div>
+                        <p class="text-3xl text-blue-600 font-bold mt-12">Now, let's make a Project!</p>
+                        <p class="text-xl text-gray-500 mt-2">Open Scratch Jr!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.20: Project Preview -->
+            <div class="slide hidden" data-meeting="10" data-slide="20">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-600 mb-4">Project: Frog Stairs 🐸</h2>
+                    <p class="text-2xl text-gray-600 mb-6">We will make the frog climb up!</p>
+                    <div class="bg-black rounded-3xl p-2 shadow-2xl inline-block border-4 border-gray-300">
+                         <video src="https://scratchjrfun.com/wp-content/uploads/2020/11/frogA.mp4" controls autoplay loop class="rounded-2xl h-80"></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.21: Character Setup -->
+            <div class="slide hidden" data-meeting="10" data-slide="21">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-blue-600 mb-8">Step 1: Choose Character</h2>
+                    <div class="flex gap-8 justify-center items-center">
+                        <div class="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-200">
+                            <img src="https://codakid.com/wp-content/uploads/2020/07/ScratchJr_003.jpg" alt="Paint Editor" class="h-48 mb-4">
+                            <p class="text-2xl font-bold">1. Delete Cat</p>
+                            <p class="text-xl text-gray-500">Long press x</p>
+                        </div>
+                        <div class="text-4xl">➡️</div>
+                         <div class="bg-white p-6 rounded-2xl shadow-xl border-2 border-green-200">
+                            <span class="text-8xl">🐸</span>
+                            <p class="text-2xl font-bold mt-4">2. Add Frog</p>
+                            <p class="text-xl text-gray-500">Choose a background too!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.22: Scene 1 Setup (Stairs) -->
+            <div class="slide hidden" data-meeting="10" data-slide="22">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-purple-600 mb-8">Step 2: Draw the Stairs 🖌️</h2>
+                    <p class="text-2xl text-gray-600 mb-6">Use the Paint Tool to draw stairs.</p>
+                     <div class="bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 max-w-4xl mx-auto">
+                        <div class="flex items-end justify-center gap-0 h-48 border-b-4 border-gray-800">
+                            <div class="w-16 h-12 bg-gray-400 border border-gray-500"></div>
+                            <div class="w-16 h-24 bg-gray-400 border border-gray-500"></div>
+                            <div class="w-16 h-36 bg-gray-400 border border-gray-500"></div>
+                            <div class="w-16 h-48 bg-gray-400 border border-gray-500"></div>
+                        </div>
+                        <p class="mt-4 text-xl text-red-500 font-bold">Important: Steps must be same size!</p>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Slide 10.23: Logic Up -->
+            <div class="slide hidden" data-meeting="10" data-slide="23">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-orange-500 mb-8">Step 3: Find the Pattern 🧐</h2>
+                    <p class="text-2xl text-gray-600 mb-8">To climb UP, what does the Frog do?</p>
+                    
+                    <div class="flex justify-center gap-8 mb-8">
+                         <div class="flex flex-col items-center animate-bounce">
+                             <div class="bg-blue-500 text-white p-4 rounded-xl text-2xl font-bold mb-2">⬆️ Up</div>
+                         </div>
+                         <div class="text-4xl self-center">+</div>
+                         <div class="flex flex-col items-center animate-bounce" style="animation-delay: 0.2s">
+                             <div class="bg-blue-500 text-white p-4 rounded-xl text-2xl font-bold mb-2">➡️ Right</div>
+                         </div>
+                    </div>
+                    
+                    <div class="bg-yellow-100 p-6 rounded-2xl inline-block">
+                        <p class="text-3xl font-bold text-yellow-800">It repeats this!</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Slide 10.24: Project Solution (Merged 24-27) -->
+             <div class="slide hidden" data-meeting="10" data-slide="24">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl font-bold text-orange-500 mb-8">Solution! 💡</h2>
+                     <div class="flex items-center justify-center gap-4 bg-white p-4 rounded-3xl shadow-xl border-4 border-yellow-200">
+                        <img src="https://scratchjrfun.com/wp-content/uploads/2020/11/scratch-junior-project-solution-scritps.png" 
+                             class="max-h-[500px] w-auto rounded-xl" 
+                             alt="Solution Code">
+                     </div>
+                     <p class="text-2xl text-gray-600 mt-6 font-bold">Here is the code for UP and DOWN!</p>
+                </div>
+            </div>
+
+
+
+            <!-- Slide 10.25: Math Connection (Renumbered) -->
+            <div class="slide hidden" data-meeting="10" data-slide="25">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Math Magic! 🧮</h2>
+                    <div class="bg-blue-50 p-8 rounded-3xl border-2 border-blue-200">
+                        <p class="text-3xl text-gray-800 mb-6 font-bold">How many jumps did the frog do?</p>
+                        
+                        <div class="grid grid-cols-2 gap-8 text-left text-2xl">
+                            <div>
+                                <p>1 Loop = <span class="font-bold text-red-500">2 Moves</span> (Up + Right)</p>
+                                <p>We did Loops <span class="font-bold text-green-500">4 Times</span></p>
+                            </div>
+                            <div class="text-center bg-white p-4 rounded-xl shadow-inner">
+                                <span class="text-6xl font-black text-purple-600">2 x 4 = 8</span>
+                                <p class="text-gray-500 mt-2">Total Moves!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Slide 10.26: Final Challenge (Renumbered) -->
+             <div class="slide hidden" data-meeting="10" data-slide="26">
+                 <div class="text-center flex flex-col items-center justify-center h-full">
+                     <h1 class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-8 animate-pulse">CHALLENGE! 🏆</h1>
+                     <div class="bg-white p-8 rounded-3xl shadow-xl max-w-3xl border-4 border-yellow-300">
+                         <p class="text-3xl text-gray-700 mb-6">Can you make the frog jump <span class="font-bold text-red-500">FASTER</span>?</p>
+                         <p class="text-2xl text-gray-500">Hint: Use the Speed Block!</p>
+                         <div class="mt-8 flex justify-center gap-4">
+                             <span class="text-8xl">🐸</span>
+                             <span class="text-8xl">💨</span>
+                         </div>
+                     </div>
+                     <p class="text-2xl text-gray-400 mt-12">See you in the next meeting!</p>
+                 </div>
+             </div>
+             <!-- ================================================== -->
+            <!-- == SLIDES FOR MEETING 11: DECOMPOSITION == -->
+            <!-- ================================================== -->
+
+            <!-- Slide 11.1: Title -->
+            <div class="slide hidden" data-meeting="11" data-slide="1">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="Decomposition Icon" class="h-48 mb-6 animate-bounce">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800">Decomposition 🧩</h1>
+                    <p class="text-2xl md:text-3xl text-purple-600 font-medium mt-6">Big Problems -> Small Steps!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.2: Concept - Rock vs Pebbles -->
+            <div class="slide hidden" data-meeting="11" data-slide="2">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">What is Decomposition? 🤔</h2>
+                    <div class="flex items-center justify-center gap-12">
+                        <div class="text-center">
+                            
+                            <p class="text-8xl">🪨</p>
+                            <p class="text-2xl font-bold text-red-500 mt-4">Big & Heavy</p>
+                            <p class="text-xl text-gray-500">(Hard to Move)</p>
+                        </div>
+                        <div class="text-6xl text-gray-400">➡️</div>
+                        <div class="text-center">
+                            <div class="flex gap-2 justify-center">
+                                <span class="text-4xl">🪨</span>
+                                <span class="text-4xl">🪨</span>
+                                <span class="text-4xl">🪨</span>
+                            </div>
+                            <p class="text-2xl font-bold text-green-500 mt-4">Small Pieces</p>
+                            <p class="text-xl text-gray-500">(Easy to Move!)</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl text-blue-600 mt-12 font-bold bg-blue-100 p-4 rounded-xl">Break it down to make it EASY!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.3: Analogy - Puzzle -->
+            <div class="slide hidden" data-meeting="11" data-slide="3">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Like a Puzzle! 🧩</h2>
+                    <img src="https://media.baamboozle.com/uploads/images/64969/1643962649_199723.gif" alt="Puzzle Animation" class="h-64 rounded-xl shadow-lg border-4 border-yellow-300">
+                    <p class="text-2xl text-gray-700 mt-8">One BIG picture is made of many SMALL pieces.</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.4: Real Life 1 - Burger -->
+            <div class="slide hidden" data-meeting="11" data-slide="4">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-orange-600 mb-8">A Yummy Example 🍔</h2>
+                    <p class="text-2xl text-gray-600 mb-6">How do we make a Burger?</p>
+                    <div class="flex justify-center items-end gap-2 text-center">
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🥯</span>
+                            <span class="text-lg font-bold">Bottom Bun</span>
+                        </div>
+                        <span class="text-4xl mb-4">+</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🥩</span>
+                            <span class="text-lg font-bold">Meat</span>
+                        </div>
+                        <span class="text-4xl mb-4">+</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🧀</span>
+                            <span class="text-lg font-bold">Cheese</span>
+                        </div>
+                        <span class="text-4xl mb-4">+</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-6xl">🥯</span>
+                            <span class="text-lg font-bold">Top Bun</span>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <span class="text-8xl">🍔</span>
+                        <p class="text-3xl font-bold text-orange-700">YUM!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.5: Real Life 2 - School -->
+            <div class="slide hidden" data-meeting="11" data-slide="5">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Getting Ready for School 🏫</h2>
+                    <p class="text-xl text-gray-600 mb-8">It's a big job! Let's break it down.</p>
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-200 hover:scale-105 transition">
+                            <span class="text-6xl">👕</span>
+                            <p class="text-xl font-bold mt-2">1. Uniform</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-orange-200 hover:scale-105 transition">
+                            <span class="text-6xl">🥣</span>
+                            <p class="text-xl font-bold mt-2">2. Breakfast</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-200 hover:scale-105 transition">
+                            <span class="text-6xl">🎒</span>
+                            <p class="text-xl font-bold mt-2">3. Bag</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.6: Why? -->
+            <div class="slide hidden" data-meeting="11" data-slide="6">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-green-600 mb-8">Why do we Decompose? 🤷</h2>
+                    <div class="flex gap-8 justify-center">
+                        <div class="bg-red-100 p-8 rounded-3xl w-1/3">
+                            <p class="text-6xl">😫</p>
+                            <p class="text-2xl font-bold mt-4 text-red-600">Big Job = OUCH!</p>
+                        </div>
+                        <div class="bg-green-100 p-8 rounded-3xl w-1/3">
+                            <p class="text-6xl">😎</p>
+                            <p class="text-2xl font-bold mt-4 text-green-600">Small Steps = EASY!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.7: Activity Intro -->
+            <div class="slide hidden" data-meeting="11" data-slide="7">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-6">Help the Robot! 🤖</h2>
+                    <img src="https://media.giphy.com/media/26AHG5KGFxSkqlB4c/giphy.gif" alt="Robot Confused" class="h-56 rounded-xl shadow-lg mb-6">
+                    <p class="text-2xl text-gray-700">The robot doesn't know how to do things!</p>
+                    <p class="text-3xl text-blue-600 font-bold mt-4">We must give it STEP-BY-STEP instructions!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.8: Game 1 - Sandwich -->
+            <div class="slide hidden" data-meeting="11" data-slide="8">
+                <div class="flex flex-col items-center justify-center h-full w-full">
+                    <h2 class="text-3xl font-bold text-orange-600 mb-4">Mission 1: Make a Sandwich 🥪</h2>
+                    
+                    <!-- Drop Zones (Ordered 1-4) -->
+                    <div class="flex gap-4 mb-8 w-full justify-center">
+                        <div class="drop-zone-11 w-32 h-32 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="1">1</div>
+                        <div class="drop-zone-11 w-32 h-32 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="2">2</div>
+                        <div class="drop-zone-11 w-32 h-32 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="3">3</div>
+                        <div class="drop-zone-11 w-32 h-32 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="4">4</div>
+                    </div>
+
+                    <!-- Draggables (Scrambled) -->
+                    <div class="flex gap-4 bg-orange-50 p-6 rounded-2xl w-full justify-center">
+                        <div id="drag-s3" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="3">
+                            <span class="text-4xl">🔪</span>
+                            <p class="font-bold text-sm">Spread It</p>
+                        </div>
+                        <div id="drag-s1" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="1">
+                            <span class="text-4xl">🍞</span>
+                            <p class="font-bold text-sm">Get Bread</p>
+                        </div>
+                        <div id="drag-s4" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="4">
+                            <span class="text-4xl">😋</span>
+                            <p class="font-bold text-sm">Eat It!</p>
+                        </div>
+                        <div id="drag-s2" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="2">
+                            <span class="text-4xl">🍓</span>
+                            <p class="font-bold text-sm">Add Jam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.9: Game 2 - Clean Room -->
+            <div class="slide hidden" data-meeting="11" data-slide="9">
+                <div class="flex flex-col items-center justify-center h-full w-full">
+                    <h2 class="text-3xl font-bold text-blue-600 mb-4">Mission 2: Clean the Room 🧹</h2>
+                    
+                    <!-- Drop Zones (Ordered 1-3) -->
+                    <div class="flex gap-8 mb-8 w-full justify-center">
+                        <div class="drop-zone-11 w-40 h-40 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="1">1</div>
+                        <div class="drop-zone-11 w-40 h-40 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="2">2</div>
+                        <div class="drop-zone-11 w-40 h-40 bg-gray-100 border-4 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-4xl font-bold text-gray-300" data-step="3">3</div>
+                    </div>
+
+                    <!-- Draggables (Scrambled) -->
+                    <div class="flex gap-4 bg-blue-50 p-6 rounded-2xl w-full justify-center">
+                        <div id="drag-c2" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="2">
+                            <span class="text-5xl">📦</span>
+                            <p class="font-bold text-sm">Put in Box</p>
+                        </div>
+                        <div id="drag-c3" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="3">
+                            <span class="text-5xl">🔒</span>
+                            <p class="font-bold text-sm">Close Box</p>
+                        </div>
+                        <div id="drag-c1" class="drag-item-11 bg-white p-4 rounded-xl shadow-md cursor-grab hover:scale-105 transition" draggable="true" data-step="1">
+                            <span class="text-5xl">🧸</span>
+                            <p class="font-bold text-sm">Pick up Toy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.10: What if we skip? -->
+            <div class="slide hidden" data-meeting="11" data-slide="10">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-red-600 mb-8">What if we skip a step? 😱</h2>
+                    <p class="text-2xl text-gray-600 mb-6">"If we spread the jam BEFORE we get the bread..."</p>
+                    <img src="https://media.tenor.com/JMgvE9y0Q2AAAAAM/messy-eater-cookie-monster.gif" alt="Messy" class="h-56 rounded-xl shadow-lg">
+                    <p class="text-3xl font-bold text-orange-600 mt-6">It makes a MESS! 🧼</p>
+                    <p class="text-xl text-gray-500 mt-2">Order is important!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.11: Coding Connection -->
+            <div class="slide hidden" data-meeting="11" data-slide="11">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Coding is Decomposition! 💻</h2>
+                    <div class="bg-gray-800 p-8 rounded-3xl text-white">
+                        <p class="text-2xl font-mono mb-2">1. Start 🏁</p>
+                        <p class="text-2xl font-mono mb-2">2. Move Right ➡️</p>
+                        <p class="text-2xl font-mono mb-2">3. Jump ⬆️</p>
+                        <p class="text-2xl font-mono">4. Stop 🛑</p>
+                    </div>
+                    <p class="text-2xl text-gray-600 mt-8">We tell the computer every small step.</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.12: Example - Frog Project -->
+            <div class="slide hidden" data-meeting="11" data-slide="12">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-8">Remember the Frog? 🐸</h2>
+                    <p class="text-2xl text-gray-600 mb-6">It was a BIG project!</p>
+                    <div class="flex gap-4 justify-center">
+                        <div class="bg-white p-4 rounded-xl shadow-md border-2 border-green-200 opacity-50">
+                            <p class="text-4xl">1</p>
+                            <p>Setup</p>
+                        </div>
+                        <span class="text-4xl self-center">➡️</span>
+                        <div class="bg-white p-4 rounded-xl shadow-md border-2 border-green-200 opacity-75">
+                            <p class="text-4xl">2</p>
+                            <p>Up Code</p>
+                        </div>
+                        <span class="text-4xl self-center">➡️</span>
+                        <div class="bg-white p-4 rounded-xl shadow-md border-4 border-green-500 scale-110">
+                            <p class="text-4xl">3</p>
+                            <p class="text-xl font-bold">Down Code</p>
+                        </div>
+                    </div>
+                    <p class="text-2xl text-blue-600 mt-8">We did it one step at a time!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.13: Discussion Challenge -->
+            <div class="slide hidden" data-meeting="11" data-slide="13">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-8">Circle Time Challenge! 🗣️</h2>
+                    <img src="https://media.tenor.com/_Z8Ddeoi2QIAAAAj/brushing-teeth-tooth-brush.gif" alt="Brushing Teeth" class="h-48 rounded-xl shadow-lg mb-6">
+                    <p class="text-3xl font-bold text-gray-800">How do you brush your teeth?</p>
+                    <p class="text-2xl text-gray-600 mt-4">Break it down into 3 steps?</p>
+                    <div class="mt-8 flex gap-4 justify-center text-4xl">
+                        <span>🪥</span>
+                        <span>🦷</span>
+                        <span>✨</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.14: Review -->
+            <div class="slide hidden" data-meeting="11" data-slide="14">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Review Time 📝</h2>
+                    <div class="bg-yellow-50 p-8 rounded-3xl border-2 border-yellow-200">
+                        <p class="text-3xl text-gray-800 mb-4">Decomposition is...</p>
+                        <p class="text-4xl font-bold text-blue-600 animate-pulse">Breaking BIG things into SMALL steps!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.15: Badge -->
+            <div class="slide hidden" data-meeting="11" data-slide="15">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h1 class="text-6xl font-bold text-yellow-500 mb-8">You are a Thinker! 🧠</h1>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Brain Badge" class="h-64 animate-bounce drop-shadow-2xl">
+                    <p class="text-3xl text-gray-700 mt-8">Badge Unlocked: <span class="font-bold text-purple-600">The Decomposer</span></p>
+                    <p class="text-xl text-gray-400 mt-4">See you in the next Meeting!</p>
+                </div>
+            </div>
         </main>
 
         <footer class="flex justify-between items-center p-4 bg-gray-100 border-t-2 border-gray-200">
@@ -4053,6 +4882,106 @@
             });
         });
 
+        // ==========================================
+        // === MEETING 10: PATTERN GAME LOGIC (NEW) ===
+        // ==========================================
+
+        function checkPattern(slideNum, answer) {
+            let isCorrect = false;
+            let feedbackElement = document.getElementById(`target-slot-${slideNum}`);
+
+            // Define correct answers
+            if (slideNum === 10 && answer === 'banana') isCorrect = true;
+            if (slideNum === 11 && answer === 'green') isCorrect = true;
+            if (slideNum === 12 && answer === 'mouse') isCorrect = true;
+            if (slideNum === 14 && answer === 'moon') isCorrect = true;
+
+            if (isCorrect) {
+                showSuccessMessage("🎉 Correct! You found the pattern! 🎉");
+                
+                // Update visual slot based on slide specific styling
+                if (slideNum === 10) {
+                    feedbackElement.innerHTML = "🍌";
+                    feedbackElement.classList.remove('text-gray-400', 'border-gray-400', 'border-dashed');
+                    feedbackElement.classList.add('bg-yellow-100', 'border-yellow-400', 'text-6xl', 'border-solid');
+                } else if (slideNum === 11) {
+                    feedbackElement.innerHTML = "";
+                    feedbackElement.className = "w-16 h-16 rounded-full bg-green-500 shadow-md animate-bounce";
+                } else if (slideNum === 12) {
+                    feedbackElement.innerHTML = "🐭";
+                    feedbackElement.classList.remove('text-gray-300', 'border-gray-400', 'border-dashed', 'animate-pulse');
+                    feedbackElement.classList.add('bg-gray-100', 'border-gray-400', 'text-6xl', 'border-solid');
+                } else if (slideNum === 14) {
+                     feedbackElement.innerHTML = "🌙";
+                     feedbackElement.className = "bg-gray-800 w-32 h-32 rounded-full flex items-center justify-center text-6xl shadow-inner animate-bounce text-white";
+                }
+
+            } else {
+                showSuccessMessage("❌ Oops! Try again!");
+                // Add shake animation
+                feedbackElement.classList.add('ring-4', 'ring-red-400');
+                setTimeout(() => feedbackElement.classList.remove('ring-4', 'ring-red-400'), 500);
+            }
+        }
+
+        // ==========================================
+        // === MEETING 11: DECOMPOSITION LOGIC ===
+        // ==========================================
+
+        const m11Draggables = document.querySelectorAll('.drag-item-11');
+        const m11Dropzones = document.querySelectorAll('.drop-zone-11');
+        
+        m11Draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', draggable.dataset.step);
+                e.dataTransfer.setData('element-id', draggable.id);
+                setTimeout(() => draggable.classList.add('opacity-50'), 0);
+            });
+
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('opacity-50');
+            });
+        });
+
+        m11Dropzones.forEach(zone => {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('bg-blue-100', 'border-blue-400');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('bg-blue-100', 'border-blue-400');
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('bg-blue-100', 'border-blue-400');
+
+                const step = e.dataTransfer.getData('text/plain');
+                const elementId = e.dataTransfer.getData('element-id');
+                const draggableElement = document.getElementById(elementId);
+                const correctStep = zone.dataset.step;
+
+                if (step === correctStep) {
+                    // Correct!
+                    zone.innerHTML = ""; // Clear placeholder
+                    zone.appendChild(draggableElement);
+                    draggableElement.draggable = false;
+                    draggableElement.classList.remove('cursor-grab', 'opacity-50');
+                    draggableElement.classList.add('cursor-default', 'w-full', 'h-full', 'flex', 'items-center', 'justify-center');
+                    
+                    zone.classList.remove('border-dashed');
+                    zone.classList.add('border-solid', 'border-green-500', 'bg-green-100');
+                    
+                    showSuccessMessage("✅ Correct Step!");
+                    
+                    // Check if all zones in this slide are filled
+                    // (Simplified check)
+                } else {
+                    showSuccessMessage("❌ Oops! Wrong Order!");
+                }
+            });
+        });
     </script>
 </body>
 
