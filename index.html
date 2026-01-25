@@ -133,6 +133,7 @@
                     <option value="9">Meet 9: Being a Digital Creator</option>
                     <option value="10">Meet 10: Patterns & Prediction</option>
                     <option value="11">Meet 11: Decomposition</option>
+                    <option value="12">Meet 12: Debugging (Finding Mistakes)</option>
                 </select>
             </div>
         </header>
@@ -3886,7 +3887,7 @@
             <div class="slide hidden" data-meeting="11" data-slide="3">
                 <div class="text-center flex flex-col items-center justify-center h-full">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Like a Puzzle! 🧩</h2>
-                    <img src="https://media.baamboozle.com/uploads/images/64969/1643962649_199723.gif" alt="Puzzle Animation" class="h-64 rounded-xl shadow-lg border-4 border-yellow-300">
+                    <img src="https://whiled.co/cdn/shop/files/WHILED_SUNNY-SIDE-UP-IG-AD.gif?v=1616446127" alt="Puzzle Animation" class="h-64 rounded-xl shadow-lg border-4 border-yellow-300">
                     <p class="text-2xl text-gray-700 mt-8">One BIG picture is made of many SMALL pieces.</p>
                 </div>
             </div>
@@ -3967,7 +3968,7 @@
             <div class="slide hidden" data-meeting="11" data-slide="7">
                 <div class="text-center flex flex-col items-center justify-center h-full">
                     <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-6">Help the Robot! 🤖</h2>
-                    <img src="https://media.giphy.com/media/26AHG5KGFxSkqlB4c/giphy.gif" alt="Robot Confused" class="h-56 rounded-xl shadow-lg mb-6">
+                    <img src="https://robotics.snowcron.com/my_robots/images/spider/spider_27.gif" alt="Robot Confused" class="h-56 rounded-xl shadow-lg mb-6">
                     <p class="text-2xl text-gray-700">The robot doesn't know how to do things!</p>
                     <p class="text-3xl text-blue-600 font-bold mt-4">We must give it STEP-BY-STEP instructions!</p>
                 </div>
@@ -4121,6 +4122,585 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Brain Badge" class="h-64 animate-bounce drop-shadow-2xl">
                     <p class="text-3xl text-gray-700 mt-8">Badge Unlocked: <span class="font-bold text-purple-600">The Decomposer</span></p>
                     <p class="text-xl text-gray-400 mt-4">See you in the next Meeting!</p>
+                </div>
+            </div>
+
+            <!-- Slide 11.16: Project Intro - The BIG Problem -->
+            <div class="slide hidden" data-meeting="11" data-slide="16">
+                <div class="flex flex-col items-center justify-center h-full p-8">
+                    <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-6 text-center">Game Project - The Crashing Rider 🧩</h2>
+                    <div class="grid grid-cols-2 gap-8 w-full max-w-6xl">
+                        <div class="bg-red-50 p-8 rounded-3xl border-4 border-red-300 flex flex-col justify-center">
+                            <p class="text-6xl mb-6 text-center">🪨</p>
+                            <h3 class="text-3xl font-bold text-red-700 mb-4">The BIG Problem:</h3>
+                            <p class="text-xl text-gray-700 italic">"Bagaimana cara membuat animasi di mana seorang pengendara sepeda menabrak bunga hingga jatuh saat kita menyentuh sepedanya?"</p>
+                            <p class="text-lg text-gray-500 mt-6">Looks hard? Let's break it down! 💪</p>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/1f819239-c686-45d8-8392-ee6787cd55d5.gif" 
+                                 alt="Crashing Rider Demo" 
+                                 class="rounded-3xl shadow-2xl border-4 border-purple-300 max-h-[500px] w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.17: Decomposition Breakdown -->
+            <div class="slide hidden" data-meeting="11" data-slide="17">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Decomposition: Breaking It Down ✂️</h2>
+                    <p class="text-2xl text-gray-600 mb-6">We'll split this into 4 small tasks:</p>
+                    <div class="grid grid-cols-2 gap-6 max-w-5xl">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-300 hover:scale-105 transition">
+                            <p class="text-6xl mb-4">🖼️</p>
+                            <p class="text-2xl font-bold text-yellow-700">Task 1: Setup</p>
+                            <p class="text-lg text-gray-600 mt-2">Prepare the stage!</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-300 hover:scale-105 transition">
+                            <p class="text-6xl mb-4">🚴</p>
+                            <p class="text-2xl font-bold text-green-700">Task 2: Rider</p>
+                            <p class="text-lg text-gray-600 mt-2">Code the bicycle!</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-pink-300 hover:scale-105 transition">
+                            <p class="text-6xl mb-4">🌸</p>
+                            <p class="text-2xl font-bold text-pink-700">Task 3: Flower</p>
+                            <p class="text-lg text-gray-600 mt-2">Make it fall!</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-purple-300 hover:scale-105 transition">
+                            <p class="text-6xl mb-4">🎮</p>
+                            <p class="text-2xl font-bold text-purple-700">Task 4: Test</p>
+                            <p class="text-lg text-gray-600 mt-2">Try and fix!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.18: Task 1 - Setup -->
+            <div class="slide hidden" data-meeting="11" data-slide="18">
+                <div class="flex flex-col justify-center h-full p-8">
+                    <h2 class="text-4xl font-bold text-yellow-600 mb-6 text-center">🧩 Tugas 1: Menyiapkan Panggung (Setup)</h2>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-yellow-50 p-6 rounded-2xl border-2 border-yellow-300">
+                            <h3 class="text-2xl font-bold text-yellow-700 mb-4">Steps:</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex gap-3 items-start">
+                                    <span class="text-2xl">🖼️</span>
+                                    <div>
+                                        <p class="font-bold">Pilih Latar:</p>
+                                        <p class="text-gray-600">Klik ikon Background, pilih "River" atau "Park"</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <span class="text-2xl">🐱</span>
+                                    <div>
+                                        <p class="font-bold">Hapus Kucing:</p>
+                                        <p class="text-gray-600">Tahan lama lalu klik X</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <span class="text-2xl">🚴</span>
+                                    <div>
+                                        <p class="font-bold">Tambah Bicycle Rider:</p>
+                                        <p class="text-gray-600">Klik (+), pilih karakter</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <span class="text-2xl">🌸</span>
+                                    <div>
+                                        <p class="font-bold">Tambah Flower:</p>
+                                        <p class="text-gray-600">Klik (+) lagi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/c8e10c93-bdc6-46cc-8234-a9381a300d9a.png" 
+                                 alt="Setup Screen" 
+                                 class="rounded-2xl shadow-xl border-4 border-yellow-300 max-h-[500px] w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.19: Task 2 - Coding the Rider -->
+            <div class="slide hidden" data-meeting="11" data-slide="19">
+                <div class="flex flex-col justify-center h-full p-8">
+                    <h2 class="text-4xl font-bold text-green-600 mb-6 text-center">🧩 Tugas 2: Coding Si Pengendara (The Action)</h2>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-green-50 p-8 rounded-2xl border-2 border-green-300">
+                            <p class="text-xl text-gray-700 mb-6">Pilih ikon <span class="font-bold">"Bicycle Rider"</span></p>
+                            <div class="space-y-4">
+                                <div class="bg-white p-6 rounded-xl shadow-md">
+                                    <p class="text-2xl font-bold text-yellow-700 mb-2">1. Pemicu (Trigger):</p>
+                                    <p class="text-lg text-gray-700">Ambil blok <span class="bg-yellow-300 px-2 py-1 rounded">Kuning (Jari Telunjuk/Start on Tap)</span></p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Artinya: "Jalan saat disentuh!"</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-md">
+                                    <p class="text-2xl font-bold text-blue-700 mb-2">2. Gerakan:</p>
+                                    <p class="text-lg text-gray-700">Ambil blok <span class="bg-blue-300 px-2 py-1 rounded">Biru (Panah Kanan)</span></p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Ubah angka jadi 6 atau 7 (sesuaikan jarak)</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-md">
+                                    <p class="text-2xl font-bold text-red-700 mb-2">3. Penutup:</p>
+                                    <p class="text-lg text-gray-700">Ambil blok <span class="bg-red-300 px-2 py-1 rounded">Merah (End)</span></p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Untuk mengakhiri rangkaian</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/474475cf-f5b2-443d-9902-46843d46ff72.png" 
+                                 alt="Rider Code Blocks" 
+                                 class="rounded-2xl shadow-xl border-4 border-green-300 max-h-[500px] w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.20: Task 3 - Coding the Flower -->
+            <div class="slide hidden" data-meeting="11" data-slide="20">
+                <div class="flex flex-col justify-center h-full p-8">
+                    <h2 class="text-4xl font-bold text-pink-600 mb-6 text-center">🧩 Tugas 3: Coding Si Bunga (The Reaction)</h2>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-pink-50 p-8 rounded-2xl border-2 border-pink-300">
+                            <p class="text-xl text-gray-700 mb-6">Pilih ikon <span class="font-bold">"Flower"</span></p>
+                            <div class="space-y-4">
+                                <div class="bg-white p-6 rounded-xl shadow-md">
+                                    <p class="text-2xl font-bold text-yellow-700 mb-2">1. Pemicu (Trigger):</p>
+                                    <p class="text-lg text-gray-700">Ambil blok <span class="bg-yellow-300 px-2 py-1 rounded">Kuning (Dua Orang Tabrakan/Start on Bump)</span></p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Artinya: "Bergerak hanya jika ditabrak!"</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-md">
+                                    <p class="text-2xl font-bold text-blue-700 mb-2">2. Efek Jatuh:</p>
+                                    <p class="text-lg text-gray-700">Ambil blok <span class="bg-blue-300 px-2 py-1 rounded">Biru (Putar Kanan/Rotate)</span></p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Atur angka (2 atau 3) agar bunga miring/tumbang</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-md border-2 border-dashed border-purple-300">
+                                    <p class="text-2xl font-bold text-purple-700 mb-2">3. Opsional - Terpental:</p>
+                                    <p class="text-lg text-gray-700">Tambah blok <span class="bg-blue-300 px-2 py-1 rounded">Biru (Panah Atas)</span> sebelum jatuh</p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Agar bunga terlihat sedikit terpental! ⬆️</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/82a18851-bdaa-4135-aed8-bac438cf3b77.png" 
+                                 alt="Flower Code Blocks" 
+                                 class="rounded-2xl shadow-xl border-4 border-pink-300 max-h-[500px] w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.21: Task 4 - Testing -->
+            <div class="slide hidden" data-meeting="11" data-slide="21">
+                <div class="flex flex-col justify-center h-full p-8">
+                    <h2 class="text-4xl font-bold text-purple-600 mb-6 text-center">🧩 Tugas 4: Uji Coba & Perbaikan (Testing)</h2>
+                    <div class="bg-purple-50 p-8 rounded-2xl border-2 border-purple-300 max-w-4xl mx-auto">
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <span class="text-5xl">📱</span>
+                                <div>
+                                    <p class="text-2xl font-bold text-purple-700">Klik ikon Layar Penuh (Full Screen)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-5xl">👆</span>
+                                <div>
+                                    <p class="text-2xl font-bold text-purple-700">Sentuh si Pengendara</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl">
+                                <p class="text-2xl font-bold text-orange-600 mb-4">Cek:</p>
+                                <div class="space-y-2 text-lg text-gray-700">
+                                    <p>✅ Apakah sepedanya sampai ke bunga?</p>
+                                    <p>✅ Apakah bunganya jatuh di waktu yang tepat?</p>
+                                    <p>✅ Jika belum, ubah angka pada blok gerakan!</p>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-xl border-2 border-yellow-400">
+                                <p class="text-xl font-bold text-yellow-800 text-center">🔄 Keep testing until perfect! 🎯</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11.22: Why Decomposition? Reflection -->
+            <div class="slide hidden" data-meeting="11" data-slide="22">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-8">Mengapa Kita Pakai Dekomposisi? 🧠</h2>
+                    <div class="grid grid-cols-2 gap-8 max-w-5xl">
+                        <div class="bg-red-50 p-8 rounded-3xl border-4 border-red-300">
+                            <p class="text-6xl mb-4">😫</p>
+                            <h3 class="text-3xl font-bold text-red-700 mb-4">Tanpa Dekomposisi:</h3>
+                            <div class="text-left text-lg text-gray-700 space-y-2">
+                                <p>❌ Kita akan bingung mulai dari mana</p>
+                                <p>❌ "Gimana cara bikin mereka tabrakan?!"</p>
+                                <p class="mt-4 italic">Terasa berat seperti batu besar! 🪨</p>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-8 rounded-3xl border-4 border-green-300">
+                            <p class="text-6xl mb-4">😎</p>
+                            <h3 class="text-3xl font-bold text-green-700 mb-4">Dengan Dekomposisi:</h3>
+                            <div class="text-left text-lg text-gray-700 space-y-2">
+                                <p>✅ Fokus ke Latar dulu</p>
+                                <p>✅ Lalu fokus ke Sepeda saja</p>
+                                <p>✅ Lalu fokus ke Bunga saja</p>
+                                <p class="mt-4 font-bold text-2xl text-green-600">🎉 Game SELESAI!</p>
+                                <p class="italic">Terasa ringan seperti kerikil! 🪨🪨🪨</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-yellow-100 p-6 rounded-2xl border-2 border-yellow-400">
+                        <p class="text-3xl font-bold text-yellow-800">Break BIG problems into SMALL steps! 🚀</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================== -->
+            <!-- ==  SLIDES FOR MEETING 12: DEBUGGING STARTS HERE  == -->
+            <!-- ================================================== -->
+
+            <!-- Slide 12.1: Title -->
+            <div class="slide hidden" data-meeting="12" data-slide="1">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <div class="text-7xl animate-bounce">🔍</div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mt-4">Let's Find Mistakes!</h1>
+                    <p class="text-3xl md:text-4xl text-blue-600 font-medium mt-6">Meet 12: Bug Detective</p>
+                </div>
+            </div>
+
+            <!-- Slide 12.2: Welcome Song -->
+            <div class="slide hidden" data-meeting="12" data-slide="2">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Welcome, Super Coders!</h2>
+                    <p class="text-2xl text-blue-600 mt-4">Let's sing our welcome song!</p>
+                    <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
+                        <p>🎵 Hello, hello, how are you? 😊</p>
+                        <p>🎵 We are here, me and you! 🧑‍🤝‍🧑</p>
+                        <p>🎵 Time to learn and time to play, 🧠</p>
+                        <p>🎵 It's a happy, super day! ✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.3: What is a Bug? -->
+            <div class="slide hidden" data-meeting="12" data-slide="3">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">What is a "Bug"? 🐛</h2>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+                        <div class="bg-red-100 p-8 rounded-2xl shadow-lg">
+                            <p class="text-6xl mb-4">🐛</p>
+                            <p class="text-2xl font-bold text-red-700">A Bug is a MISTAKE!</p>
+                            <p class="text-xl text-gray-600 mt-2">When our code doesn't work right</p>
+                        </div>
+                        <div class="bg-green-100 p-8 rounded-2xl shadow-lg">
+                            <p class="text-6xl mb-4">🔧</p>
+                            <p class="text-2xl font-bold text-green-700">We can FIX it!</p>
+                            <p class="text-xl text-gray-600 mt-2">That's called "Debugging"!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.4: Types of Bugs -->
+            <div class="slide hidden" data-meeting="12" data-slide="4">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">3 Types of Bugs 🐛</h2>
+                    <div class="space-y-4 w-full max-w-4xl">
+                        <div class="bg-orange-100 p-6 rounded-2xl shadow-lg hover-pop">
+                            <p class="text-3xl font-bold text-orange-700">1. Wrong Direction ⬅️➡️</p>
+                            <p class="text-xl text-gray-600 mt-2">Going LEFT when we should go RIGHT!</p>
+                        </div>
+                        <div class="bg-purple-100 p-6 rounded-2xl shadow-lg hover-pop">
+                            <p class="text-3xl font-bold text-purple-700">2. Wrong Order 🔄</p>
+                            <p class="text-xl text-gray-600 mt-2">Steps are mixed up!</p>
+                        </div>
+                        <div class="bg-pink-100 p-6 rounded-2xl shadow-lg hover-pop">
+                            <p class="text-3xl font-bold text-pink-700">3. Missing Steps 📦</p>
+                            <p class="text-xl text-gray-600 mt-2">We forgot something!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.5: Become a Bug Detective! -->
+            <div class="slide hidden" data-meeting="12" data-slide="5">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">You Are Now...</h2>
+                    <div class="mt-8 bg-gradient-to-r from-yellow-400 to-orange-400 p-12 rounded-3xl shadow-2xl">
+                        <p class="text-7xl mb-4">🕵️‍♂️🔍</p>
+                        <h1 class="text-6xl font-bold text-white">BUG DETECTIVES!</h1>
+                        <p class="text-2xl text-white mt-4">Your job: Find and Fix Mistakes!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.6: Teacher Activity - Setup -->
+            <div class="slide hidden" data-meeting="12" data-slide="6">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Activity Time! 🎯</h2>
+                    <div class="mt-8 bg-blue-100 p-8 rounded-2xl w-full max-w-4xl">
+                        <p class="text-3xl font-bold text-blue-700 mb-6">Teacher will make MISTAKES!</p>
+                        <div class="text-left text-2xl space-y-4 text-gray-700">
+                            <p>👁️ Watch carefully!</p>
+                            <p>🤔 Find the mistake!</p>
+                            <p>✋ Raise your hand when you spot it!</p>
+                            <p>🗣️ Tell us how to fix it!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.7: Teacher Demo - Wrong Direction -->
+            <div class="slide hidden" data-meeting="12" data-slide="7">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Demo 1: Wrong Direction!</h2>
+                    <div class="mt-8 grid grid-cols-2 gap-8 w-full max-w-5xl">
+                        <div class="bg-red-50 border-4 border-dashed border-red-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-red-700 mb-4">❌ WRONG!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>⬆️ Go Forward</p>
+                                <p>⬆️ Go Forward</p>
+                                <p>⬅️ Turn Left</p>
+                            </div>
+                            <p class="text-xl mt-4 text-red-600">Oh no! We went the wrong way!</p>
+                        </div>
+                        <div class="bg-green-50 border-4 border-solid border-green-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-green-700 mb-4">✅ FIXED!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>⬆️ Go Forward</p>
+                                <p>⬆️ Go Forward</p>
+                                <p>➡️ Turn Right</p>
+                            </div>
+                            <p class="text-xl mt-4 text-green-600">Perfect! Now it works!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.8: Teacher Demo - Wrong Order -->
+            <div class="slide hidden" data-meeting="12" data-slide="8">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Demo 2: Wrong Order!</h2>
+                    <div class="mt-8 grid grid-cols-2 gap-8 w-full max-w-5xl">
+                        <div class="bg-red-50 border-4 border-dashed border-red-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-red-700 mb-4">❌ WRONG!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>👕 Put on shirt</p>
+                                <p>🧥 Put on jacket</p>
+                                <p>👔 Put on tie</p>
+                            </div>
+                            <p class="text-xl mt-4 text-red-600">That's the wrong order!</p>
+                        </div>
+                        <div class="bg-green-50 border-4 border-solid border-green-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-green-700 mb-4">✅ FIXED!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>👕 Put on shirt</p>
+                                <p>👔 Put on tie</p>
+                                <p>🧥 Put on jacket</p>
+                            </div>
+                            <p class="text-xl mt-4 text-green-600">Now the order is right!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.9: Teacher Demo - Missing Step -->
+            <div class="slide hidden" data-meeting="12" data-slide="9">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Demo 3: Missing Step!</h2>
+                    <div class="mt-8 grid grid-cols-2 gap-8 w-full max-w-5xl">
+                        <div class="bg-red-50 border-4 border-dashed border-red-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-red-700 mb-4">❌ WRONG!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>1. Take bread 🍞</p>
+                                <p>2. ???</p>
+                                <p>3. Eat sandwich 😋</p>
+                            </div>
+                            <p class="text-xl mt-4 text-red-600">We forgot something!</p>
+                        </div>
+                        <div class="bg-green-50 border-4 border-solid border-green-400 p-8 rounded-2xl">
+                            <p class="text-3xl font-bold text-green-700 mb-4">✅ FIXED!</p>
+                            <div class="text-2xl space-y-2">
+                                <p>1. Take bread 🍞</p>
+                                <p>2. Add peanut butter 🥜</p>
+                                <p>3. Eat sandwich 😋</p>
+                            </div>
+                            <p class="text-xl mt-4 text-green-600">Now it's complete!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.10: Your Turn! -->
+            <div class="slide hidden" data-meeting="12" data-slide="10">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Now YOU Try! 🎮</h2>
+                    <p class="text-2xl text-blue-600 mt-4">Let's fix Scratch Cat's mistakes!</p>
+                    <div class="mt-8 bg-yellow-100 p-8 rounded-2xl w-full max-w-4xl">
+                        <p class="text-3xl font-bold text-yellow-700 mb-6">Bug Detective Rules:</p>
+                        <div class="text-left text-2xl space-y-3 text-gray-700">
+                            <p>1. 👀 Look at the picture carefully</p>
+                            <p>2. 🤔 Find what's wrong</p>
+                            <p>3. 💭 Think about the fix</p>
+                            <p>4. ✋ Tell teacher your answer!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.11: Scratch Jr Bug #1 (Placeholder) -->
+            <div class="slide hidden" data-meeting="12" data-slide="11">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-6">Bug #1: Dance Party 💃</h2>
+                    <div class="flex-1 grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">❌ BROKEN CODE:</h3>
+                            <div class="min-h-64 bg-gray-100 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center text-xl text-gray-500">
+                                [Teacher: Insert Scratch Jr code image here]
+                            </div>
+                            <p class="text-xl mt-4 text-gray-600">What's wrong? Scratch Cat won't dance!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Question:</h3>
+                            <div class="bg-blue-100 p-6 rounded-xl text-xl space-y-4">
+                                <p>🔍 Look at the code</p>
+                                <p>🐛 What's the bug?</p>
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Hint: Something is missing at the start!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.12: Scratch Jr Bug #2 (Placeholder) -->
+            <div class="slide hidden" data-meeting="12" data-slide="12">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-6">Bug #2: Starry Night ⭐</h2>
+                    <div class="flex-1 grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">❌ BROKEN CODE:</h3>
+                            <div class="min-h-64 bg-gray-100 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center text-xl text-gray-500">
+                                [Teacher: Insert Scratch Jr code image here]
+                            </div>
+                            <p class="text-xl mt-4 text-gray-600">The bat only goes up and down!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Question:</h3>
+                            <div class="bg-blue-100 p-6 rounded-xl text-xl space-y-4">
+                                <p>🔍 Look at the blocks</p>
+                                <p>🐛 What's missing?</p>
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Hint: We need another green flag!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.13: Scratch Jr Bug #3 (Placeholder) -->
+            <div class="slide hidden" data-meeting="12" data-slide="13">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-6">Bug #3: Spinning Star 🌟</h2>
+                    <div class="flex-1 grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">❌ BROKEN CODE:</h3>
+                            <div class="min-h-64 bg-gray-100 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center text-xl text-gray-500">
+                                [Teacher: Insert Scratch Jr code image here]
+                            </div>
+                            <p class="text-xl mt-4 text-gray-600">The star hides and never comes back!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Question:</h3>
+                            <div class="bg-blue-100 p-6 rounded-xl text-xl space-y-4">
+                                <p>🔍 Check the hide/show blocks</p>
+                                <p>🐛 What went wrong?</p>
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Hint: Hide should be SHOW!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.14: Scratch Jr Bug #4 (Placeholder) -->
+            <div class="slide hidden" data-meeting="12" data-slide="14">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-6">Bug #4: Forever Spin 🔄</h2>
+                    <div class="flex-1 grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">❌ BROKEN CODE:</h3>
+                            <div class="min-h-64 bg-gray-100 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center text-xl text-gray-500">
+                                [Teacher: Insert Scratch Jr code image here]
+                            </div>
+                            <p class="text-xl mt-4 text-gray-600">The star spins once and stops!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Question:</h3>
+                            <div class="bg-blue-100 p-6 rounded-xl text-xl space-y-4">
+                                <p>🔍 Look at the repeat block</p>
+                                <p>🐛 What's missing?</p>
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Hint: We need a REPEAT FOREVER block!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.15: Scratch Jr Bug #5 (Placeholder) -->
+            <div class="slide hidden" data-meeting="12" data-slide="15">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-6">Bug #5: Swimming Fish 🐠</h2>
+                    <div class="flex-1 grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-600 mb-4">❌ BROKEN CODE:</h3>
+                            <div class="min-h-64 bg-gray-100 border-4 border-dashed border-gray-400 rounded-2xl flex items-center justify-center text-xl text-gray-500">
+                                [Teacher: Insert Scratch Jr code image here]
+                            </div>
+                            <p class="text-xl mt-4 text-gray-600">The fish moves but never stops!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Question:</h3>
+                            <div class="bg-blue-100 p-6 rounded-xl text-xl space-y-4">
+                                <p>🔍 Check the repeat block</p>
+                                <p>🐛 Wrong type of repeat?</p>
+                                <p class="text-2xl font-bold text-blue-700 mt-4">Hint: Change REPEAT FOREVER to REPEAT number!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.16: Great Job! -->
+            <div class="slide hidden" data-meeting="12" data-slide="16">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <img src="https://img2.clipart-library.com/27/excellent-clipart-gif/excellent-clipart-gif-14.gif"
+                        alt="Gold star" class="h-48 animate-bounce">
+                    <h1 class="text-5xl md:text-7xl font-bold text-yellow-600 mt-6">Amazing Work!</h1>
+                    <p class="text-3xl text-gray-700 mt-6">You are excellent Bug Detectives! 🕵️‍♂️🔍</p>
+                    <div class="mt-8 bg-green-100 p-8 rounded-2xl">
+                        <p class="text-2xl font-bold text-green-700">What Did We Learn?</p>
+                        <div class="text-xl mt-4 space-y-2 text-gray-700">
+                            <p>✅ Bugs are mistakes in our code</p>
+                            <p>✅ We can find bugs by looking carefully</p>
+                            <p>✅ We can fix bugs to make code work!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12.17: Goodbye -->
+            <div class="slide hidden" data-meeting="12" data-slide="17">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <img src="https://i.pinimg.com/originals/ea/4b/b4/ea4bb43750344cb103caab2fec31caae.gif"
+                        alt="Waving goodbye" class="h-48">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mt-6">Goodbye, Bug Detectives!</h1>
+                    <p class="text-2xl text-blue-600 mt-4">Keep finding and fixing bugs!</p>
+                    <div class="text-left text-2xl md:text-3xl text-gray-700 space-y-3 bg-yellow-100 p-8 rounded-2xl mt-8 shadow-lg">
+                        <p class="text-center font-bold mb-4">One Last Time!</p>
+                        <p>🎵 Goodbye, goodbye, see you soon! 👋</p>
+                        <p>🎵 We had fun this afternoon! ☀️</p>
+                        <p>🎵 We learned to code today, 💻</p>
+                        <p>🎵 Hip hip hooray, hooray! 🎉</p>
+                    </div>
                 </div>
             </div>
         </main>
