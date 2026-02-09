@@ -135,6 +135,9 @@
                     <option value="11">Meet 11: Decomposition</option>
                     <option value="12">Meet 12: Debugging (Finding Mistakes)</option>
                     <option value="13">Meet 13: Arah & Peta (Directions)</option>
+                    <option value="14">Meet 14: Loops (Patterns & Efficiency)</option>
+                    <option value="15">Meet 15: Innovation (Plan & Build)</option>
+                    <option value="16">Meet 16: Innovation (Polish & Present)</option>
                 </select>
             </div>
         </header>
@@ -5416,6 +5419,693 @@
                 }, 500);
                 
             </script>
+
+    <!-- ========================================== -->
+    <!-- === MEETING 14: LOOPS & EFFICIENCY === -->
+    <!-- ========================================== -->
+
+    <!-- Slide 14.1: Title -->
+    <div class="slide hidden" data-meeting="14" data-slide="1">
+        <div class="flex flex-col items-center justify-center h-full text-center bg-yellow-50 rounded-3xl border-4 border-yellow-200">
+            <span class="text-8xl mb-4 animate-spin-slow">🔄</span>
+            <h1 class="text-6xl font-bold text-yellow-600 mb-6">Looping Magic!</h1>
+            <div class="bg-white px-8 py-4 rounded-full mt-8 shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-800">"If it's the same... REPEAT!"</h2>
+            </div>
+             <p class="text-2xl text-blue-600 font-medium mt-6">Module 14: Patterns & Efficiency</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.2: Daily Life Loops -->
+    <div class="slide hidden" data-meeting="14" data-slide="2">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Do It Again! 🔁</h2>
+            <div class="flex gap-8 justify-center w-full">
+                <div class="bg-blue-100 p-6 rounded-3xl w-1/3">
+                    <span class="text-6xl">👏</span>
+                    <p class="text-2xl font-bold text-blue-800 mt-4">Clapping</p>
+                    <p class="text-lg text-gray-600">Clap, Clap, Clap!</p>
+                </div>
+                <div class="bg-green-100 p-6 rounded-3xl w-1/3">
+                    <span class="text-6xl">🦷</span>
+                    <p class="text-2xl font-bold text-green-800 mt-4">Brushing</p>
+                    <p class="text-lg text-gray-600">Brush, Brush, Brush!</p>
+                </div>
+                <div class="bg-pink-100 p-6 rounded-3xl w-1/3">
+                    <span class="text-6xl">🚶</span>
+                    <p class="text-2xl font-bold text-pink-800 mt-4">Walking</p>
+                    <p class="text-lg text-gray-600">Step, Step, Step!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.3: Patterns -->
+    <div class="slide hidden" data-meeting="14" data-slide="3">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">What Comes Next? ❓</h2>
+            <div class="flex items-center gap-4 bg-gray-100 p-8 rounded-full shadow-inner mb-8">
+                <span class="text-6xl">🍎</span>
+                <span class="text-6xl">🍌</span>
+                <span class="text-6xl">🍎</span>
+                <span class="text-6xl">🍌</span>
+                <span class="text-6xl">🍎</span>
+                <div class="w-20 h-20 border-4 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-4xl bg-white">?</div>
+            </div>
+            <div class="flex gap-8">
+                <button onclick="checkPattern14(this, 'banana')" class="text-6xl hover:scale-110 transition-transform p-4 bg-white rounded-xl shadow-md border-2 border-gray-200">🍌</button>
+                <button onclick="checkPattern14(this, 'apple')" class="text-6xl hover:scale-110 transition-transform p-4 bg-white rounded-xl shadow-md border-2 border-gray-200">🍎</button>
+            </div>
+            <p id="pattern-feedback-14" class="text-2xl font-bold mt-6 h-8"></p>
+        </div>
+    </div>
+
+    <!-- Slide 14.4: The Long Way -->
+    <div class="slide hidden" data-meeting="14" data-slide="4">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-red-600 mb-4">The "Tired" Way 😫</h2>
+            <p class="text-xl text-gray-600 mb-6">Moving 5 steps...</p>
+            <div class="flex gap-2 overflow-x-auto p-4 bg-blue-50 rounded-xl max-w-4xl border-2 border-blue-100">
+                <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/8309ba8b-6d04-4732-8d17-50f4235bb4a8.png" class="h-24">
+                <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/8309ba8b-6d04-4732-8d17-50f4235bb4a8.png" class="h-24">
+                <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/8309ba8b-6d04-4732-8d17-50f4235bb4a8.png" class="h-24">
+                <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/8309ba8b-6d04-4732-8d17-50f4235bb4a8.png" class="h-24">
+                <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/8309ba8b-6d04-4732-8d17-50f4235bb4a8.png" class="h-24">
+            </div>
+            <p class="text-2xl font-bold text-red-500 mt-6">So many blocks! 🥵</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.5: Efficiency Secret -->
+    <div class="slide hidden" data-meeting="14" data-slide="5">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-blue-600 mb-6 bg-blue-100 px-8 py-2 rounded-full">Be Smart! 🧠</h2>
+            <div class="flex items-center gap-8 mt-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/3750/3750019.png" class="h-48 animate-pulse">
+                <div class="text-left bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500">
+                    <p class="text-3xl text-gray-800 font-bold mb-4">Don't do it again and again...</p>
+                    <p class="text-4xl text-blue-600 font-bold">Just say: "REPEAT!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.6: The Magic Spell -->
+    <div class="slide hidden" data-meeting="14" data-slide="6">
+        <div class="flex flex-col items-center justify-center h-full text-center bg-orange-50 rounded-3xl border-4 border-orange-200">
+            <h2 class="text-4xl font-bold text-orange-600 mb-8">The Magic Spell ✨</h2>
+            <div class="relative inline-block">
+                <div class="bg-orange-500 text-white text-5xl font-bold px-12 py-8 rounded-2xl shadow-xl transform -rotate-2">
+                    REPEAT 4 TIMES
+                </div>
+                <div class="absolute -top-8 -right-8 text-7xl animate-bounce">🪄</div>
+            </div>
+            <p class="text-3xl text-gray-700 mt-12 font-medium">It turns <b class="text-red-500">4 blocks</b> into <b class="text-green-500">1 block</b>!</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.7: ScratchJr Repeat Block -->
+    <div class="slide hidden" data-meeting="14" data-slide="7">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Meet the Repeat Block! 🟧</h2>
+            <img src="https://hybridmedia.io/wp-content/uploads/2021/10/scratch-jr-repeat-300x182.png" 
+                 class="h-64 object-contain animate-pulse filter drop-shadow-xl">
+            <p class="text-3xl text-orange-600 font-bold mt-8">It hugs other blocks inside! 🤗</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.8: How to Use -->
+    <div class="slide hidden" data-meeting="14" data-slide="8">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">How many times?</h2>
+            <p class="text-xl text-gray-600 mb-8">We can change the number!</p>
+            <div class="flex items-center gap-8 justify-center">
+                <div class="bg-orange-100 w-32 h-32 flex items-center justify-center rounded-3xl border-4 border-orange-300 shadow-md">
+                    <p class="text-7xl font-bold text-orange-600">4</p>
+                </div>
+                <span class="text-6xl animate-pulse">➡️</span>
+                <img src="https://en.scratch-wiki.info/w/images/thumb/Repeat_Block_%28ScratchJr%29.png/300px-Repeat_Block_%28ScratchJr%29.png" class="h-48 filter drop-shadow-xl">
+            </div>
+            <div class="mt-8 bg-gray-100 px-6 py-3 rounded-xl inline-block">
+                <p class="text-2xl text-gray-700">Type <b>4</b> = Repeat <b>4 times</b>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.9: Interactive Game --> 
+    <div class="slide hidden" data-meeting="14" data-slide="9">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-purple-600 mb-2">Game: Pattern Builder 🐰</h2>
+            <p class="text-xl text-gray-600 mb-4">Help the bunny hop to the carrot!</p>
+            
+            <!-- Game Container -->
+            <div class="w-full max-w-4xl bg-green-100 rounded-3xl p-6 border-4 border-green-300 relative shadow-xl overflow-hidden">
+                <!-- Track -->
+                <div class="flex justify-between items-center mb-8 px-8 relative h-24">
+                    <!-- Starting Bunny -->
+                    <div id="bunny-14" class="text-6xl transition-all duration-[1500ms] absolute left-8 top-2 z-10 ease-in-out">🐰</div>
+                    
+                    <!-- Spacers/Grid -->
+                    <div class="text-6xl opacity-0">🐰</div> 
+                    <div class="flex gap-4 flex-1 justify-center z-0">
+                        <div class="w-16 h-16 bg-white/50 rounded-full border-2 border-green-400"></div>
+                        <div class="w-16 h-16 bg-white/50 rounded-full border-2 border-green-400"></div>
+                        <div class="w-16 h-16 bg-white/50 rounded-full border-2 border-green-400"></div>
+                        <div class="w-16 h-16 bg-white/50 rounded-full border-2 border-green-400"></div>
+                    </div>
+                    <div class="text-6xl z-10">🥕</div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-200">
+                    <p class="text-2xl font-bold text-gray-700 mb-4">Code:</p>
+                    <div class="flex items-center justify-center gap-4 flex-wrap">
+                        <div class="bg-orange-500 text-white px-6 py-4 rounded-xl font-bold text-2xl shadow-md flex items-center">
+                            REPEAT <input type="number" id="loop-input-14" class="w-20 h-10 text-black text-center rounded-lg ml-3 border-2 border-orange-700" min="1" max="9" value="1">
+                        </div>
+                        <div class="bg-blue-500 text-white px-6 py-4 rounded-xl font-bold text-2xl shadow-md">
+                            HOP 🐇
+                        </div>
+                    </div>
+                    <button onclick="runBunnyGame()" class="mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-12 rounded-full shadow-lg transition-transform hover:scale-105 text-xl">
+                        ▶️ RUN CODE
+                    </button>
+                    <p id="bunny-feedback" class="text-xl font-bold mt-4 h-8 text-gray-500"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.10: Activity Dance -->
+    <div class="slide hidden" data-meeting="14" data-slide="10">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-pink-600 mb-6">Activity: Dance Party! 💃</h2>
+            <img src="https://media.tenor.com/fSc27t8XlQAAAAAj/dance-kid.gif" class="h-48 rounded-2xl shadow-lg border-4 border-pink-300">
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-6 mt-8 rounded-r-xl max-w-2xl text-left shadow-sm">
+                <p class="text-2xl font-bold text-gray-800">Challenge:</p>
+                <div class="mt-4 space-y-2">
+                    <p class="text-xl text-gray-700">1. Choose a funny character.</p>
+                    <p class="text-xl text-gray-700">2. Make them <b>Dance Forever</b>!</p>
+                    <p class="text-xl text-gray-700">3. Use the <b class="text-red-500 bg-red-100 px-2 rounded">Red Forever Block</b>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.11: The Maze -->
+    <div class="slide hidden" data-meeting="14" data-slide="11">
+         <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-blue-600 mb-6">Activity: The Maze 🧩</h2>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0lukIS_0xuNNPqVnfE956N0CysQVMs4JlYw&s" 
+                 class="h-48 rounded-2xl shadow-lg border-4 border-blue-300">
+             <div class="bg-yellow-100 border-l-8 border-yellow-400 p-6 mt-8 rounded-r-xl max-w-2xl text-left shadow-sm">
+                <p class="text-2xl font-bold text-gray-800">Challenge:</p>
+                <div class="mt-4 space-y-2">
+                    <p class="text-xl text-gray-700">1. Move <b>Right 4 steps</b>.</p>
+                    <p class="text-xl text-gray-700">2. Don't use 4 blue blocks!</p>
+                    <p class="text-xl text-gray-700">3. Use <b>1 Repeat Block</b> with number <b>4</b>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.12: Efficiency Check -->
+    <div class="slide hidden" data-meeting="14" data-slide="12">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Which is Better? 🤔</h2>
+            
+            <div class="grid grid-cols-2 gap-12 w-full max-w-5xl">
+                <!-- Option A -->
+                <div class="bg-red-50 p-6 rounded-3xl border-4 border-red-200 opacity-60 hover:opacity-100 transition-opacity">
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">OPTION A</h3>
+                    <div class="flex flex-wrap gap-2 justify-center py-4">
+                         <div class="w-12 h-12 bg-blue-500 rounded shadow-sm border border-blue-600"></div>
+                         <div class="w-12 h-12 bg-blue-500 rounded shadow-sm border border-blue-600"></div>
+                         <div class="w-12 h-12 bg-blue-500 rounded shadow-sm border border-blue-600"></div>
+                         <div class="w-12 h-12 bg-blue-500 rounded shadow-sm border border-blue-600"></div>
+                    </div>
+                    <p class="text-xl font-bold mt-4 text-red-700">Long & Tired 😓</p>
+                </div>
+                
+                <!-- Option B -->
+                <div class="bg-green-50 p-6 rounded-3xl border-4 border-green-400 transform scale-105 shadow-2xl relative">
+                    <div class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 font-bold px-4 py-1 rounded-full shadow">WINNER!</div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">OPTION B</h3>
+                    <div class="flex items-center justify-center gap-2 py-4">
+                        <div class="bg-orange-500 rounded-lg text-white font-bold flex items-center justify-center text-xl px-6 py-3 shadow-md border-b-4 border-orange-700">REPEAT 4</div>
+                    </div>
+                    <p class="text-xl font-bold mt-4 text-green-700">Short & Smart! 😎</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.13: Infinite Loops -->
+    <div class="slide hidden" data-meeting="14" data-slide="13">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-purple-600 mb-12">Forever and Ever! ♾️</h2>
+            <div class="flex gap-16 items-center justify-center">
+                <div class="text-center group">
+                    <div class="w-40 h-40 bg-orange-500 rounded-3xl flex items-center justify-center text-8xl text-white shadow-xl group-hover:scale-105 transition-transform">4</div>
+                    <p class="text-2xl font-bold mt-6 text-gray-700">Stop after 4</p>
+                </div>
+                <div class="text-6xl font-black text-gray-300">VS</div>
+                <div class="text-center group">
+                    <div class="w-40 h-40 bg-red-600 rounded-full flex items-center justify-center text-8xl text-white shadow-xl animate-spin-slow group-hover:scale-105 transition-transform">↻</div>
+                    <p class="text-2xl font-bold mt-6 text-red-600">Never Stop!</p>
+                </div>
+            </div>
+            <p class="text-2xl text-gray-700 mt-16 bg-purple-100 px-12 py-4 rounded-2xl shadow-sm inline-block">Use the <b>Red Block</b> for music and dancing!</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.14: Scary Maze Game -->
+    <div class="slide hidden" data-meeting="14" data-slide="14">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-purple-600 mb-4">Focus Challenge! 🧐</h2>
+            <div class="w-full h-[70vh] border-4 border-purple-300 rounded-2xl overflow-hidden shadow-2xl relative bg-black">
+                 <iframe src="https://www.crazygames.com/embed/scary-maze" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+            </div>
+            <p class="text-xl text-gray-600 mt-4">Can you reach the end? 👻</p>
+        </div>
+    </div>
+
+    <!-- Slide 14.15: Tutorial - The Maze -->
+    <div class="slide hidden" data-meeting="14" data-slide="15">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2">Build the Maze! 🧱</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/3b813787-c80f-4248-ae74-e4f56730b26b.png"
+                alt="Maze Sprite" class="h-[60vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-blue-200">
+            <p class="text-2xl font-bold text-blue-600 mt-4">Challenge Accepted! Let's build our own Maze! 🧩</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl">
+                <p class="text-2xl text-gray-800 text-left">1. Delete the Cat 🐱<br>2. Add the <b>Maze Sprite</b>!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.16: Tutorial - The Frog -->
+    <div class="slide hidden" data-meeting="14" data-slide="16">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-green-600 mb-2">Meet Hoppy! 🐸</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/0e820cd7-fa58-4211-b80f-7785f10bc478.png"
+                alt="Frog Sprite" class="h-[60vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-green-200">
+            <p class="text-2xl font-bold text-green-600 mt-4">He's super hungry! 🤤</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl">
+                <p class="text-2xl text-gray-800 text-left">Add the <b>Frog Character</b> to the start of the maze!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.17: Tutorial - The Fly -->
+    <div class="slide hidden" data-meeting="14" data-slide="17">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2">Yummy Lunch! 🪰</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/5100fd52-ccd8-45d0-969a-124ae2732856.png"
+                alt="Fly Sprite" class="h-[60vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-gray-300">
+            <p class="text-2xl font-bold text-gray-600 mt-4">Find the food! 🥣</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl">
+                <p class="text-2xl text-gray-800 text-left">Add a <b>Fly</b> at the end of the maze!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.18: Tutorial - Controls -->
+    <div class="slide hidden" data-meeting="14" data-slide="18">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-purple-600 mb-2">Remote Control! 🎮</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/bd23a739-9cb5-4574-919b-ce82f80daf8e.png"
+                alt="Arrow Controls" class="h-[60vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-purple-200">
+            <p class="text-2xl font-bold text-purple-600 mt-4">We need buttons to move! ⬆️⬇️⬅️➡️</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl">
+                <p class="text-2xl text-gray-800 text-left">Draw <b>4 Arrow Sprites</b>: Up, Down, Left, Right.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.19: Tutorial - Code Arrows -->
+    <div class="slide hidden" data-meeting="14" data-slide="19">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-orange-600 mb-2">Send Signal! 📡</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/1e4ce2dd-ecd4-4658-91ba-09f45dced4af.png"
+                alt="Arrow Code" class="h-[50vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-orange-200">
+            <p class="text-2xl font-bold text-orange-600 mt-4">Code the Arrow Button:</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl text-left">
+                <p class="text-xl md:text-2xl text-gray-800">1. <b>Start on Click</b> (Person) 👆</p>
+                <p class="text-xl md:text-2xl text-gray-800">2. <b>Send Message</b> (Orange Letter) ✉️</p>
+                <p class="text-sm text-gray-600 italic">(Different color for each arrow!)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.20: Tutorial - Code Frog -->
+    <div class="slide hidden" data-meeting="14" data-slide="20">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-green-600 mb-2">Hoppy Hears You! 👂</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/208d64f0-7927-4332-adb0-9079cd45bbd6.png"
+                alt="Frog Code" class="h-[50vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-green-200">
+             <p class="text-2xl font-bold text-green-600 mt-4">Code the Frog to Move:</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl text-left">
+                 <p class="text-xl md:text-2xl text-gray-800">1. <b>Open Message</b> (Letter) 📩</p>
+                 <p class="text-xl md:text-2xl text-gray-800">2. <b>Move</b> in that direction ➡️</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.21: Tutorial - Wall Reset -->
+    <div class="slide hidden" data-meeting="14" data-slide="21">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-red-600 mb-2">Bonk! Watch Out! 🧱</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/14fa5715-4f3c-4ed4-8ee2-1730d431a914.png"
+                alt="Wall Collision Code" class="h-[50vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-red-200">
+             <p class="text-2xl font-bold text-red-600 mt-4">Hard Mode: Make it tricky!</p>
+             <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl text-left">
+                <p class="text-xl md:text-2xl text-gray-800">1. <b>Start on Bump</b> (Touching) 💥</p>
+                <p class="text-xl md:text-2xl text-gray-800">2. <b>Go Home</b> (Reset Position) 🏠</p>
+                <p class="text-xl md:text-2xl text-gray-800">If Frog touches Maze -> Restart! 😱</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.22: Tutorial - Talking Wall -->
+    <div class="slide hidden" data-meeting="14" data-slide="22">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-blue-600 mb-2">The Wall is Alive! 🗣️</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/cec20cf1-7d97-4796-bc65-54cf9c71d348.png"
+                alt="Talking Wall" class="h-[50vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-blue-200">
+            <p class="text-2xl font-bold text-blue-600 mt-4">Make it funny!</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl text-left">
+                 <p class="text-xl md:text-2xl text-gray-800">1. <b>Start on Bump</b> 💥</p>
+                 <p class="text-xl md:text-2xl text-gray-800">2. <b>Say</b> "Hey! Watch it!" 💬</p>
+            </div>
+        </div>
+    </div>
+
+     <!-- Slide 14.23: Tutorial - Win Condition -->
+    <div class="slide hidden" data-meeting="14" data-slide="23">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-yellow-600 mb-2">Dinner Time! 🥣</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/324270f3-7280-4222-8a37-9907d97e1d96.png"
+                alt="Win Code" class="h-[50vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-yellow-200">
+            <p class="text-2xl font-bold text-yellow-600 mt-4">When Frog touches Fly...</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl text-left">
+                 <p class="text-xl md:text-2xl text-gray-800">1. <b>Start on Bump</b> (Fly code) 💥</p>
+                 <p class="text-xl md:text-2xl text-gray-800">2. <b>Go to Scene 2</b> (Win Page) 🏁</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.24: Tutorial - Victory Scene -->
+    <div class="slide hidden" data-meeting="14" data-slide="24">
+        <div class="text-center flex flex-col items-center justify-center h-full">
+            <h2 class="text-3xl md:text-5xl font-bold text-pink-600 mb-2">You Win! 🎉</h2>
+            <img src="https://cdn-web-2.ruangguru.com/landing-pages/assets/293a553c-c694-4828-958a-dc2e9ccc687d.png"
+                alt="Win Scene" class="h-[60vh] object-contain mt-2 rounded-2xl shadow-xl border-4 border-pink-200">
+            <p class="text-2xl font-bold text-pink-600 mt-4">Create a Victory Page!</p>
+            <div class="bg-yellow-100 border-l-8 border-yellow-400 p-4 mt-2 inline-block rounded-r-xl">
+                 <p class="text-2xl text-gray-800 text-left">Draw a big <b>"YOU WIN"</b> sign!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.25: Recap -->
+    <div class="slide hidden" data-meeting="14" data-slide="25">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-12">What did we learn? 🧠</h2>
+            <div class="space-y-8 text-left max-w-4xl w-full px-8">
+                <div class="flex items-center gap-8 bg-yellow-50 p-6 rounded-3xl border-2 border-yellow-200 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-6xl">🔄</span>
+                    <p class="text-4xl font-bold text-gray-700">Loop = Repeat</p>
+                </div>
+                <div class="flex items-center gap-8 bg-green-50 p-6 rounded-3xl border-2 border-green-200 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-6xl">😎</span>
+                    <p class="text-4xl font-bold text-gray-700">Efficient = Smart & Short</p>
+                </div>
+                <div class="flex items-center gap-8 bg-orange-50 p-6 rounded-3xl border-2 border-orange-200 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-6xl">🟧</span>
+                    <p class="text-4xl font-bold text-gray-700">Orange Block = Magic!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14.26: Badge -->
+    <div class="slide hidden" data-meeting="14" data-slide="26">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+             <img src="https://img.freepik.com/premium-vector/gold-medal-with-star-vector-illustration-flat-style_71208-593.jpg" class="h-64 animate-bounce rounded-full shadow-2xl border-4 border-yellow-300">
+            <h1 class="text-6xl font-bold text-yellow-500 mt-8 drop-shadow-sm">Loop Master! 🏅</h1>
+            <p class="text-3xl text-gray-600 mt-4 font-medium">You are a Pattern Expert!</p>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- == SLIDES FOR MEETING 15: INNOVATION - PLAN & BUILD == -->
+    <!-- ======================================================= -->
+
+    <!-- Slide 15.1: Intro - Game Designers -->
+    <div class="slide hidden" data-meeting="15" data-slide="1">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-6">You are a Game Designer! 🎨</h2>
+            <img src="https://img.freepik.com/premium-vector/boy-sitting-thinking-idea-vector-illustration_590130-101.jpg"
+                alt="Kid Thinking" class="h-64 object-contain rounded-2xl shadow-xl border-4 border-blue-200">
+            <p class="text-3xl text-blue-600 mt-8 font-medium">Today we make our OWN game!</p>
+            <div class="bg-yellow-100 px-8 py-4 mt-6 rounded-full inline-block">
+                <span class="text-2xl font-bold text-yellow-800">What will you create?</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15.2: The Design Cycle -->
+    <div class="slide hidden" data-meeting="15" data-slide="2">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">How do we build a game? 🏗️</h2>
+            <div class="flex items-center justify-center gap-4 w-full px-8">
+                <!-- Step 1 -->
+                <div class="flex-1 bg-blue-50 p-6 rounded-3xl border-2 border-blue-200 hover:scale-105 transition-transform">
+                    <span class="text-6xl">💭</span>
+                    <h3 class="text-2xl font-bold text-blue-700 mt-4">1. Think</h3>
+                    <p class="text-lg text-gray-600">Have an idea!</p>
+                </div>
+                <!-- Arrow -->
+                <span class="text-4xl text-gray-400">➡️</span>
+                <!-- Step 2 -->
+                <div class="flex-1 bg-green-50 p-6 rounded-3xl border-2 border-green-200 hover:scale-105 transition-transform">
+                    <span class="text-6xl">📝</span>
+                    <h3 class="text-2xl font-bold text-green-700 mt-4">2. Plan</h3>
+                    <p class="text-lg text-gray-600">Draw on paper!</p>
+                </div>
+                <!-- Arrow -->
+                <span class="text-4xl text-gray-400">➡️</span>
+                <!-- Step 3 -->
+                <div class="flex-1 bg-purple-50 p-6 rounded-3xl border-2 border-purple-200 hover:scale-105 transition-transform">
+                    <span class="text-6xl">💻</span>
+                    <h3 class="text-2xl font-bold text-purple-700 mt-4">3. Code</h3>
+                    <p class="text-lg text-gray-600">Build in ScratchJr!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15.3: Step 1 - Plan -->
+    <div class="slide hidden" data-meeting="15" data-slide="3">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-green-600 mb-6">Step 1: Grab your Paper! 📄</h2>
+            <img src="https://img.freepik.com/premium-vector/notepad-pencil-icon-cartoon-style_196205-13.jpg"
+                alt="Paper and Pencil" class="h-56 object-contain rounded-2xl shadow-lg mb-6">
+            <p class="text-2xl text-gray-700 mb-4">Draw your game idea before you touch the iPad!</p>
+            <div class="grid grid-cols-3 gap-6 w-full max-w-4xl mt-4 text-left">
+                <div class="bg-white p-4 rounded-xl shadow border-l-8 border-red-400">
+                    <p class="font-bold text-xl">1. Hero 🦸</p>
+                    <p class="text-gray-500">Who is the player?</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow border-l-8 border-yellow-400">
+                    <p class="font-bold text-xl">2. Place 🏰</p>
+                    <p class="text-gray-500">Where are they?</p>
+                </div>
+                 <div class="bg-white p-4 rounded-xl shadow border-l-8 border-blue-400">
+                    <p class="font-bold text-xl">3. Goal 💎</p>
+                    <p class="text-gray-500">What do they want?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15.4: Brainstorming Activity -->
+    <div class="slide hidden" data-meeting="15" data-slide="4">
+        <div class="flex flex-col items-center justify-center h-full text-center bg-yellow-50 rounded-3xl border-4 border-dashed border-yellow-300">
+            <h2 class="text-5xl font-bold text-yellow-800 mb-4">📝 Planning Time!</h2>
+            <p class="text-2xl text-gray-700 mb-8">Take 5 minutes to draw your plan.</p>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full text-left space-y-4">
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl">🦸</span>
+                    <div>
+                        <p class="font-bold text-xl text-gray-800">My Character is...</p>
+                        <div class="h-8 w-64 bg-gray-100 rounded mt-1 border border-gray-300"></div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl">fo</span>
+                    <div>
+                        <p class="font-bold text-xl text-gray-800">The Background is...</p>
+                        <div class="h-8 w-64 bg-gray-100 rounded mt-1 border border-gray-300"></div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl">🏆</span>
+                    <div>
+                        <p class="font-bold text-xl text-gray-800">To Win, they must...</p>
+                        <div class="h-8 w-64 bg-gray-100 rounded mt-1 border border-gray-300"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15.5: Step 2 - Code -->
+    <div class="slide hidden" data-meeting="15" data-slide="5">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-purple-600 mb-6">Step 2: Time to Build! 🔨</h2>
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/bf/24/45/bf244585-6490-6715-6f8d-3c224b744d03/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
+                alt="ScratchJr Logo" class="h-48 rounded-2xl shadow-lg animate-bounce">
+            <p class="text-2xl text-gray-700 mt-6 max-w-2xl">Open the app and make your plan come to life!</p>
+            <div class="flex gap-4 mt-8">
+                 <div class="bg-green-100 px-6 py-3 rounded-xl font-bold text-green-800">1. Add Character</div>
+                 <div class="bg-blue-100 px-6 py-3 rounded-xl font-bold text-blue-800">2. Add Background</div>
+                 <div class="bg-orange-100 px-6 py-3 rounded-xl font-bold text-orange-800">3. Add Blocks</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 15.6: Construction Zone (Timer) -->
+    <div class="slide hidden" data-meeting="15" data-slide="6">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-6xl font-bold text-orange-600 mb-4">Construction Zone! 🚧</h2>
+            <p class="text-2xl text-gray-600 mb-8">Work on your game. Raise your hand if you need help!</p>
+             <img src="https://media.baamboozle.com/uploads/images/409605/1647413661_37286_gif-url.gif"
+                alt="Construction Worker gif" class="h-64 rounded-2xl shadow-xl border-4 border-orange-300">
+             <div class="mt-8 bg-gray-800 text-white px-8 py-4 rounded-2xl text-4xl font-mono shadow-2xl animate-pulse">
+                WORK TIME
+             </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- == SLIDES FOR MEETING 16: INNOVATION - POLISH & PRESENT == -->
+    <!-- ========================================================== -->
+
+    <!-- Slide 16.1: Intro - Polish -->
+    <div class="slide hidden" data-meeting="16" data-slide="1">
+         <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-6">Project Perfection! ✨</h2>
+            <img src="https://img.freepik.com/premium-vector/cute-cartoon-illustration-cleaning-service-man-cleaning-window_961274-123.jpg"
+                alt="Cleaning/Polishing" class="h-64 object-contain rounded-2xl shadow-xl border-4 border-blue-200">
+            <p class="text-3xl text-blue-600 mt-8 font-medium">Let's make our games shiny and new!</p>
+        </div>
+    </div>
+
+    <!-- Slide 16.2: Test It -->
+    <div class="slide hidden" data-meeting="16" data-slide="2">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-red-600 mb-6">Be a Bug Hunter! 🐞</h2>
+            <img src="https://img.freepik.com/premium-vector/cute-ladybug-magnifying-glass-cartoon-vector-illustration_590130-1094.jpg"
+                alt="Bug Hunter" class="h-56 object-contain rounded-2xl shadow-xl border-4 border-red-200">
+            <p class="text-2xl text-gray-700 mt-6">Play your game 3 times. Does it work?</p>
+            <div class="flex gap-8 mt-8">
+                <div class="bg-red-50 p-4 rounded-xl border border-red-200">
+                    <p class="text-xl font-bold text-red-800">Does the hero move?</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-xl border border-red-200">
+                    <p class="text-xl font-bold text-red-800">Does the game end?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 16.3: Add Juice -->
+    <div class="slide hidden" data-meeting="16" data-slide="3">
+         <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-purple-600 mb-6">Make it Pop! 🎈</h2>
+            <div class="grid grid-cols-3 gap-8 mt-4 w-full px-12">
+                <div class="bg-green-100 p-6 rounded-3xl hover:scale-105 transition-transform cursor-pointer">
+                    <span class="text-6xl">🔊</span>
+                    <p class="text-2xl font-bold text-green-800 mt-4">Add Sounds</p>
+                    <p class="text-gray-600">Pop, Boing, Yeay!</p>
+                </div>
+                 <div class="bg-yellow-100 p-6 rounded-3xl hover:scale-105 transition-transform cursor-pointer">
+                    <span class="text-6xl">⚡</span>
+                    <p class="text-2xl font-bold text-yellow-800 mt-4">Change Speed</p>
+                    <p class="text-gray-600">Fast or Slow?</p>
+                </div>
+                 <div class="bg-pink-100 p-6 rounded-3xl hover:scale-105 transition-transform cursor-pointer">
+                    <span class="text-6xl">💬</span>
+                    <p class="text-2xl font-bold text-pink-800 mt-4">Add Words</p>
+                    <p class="text-gray-600">"Hello!", "You Win!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 16.4: Preparation -->
+    <div class="slide hidden" data-meeting="16" data-slide="4">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-blue-600 mb-6">Get Ready to Share 🎤</h2>
+            <img src="https://img.freepik.com/premium-vector/boy-giving-speech-podium-vector-illustration_590130-975.jpg"
+                alt="Kid Speaking" class="h-64 object-contain rounded-2xl shadow-xl border-4 border-blue-200">
+            <div class="bg-white p-8 rounded-2xl shadow-lg mt-8 text-left max-w-xl w-full border-l-8 border-blue-500">
+                <p class="text-2xl font-bold text-gray-800 mb-4">Checklist:</p>
+                <p class="text-xl text-gray-700 mb-2">1. Say your <span class="font-bold text-blue-600">Name</span>.</p>
+                <p class="text-xl text-gray-700 mb-2">2. Say the <span class="font-bold text-blue-600">Name of your Game</span>.</p>
+                <p class="text-xl text-gray-700 mb-2">3. Show us <span class="font-bold text-blue-600">How to Play</span>!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 16.5: Show & Tell -->
+     <div class="slide hidden" data-meeting="16" data-slide="5">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-6xl font-bold text-yellow-600 mb-4">The Stage is Yours! 🌟</h2>
+             <img src="https://media.baamboozle.com/uploads/images/68686/1619665314_218151_gif-url.gif"
+                alt="Clapping Hands" class="h-56 rounded-2xl shadow-xl border-4 border-yellow-300">
+            <p class="text-3xl text-gray-700 mt-8">Listen to your friends and Clap! 👏</p>
+            <div class="mt-8 bg-blue-100 text-blue-800 px-8 py-4 rounded-2xl text-2xl font-bold">
+                Who wants to go first?
+            </div>
+        </div>
+    </div>
+
+     <!-- Slide 16.6: Feedback -->
+    <div class="slide hidden" data-meeting="16" data-slide="6">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-5xl font-bold text-green-600 mb-6">Great Job! 👍</h2>
+            <div class="grid grid-cols-2 gap-8 w-full max-w-4xl px-8">
+                 <div class="bg-pink-50 p-6 rounded-3xl border-2 border-pink-200">
+                    <span class="text-5xl">❤️</span>
+                    <p class="text-2xl font-bold text-pink-700 mt-4">I liked...</p>
+                    <p class="text-gray-600">"I liked your character!"</p>
+                </div>
+                 <div class="bg-purple-50 p-6 rounded-3xl border-2 border-purple-200">
+                    <span class="text-5xl">😯</span>
+                    <p class="text-2xl font-bold text-purple-700 mt-4">It was cool when...</p>
+                    <p class="text-gray-600">"It was cool when the ghost appeared!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 16.7: Graduation -->
+    <div class="slide hidden" data-meeting="16" data-slide="7">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <img src="https://img.freepik.com/premium-vector/diploma-certificate-template-kids-cartoon-style_29937-3388.jpg"
+                alt="Certificate" class="h-64 object-contain rounded-2xl shadow-2xl animate-bounce">
+            <h1 class="text-6xl font-bold text-blue-600 mt-8 drop-shadow-sm">You are a Coder! 🎓</h1>
+            <p class="text-4xl text-gray-700 mt-6 font-medium">You finished the course! Hooray! 🎉</p>
+            <div class="mt-8 flex gap-4">
+                <span class="text-6xl animate-pulse">⭐</span>
+                <span class="text-6xl animate-pulse delay-100">🚀</span>
+                <span class="text-6xl animate-pulse delay-200">👾</span>
+            </div>
+        </div>
+    </div>
         </main>
 
         <footer class="flex justify-between items-center p-4 bg-gray-100 border-t-2 border-gray-200">
@@ -6276,6 +6966,101 @@
             });
         });
     </script>
-</body>
 
+
+
+    <script>
+        // ==========================================
+        // === MEETING 14: LOOPS LOGIC ===
+        // ==========================================
+
+        function checkPattern14(btn, fruit) {
+            const feedback = document.getElementById('pattern-feedback-14');
+            // Reset styles
+            const buttons = btn.parentElement.querySelectorAll('button');
+            buttons.forEach(b => b.classList.remove('bg-green-200', 'bg-red-200', 'ring-4', 'ring-green-400', 'ring-red-400'));
+
+            if (fruit === 'banana') {
+                feedback.textContent = "✅ Correct! Apple, Banana, Apple, Banana!";
+                feedback.className = "text-2xl font-bold mt-6 h-8 text-green-600";
+                
+                // Visual pop
+                btn.classList.add('bg-green-200', 'ring-4', 'ring-green-400', 'scale-110');
+                
+                // Success sound effect (optional/simulated)
+                // playSound('success'); 
+
+            } else {
+                feedback.textContent = "❌ Not quite! Look at the pattern again.";
+                feedback.className = "text-2xl font-bold mt-6 h-8 text-red-500";
+                
+                // Error visual
+                btn.classList.add('bg-red-200', 'ring-4', 'ring-red-400');
+                // Shake it?
+                btn.classList.add('animate-pulse');
+                setTimeout(() => btn.classList.remove('animate-pulse'), 500);
+            }
+        }
+
+        function runBunnyGame() {
+            const input = document.getElementById('loop-input-14');
+            const bunny = document.getElementById('bunny-14');
+            const feedback = document.getElementById('bunny-feedback');
+            const val = parseInt(input.value);
+            
+            // Reset
+            bunny.style.left = "2rem"; // starting pos
+            bunny.classList.remove('transition-all', 'duration-[1500ms]');
+            
+            // Force reflow to ensure reset happens instantly without transition
+            void bunny.offsetWidth; 
+
+            // Re-enable transition
+            bunny.classList.add('transition-all', 'duration-[1500ms]', 'ease-in-out');
+            
+            if (val === 4) {
+                 feedback.textContent = "Running 4 loops...";
+                 feedback.className = "text-xl font-bold mt-4 h-8 text-blue-500";
+                 
+                 // Animate hop to carrot
+                 setTimeout(() => {
+                     // 100% minus padding for carrot
+                     bunny.style.left = "calc(100% - 6rem)"; 
+                 }, 100);
+
+                 // Show success after animation finishes
+                 setTimeout(() => {
+                     feedback.innerHTML = "🎉 SUCCESS! The bunny reached the carrot! 🥕";
+                     feedback.className = "text-xl font-bold mt-4 h-8 text-green-600 animate-bounce";
+                 }, 1600);
+
+            } else {
+                 feedback.textContent = `Running ${val} loop(s)...`;
+                 feedback.className = "text-xl font-bold mt-4 h-8 text-red-500";
+                
+                 // Calculate distance based on input loops.
+                 // Total steps needed = 4. 
+                 // Each step approx 20-22% of container width?
+                 // Let's approximate: 4 steps = ~85% width. 1 step = ~21%.
+                 
+                 let percentage = val * 21;
+                 
+                 // Cap it if they put in 9 (don't go off screen)
+                 if(percentage > 85) percentage = 85; 
+                 
+                 setTimeout(() => {
+                     bunny.style.left = `calc(${2 + percentage}%)`;
+                 }, 100);
+
+                 setTimeout(() => {
+                     if (val < 4) {
+                        feedback.textContent = "❌ Too short! The bunny is hungry! 🥕";
+                     } else {
+                        feedback.textContent = "❌ Too far! The bunny hopped past it! 🥕";
+                     }
+                 }, 1600);
+            }
+        }
+    </script>
+</body>
 </html>
